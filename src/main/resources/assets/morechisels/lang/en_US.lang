@@ -1,0 +1,18 @@
+# Config
+gui.morechisels.config.title=More Chisels Configuration
+
+# Items
+item.morechisels.chisel.gem.ruby.name=Ruby Chisel
+item.morechisels.chisel.gem.sapphire.name=Sapphire Chisel
+item.morechisels.chisel.gem.emerald.name=Emerald Chisel
+item.morechisels.chisel.material.wood.name=Wooden Chisel
+item.morechisels.chisel.material.stone.name=Stone Chisel
+item.morechisels.chisel.material.gold.name=Golden Chisel
+
+# Tooltips
+info.basemod.tooltip.fire=This book will set you on fire.
+
+# Chat
+info.basemod.chat.sneak=Sneak to set yourself ablaze.
+
+# Console
