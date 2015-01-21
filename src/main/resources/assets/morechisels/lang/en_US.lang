@@ -7,9 +7,7 @@ item.morechisels.chisel.sapphire.name=Sapphire Chisel
 item.morechisels.chisel.emerald.name=Emerald Chisel
 
 # Tooltips
-info.basemod.tooltip.fire=This book will set you on fire.
 
 # Chat
-info.basemod.chat.sneak=Sneak to set yourself ablaze.
 
 # Console
