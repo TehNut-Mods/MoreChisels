@@ -1,7 +1,6 @@
 package tehnut.morechisels.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -15,10 +14,6 @@ public class ItemRegistry {
 	public static Item chiselEmerald;
 
 	public static void registerItems() {
-
-		OreDictionary.registerOre("gemRuby", Items.emerald);
-		OreDictionary.registerOre("gemSapphire", Items.emerald);
-
 		// Gems
 		if (chiselRubyEnabled && !OreDictionary.getOres("gemRuby").isEmpty()) {
 			chiselRuby = new ItemChiselBase(ChiselType.RUBY);
