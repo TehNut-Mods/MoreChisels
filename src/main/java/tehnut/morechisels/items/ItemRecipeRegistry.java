@@ -20,12 +20,6 @@ public class ItemRecipeRegistry {
 				addChiselRecipe(ItemRegistry.chiselSapphire, "gemSapphire");
 			if (chiselEmeraldEnabled && !OreDictionary.getOres("gemEmerald").isEmpty())
 				addChiselRecipe(ItemRegistry.chiselEmerald, "gemEmerald");
-			if (chiselWoodEnabled && !OreDictionary.getOres("plankWood").isEmpty())
-				addChiselRecipe(ItemRegistry.chiselWood, "plankWood");
-			if (chiselStoneEnabled && !OreDictionary.getOres("cobblestone").isEmpty())
-				addChiselRecipe(ItemRegistry.chiselStone, "cobblestone");
-			if (chiselGoldEnabled && !OreDictionary.getOres("ingotGold").isEmpty())
-				addChiselRecipe(ItemRegistry.chiselGold, "ingotGold");
 		} else {
 			if (chiselRubyEnabled && !OreDictionary.getOres("gemRuby").isEmpty())
 				addModifiedChiselRecipe(ItemRegistry.chiselRuby, "gemRuby");
@@ -33,12 +27,6 @@ public class ItemRecipeRegistry {
 				addModifiedChiselRecipe(ItemRegistry.chiselSapphire, "gemSapphire");
 			if (chiselEmeraldEnabled && !OreDictionary.getOres("gemEmerald").isEmpty())
 				addModifiedChiselRecipe(ItemRegistry.chiselEmerald, "gemEmerald");
-			if (chiselWoodEnabled && !OreDictionary.getOres("plankWood").isEmpty())
-				addModifiedChiselRecipe(ItemRegistry.chiselWood, "plankWood");
-			if (chiselStoneEnabled && !OreDictionary.getOres("cobblestone").isEmpty())
-				addModifiedChiselRecipe(ItemRegistry.chiselStone, "cobblestone");
-			if (chiselGoldEnabled && !OreDictionary.getOres("ingotGold").isEmpty())
-				addModifiedChiselRecipe(ItemRegistry.chiselGold, "ingotGold");
 		}
 	}
 

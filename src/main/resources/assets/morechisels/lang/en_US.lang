@@ -2,12 +2,9 @@
 gui.morechisels.config.title=More Chisels Configuration
 
 # Items
-item.morechisels.chisel.gem.ruby.name=Ruby Chisel
-item.morechisels.chisel.gem.sapphire.name=Sapphire Chisel
-item.morechisels.chisel.gem.emerald.name=Emerald Chisel
-item.morechisels.chisel.material.wood.name=Wooden Chisel
-item.morechisels.chisel.material.stone.name=Stone Chisel
-item.morechisels.chisel.material.gold.name=Golden Chisel
+item.morechisels.chisel.ruby.name=Ruby Chisel
+item.morechisels.chisel.sapphire.name=Sapphire Chisel
+item.morechisels.chisel.emerald.name=Emerald Chisel
 
 # Tooltips
 info.basemod.tooltip.fire=This book will set you on fire.

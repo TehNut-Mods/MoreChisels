@@ -5,9 +5,6 @@ import cpw.mods.fml.client.config.IConfigElement;
 import tehnut.morechisels.ModInformation;
 import tehnut.morechisels.util.TextHelper;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraftforge.common.config.ConfigCategory;
-import net.minecraftforge.common.config.ConfigElement;
-import tehnut.morechisels.ConfigHandler;
 
 import java.util.ArrayList;
 import java.util.List;

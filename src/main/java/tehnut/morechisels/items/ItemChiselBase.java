@@ -4,34 +4,34 @@ import com.cricketcraft.chisel.api.IChiselItem;
 import com.cricketcraft.chisel.api.carving.ICarvingVariation;
 import com.cricketcraft.chisel.config.Configurations;
 import com.cricketcraft.chisel.init.ChiselTabs;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.MoreChisels;
 import tehnut.morechisels.ModInformation;
 import net.minecraft.item.Item;
 
+import java.util.List;
+
 public class ItemChiselBase extends Item implements IChiselItem {
 
-	public ItemChiselBase(String unlocName, String textureName) {
+	private ChiselType type;
+
+	public ItemChiselBase(ChiselType type) {
 		super();
 
-		setUnlocalizedName(ModInformation.ID + ".chisel." + unlocName);
-		setTextureName(ModInformation.TEXLOC + textureName);
-		setCreativeTab(ChiselTabs.tabChisel);
-		setMaxStackSize(0);
-	}
+		this.type = type;
 
-	public ItemChiselBase(String unlocName, String textureName, int maxDamage) {
-		super();
-
-		setUnlocalizedName(ModInformation.ID + ".chisel." + unlocName);
-		setTextureName(ModInformation.TEXLOC + textureName);
+		setUnlocalizedName(ModInformation.ID + ".chisel." + type.toString());
+		setTextureName(ModInformation.TEXLOC + "chisel_" + type.toString());
 		setCreativeTab(ChiselTabs.tabChisel);
-		setMaxStackSize(0);
+		setMaxStackSize(1);
 		if (Configurations.allowChiselDamage)
-			setMaxDamage(maxDamage);
+			setMaxDamage(type.durability);
 	}
 
 	@Override

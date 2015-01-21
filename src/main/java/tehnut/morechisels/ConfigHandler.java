@@ -17,16 +17,15 @@ public class ConfigHandler {
 	public static boolean chiselRubyEnabled;
 	public static boolean chiselSapphireEnabled;
 	public static boolean chiselEmeraldEnabled;
-	public static boolean chiselWoodEnabled;
-	public static boolean chiselStoneEnabled;
-	public static boolean chiselGoldEnabled;
+	public static boolean chiselFluxedEnabled;
+	public static boolean chiselBloodyEnabled;
+	public static boolean chiselBoundEnabled;
 
 	public static int durabilityRuby;
 	public static int durabilitySapphire;
 	public static int durabilityEmerald;
-	public static int durabilityWood;
-	public static int durabilityStone;
-	public static int durabilityGold;
+	public static int durabilityFluxed;
+	public static int durabilityBloody;
 
 	public static void init(File file) {
 		config = new Configuration(file);
@@ -41,16 +40,15 @@ public class ConfigHandler {
 		chiselRubyEnabled = config.get(chisels, "chiselRubyEnabled", true).getBoolean();
 		chiselSapphireEnabled = config.get(chisels, "chiselSapphireEnabled", true).getBoolean();
 		chiselEmeraldEnabled = config.get(chisels, "chiselEmeraldEnabled", true).getBoolean();
-		chiselWoodEnabled = config.get(chisels, "chiselWoodEnabled", true).getBoolean();
-		chiselStoneEnabled = config.get(chisels, "chiselStoneEnabled", true).getBoolean();
-		chiselGoldEnabled = config.get(chisels, "chiselGoldEnabled", true).getBoolean();
+//		chiselFluxedEnabled = config.get(chisels, "chiselFluxedEnabled", true).getBoolean();
+//		chiselBloodyEnabled = config.get(chisels, "chiselBloodyEnabled", true).getBoolean();
+//		chiselBoundEnabled = config.get(chisels, "chiselBoundEnabled", true).getBoolean();
 
 		durabilityRuby = config.get(durability, "durabilityRuby", 700).getInt();
 		durabilitySapphire = config.get(durability, "durabilitySapphire", 700).getInt();
 		durabilityEmerald = config.get(durability, "durabilityEmerald", 700).getInt();
-		durabilityWood = config.get(durability, "durabilityWood", 50).getInt();
-		durabilityStone = config.get(durability, "durabilityStone", 150).getInt();
-		durabilityGold = config.get(durability, "durabilityGold", 200).getInt();
+		durabilityFluxed = config.get(durability, "durabilityFluxed", 100000).getInt();
+		durabilityBloody = config.get(durability, "durabilityBloody", 20000).getInt();
 
 		config.save();
 	}
