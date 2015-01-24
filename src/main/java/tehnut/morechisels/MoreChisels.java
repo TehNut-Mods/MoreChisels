@@ -6,6 +6,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
 import tehnut.morechisels.compat.BloodMagicCompat;
 import tehnut.morechisels.compat.RedstoneFluxCompat;
 import tehnut.morechisels.items.ItemRecipeRegistry;
@@ -13,7 +14,6 @@ import tehnut.morechisels.items.ItemRegistry;
 import tehnut.morechisels.proxies.CommonProxy;
 import tehnut.morechisels.util.EnviroChecks;
 import tehnut.morechisels.util.EventHandler;
-import tehnut.morechisels.util.OreDictHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,7 +32,7 @@ public class MoreChisels {
 	public void preInit(FMLPreInitializationEvent event) {
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 
-		OreDictHandler.registerOreDict();
+		MinecraftForge.EVENT_BUS.register(new EventHandler());
 		FMLCommonHandler.instance().bus().register(new EventHandler());
 	}
 

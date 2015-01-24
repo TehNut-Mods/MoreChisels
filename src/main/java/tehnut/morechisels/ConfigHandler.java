@@ -53,7 +53,7 @@ public class ConfigHandler {
 		durabilityBloody = config.get(durability, "durabilityBloody", 20000).getInt();
 
 		addEnderIOFluxedChiselRecipes = config.get(misc, "addEnderIOFluxedChiselRecipes", false, "Requires EnderIO to be present.").getBoolean();
-		addThermalExpansionFluxedChiselRecipes = config.get(misc, "addThermalExpansionFluxedChiselRecipes", false, "Requires ThermalExpansion to be present.").getBoolean();
+		addThermalExpansionFluxedChiselRecipes = config.get(misc, "addThermalExpansionFluxedChiselRecipes", true, "Requires ThermalExpansion to be present.").getBoolean();
 		addRedstoneArsenalFluxedChiselRecipes = config.get(misc, "addRedstoneArsenalFluxedChiselRecipes", false, "Requires RedstoneArsenal to be present.").getBoolean();
 
 		config.save();

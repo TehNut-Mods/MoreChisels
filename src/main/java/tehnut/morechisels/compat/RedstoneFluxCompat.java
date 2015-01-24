@@ -29,18 +29,18 @@ public class RedstoneFluxCompat {
 
     private static void registerRecipes() {
         if (EnviroChecks.isEnderIOLoaded() && ConfigHandler.addEnderIOFluxedChiselRecipes) {
-            ItemStack basicCapacitor = GameRegistry.findItemStack("EnderIO", "itemBasicCapacitor", 1);
+            ItemStack basicCapacitor = new ItemStack(GameRegistry.findItem("EnderIO", "itemBasicCapacitor"), 1, 0);
 
-            GameRegistry.addRecipe(new ShapelessOreRecipe(ItemRegistry.chiselFluxed, ChiselItems.chisel, basicCapacitor));
+            GameRegistry.addRecipe(new ShapelessOreRecipe(chiselFluxed, ChiselItems.chisel, basicCapacitor));
         }
 
         if (EnviroChecks.isThermalExpansionLoaded() && ConfigHandler.addThermalExpansionFluxedChiselRecipes) {
             ItemStack hardenedFluxCapacitor = new ItemStack(GameRegistry.findItem("ThermalExpansion", "capacitor"), 1, 3);
 
-            GameRegistry.addRecipe(new ShapelessOreRecipe(ItemRegistry.chiselFluxed, ChiselItems.chisel, hardenedFluxCapacitor));
+            GameRegistry.addRecipe(new ShapelessOreRecipe(chiselFluxed, ChiselItems.chisel, hardenedFluxCapacitor));
         }
 
         if (EnviroChecks.isRedstoneArsenalLoaded() && ConfigHandler.addRedstoneArsenalFluxedChiselRecipes)
-            GameRegistry.addRecipe(new ShapedOreRecipe(ItemRegistry.chiselFluxed, " I", "S ", 'I', "ingotElectrumFlux", 'S', "stickWood"));
+            GameRegistry.addRecipe(new ShapedOreRecipe(chiselFluxed, " I", "S ", 'I', "ingotElectrumFlux", 'S', "stickWood"));
     }
 }

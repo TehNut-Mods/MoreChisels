@@ -12,7 +12,6 @@ public class ItemRegistry {
 	public static Item chiselRuby;
 	public static Item chiselSapphire;
 	public static Item chiselEmerald;
-	public static Item chiselFluxed;
 
 	public static void registerItems() {
 
