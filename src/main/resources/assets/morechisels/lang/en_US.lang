@@ -6,12 +6,14 @@ item.morechisels.chisel.ruby.name=Ruby Chisel
 item.morechisels.chisel.sapphire.name=Sapphire Chisel
 item.morechisels.chisel.emerald.name=Emerald Chisel
 item.morechisels.chisel.bound.name=Bound Chisel
+item.morechisels.chisel.fluxed.name=Fluxed Chisel
 
 # Tooltips
 tip.morechisels.pretty=Let's make all the pretty!
 tip.morechisels.activated=Activated
 tip.morechisels.deactivated=Deactivated
 tip.morechisels.bound.owner=Current Owner: %s
+tip.morechisels.energy=%s / %s RF
 
 # Chat
 

@@ -9,7 +9,7 @@ public enum ChiselType {
     RUBY(durabilityRuby),
     SAPPHIRE(durabilitySapphire),
     EMERALD(durabilityEmerald),
-    FLUXED(durabilityFluxed),
+    FLUXED(),
     BLOODY(durabilityBloody),
     BOUND();
 

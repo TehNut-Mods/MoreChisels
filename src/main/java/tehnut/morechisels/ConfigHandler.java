@@ -26,6 +26,10 @@ public class ConfigHandler {
 	public static int durabilityFluxed;
 	public static int durabilityBloody;
 
+	public static boolean addEnderIOFluxedChiselRecipes;
+	public static boolean addThermalExpansionFluxedChiselRecipes;
+	public static boolean addRedstoneArsenalFluxedChiselRecipes;
+
 	public static void init(File file) {
 		config = new Configuration(file);
 		syncConfig();
@@ -34,12 +38,12 @@ public class ConfigHandler {
 	public static void syncConfig() {
 		config.setCategoryComment(chisels, "Toggling of all chisels. If the chisel doesn't find the material it requires, it will not register.");
 		config.setCategoryComment(durability, "Setting of durabilities for every chisel.");
-		config.setCategoryComment(misc, "Misc settings,");
+		config.setCategoryComment(misc, "Misc settings.");
 
 		chiselRubyEnabled = config.get(chisels, "chiselRubyEnabled", true).getBoolean();
 		chiselSapphireEnabled = config.get(chisels, "chiselSapphireEnabled", true).getBoolean();
 		chiselEmeraldEnabled = config.get(chisels, "chiselEmeraldEnabled", true).getBoolean();
-//		chiselFluxedEnabled = config.get(chisels, "chiselFluxedEnabled", true).getBoolean();
+		chiselFluxedEnabled = config.get(chisels, "chiselFluxedEnabled", true).getBoolean();
 		chiselBoundEnabled = config.get(chisels, "chiselBoundEnabled", true).getBoolean();
 
 		durabilityRuby = config.get(durability, "durabilityRuby", 700).getInt();
@@ -47,6 +51,10 @@ public class ConfigHandler {
 		durabilityEmerald = config.get(durability, "durabilityEmerald", 700).getInt();
 		durabilityFluxed = config.get(durability, "durabilityFluxed", 100000).getInt();
 		durabilityBloody = config.get(durability, "durabilityBloody", 20000).getInt();
+
+		addEnderIOFluxedChiselRecipes = config.get(misc, "addEnderIOFluxedChiselRecipes", false, "Requires EnderIO to be present.").getBoolean();
+		addThermalExpansionFluxedChiselRecipes = config.get(misc, "addThermalExpansionFluxedChiselRecipes", false, "Requires ThermalExpansion to be present.").getBoolean();
+		addRedstoneArsenalFluxedChiselRecipes = config.get(misc, "addRedstoneArsenalFluxedChiselRecipes", false, "Requires RedstoneArsenal to be present.").getBoolean();
 
 		config.save();
 	}

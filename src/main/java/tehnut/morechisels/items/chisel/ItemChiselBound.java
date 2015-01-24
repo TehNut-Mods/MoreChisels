@@ -104,55 +104,55 @@ public class ItemChiselBound extends ItemChiselBase implements IBindable {
 
     // Bound stuff
     public void setActivated(ItemStack stack, boolean newActivated) {
-        NBTTagCompound itemTag = stack.stackTagCompound;
+        NBTTagCompound tag = stack.stackTagCompound;
 
-        if (itemTag == null)
+        if (tag == null)
             stack.setTagCompound(new NBTTagCompound());
 
-        itemTag.setBoolean("isActive", newActivated);
+        tag.setBoolean("isActive", newActivated);
     }
 
     public boolean getActivated(ItemStack stack) {
-        NBTTagCompound itemTag = stack.stackTagCompound;
+        NBTTagCompound tag = stack.stackTagCompound;
 
-        if (itemTag == null)
+        if (tag == null)
             stack.setTagCompound(new NBTTagCompound());
 
 
-        return itemTag.getBoolean("isActive");
+        return tag.getBoolean("isActive");
     }
 
     // Chisel API
     @Override
     public boolean onChisel(World world, ItemStack chisel, ICarvingVariation target) {
 
-        NBTTagCompound itemTag = chisel.stackTagCompound;
+        NBTTagCompound tag = chisel.stackTagCompound;
 
-        if (itemTag == null)
+        if (tag == null)
             chisel.setTagCompound(new NBTTagCompound());
 
-        return itemTag.getBoolean("isActive");
+        return tag.getBoolean("isActive");
     }
 
     @Override
     public boolean canChiselBlock(World world, EntityPlayer player, int x, int y, int z, Block block, int metadata) {
         ItemStack stack = player.getHeldItem();
 
-        NBTTagCompound itemTag = stack.stackTagCompound;
+        NBTTagCompound tag = stack.stackTagCompound;
 
-        if (itemTag == null)
+        if (tag == null)
             stack.setTagCompound(new NBTTagCompound());
 
-        return itemTag.getBoolean("isActive");
+        return tag.getBoolean("isActive");
     }
 
     @Override
     public boolean canOpenGui(World world, EntityPlayer player, ItemStack chisel) {
-        NBTTagCompound itemTag = chisel.stackTagCompound;
+        NBTTagCompound tag = chisel.stackTagCompound;
 
-        if (itemTag == null)
+        if (tag == null)
             chisel.setTagCompound(new NBTTagCompound());
 
-        return itemTag.getBoolean("isActive") && !player.isSneaking();
+        return tag.getBoolean("isActive") && !player.isSneaking();
     }
 }

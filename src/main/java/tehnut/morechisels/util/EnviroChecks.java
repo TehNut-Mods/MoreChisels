@@ -7,4 +7,34 @@ public class EnviroChecks {
     public static boolean isBloodMagicLoaded() {
         return Loader.isModLoaded("AWWayofTime");
     }
+
+    public static boolean isEnderIOLoaded() {
+        return Loader.isModLoaded("EnderIO");
+    }
+
+    public static boolean isThermalExpansionLoaded() {
+        return Loader.isModLoaded("ThermalExpansion");
+    }
+
+    public static boolean isRedstoneArsenalLoaded() {
+        return Loader.isModLoaded("RedstoneArsenal");
+    }
+
+    public static boolean isRFAPILoaded() {
+        boolean checked = false;
+        boolean foundRF = false;
+
+        if (!checked) {
+            try {
+                Class.forName("cofh.api.energy.IEnergyHandler");
+                foundRF = true;
+            } catch (ClassNotFoundException e) {
+                // Not found
+            } finally {
+                checked = true;
+            }
+        }
+
+        return foundRF;
+    }
 }
