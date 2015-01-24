@@ -1,4 +1,4 @@
-#More Chisels
+#More Chisels [![Build Status](http://tehnut.info/jenkins/job/MoreChisels/badge/icon)](http://tehnut.info/jenkins/job/MoreChisels/)
 
 Assorted chisels for [Chisel-2](https://github.com/TheCricket/Chisel-2).
 
