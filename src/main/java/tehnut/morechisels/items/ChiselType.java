@@ -14,7 +14,7 @@ public enum ChiselType {
     BOUND();
 
     /**
-     * Used for all types of durability (RF, LP, etc)
+     * Used for all types of durability (RF, EU, etc)
      */
     public final int durability;
 

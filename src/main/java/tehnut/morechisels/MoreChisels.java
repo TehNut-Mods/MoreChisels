@@ -29,8 +29,6 @@ public class MoreChisels {
 	public void preInit(FMLPreInitializationEvent event) {
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 
-		ItemRegistry.registerItems();
-
 		OreDictHandler.registerOreDict();
 		FMLCommonHandler.instance().bus().register(new EventHandler());
 	}
@@ -38,6 +36,7 @@ public class MoreChisels {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 
+		ItemRegistry.registerItems();
 		ItemRecipeRegistry.registerRecipes();
 	}
 

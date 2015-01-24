@@ -18,7 +18,6 @@ public class ConfigHandler {
 	public static boolean chiselSapphireEnabled;
 	public static boolean chiselEmeraldEnabled;
 	public static boolean chiselFluxedEnabled;
-	public static boolean chiselBloodyEnabled;
 	public static boolean chiselBoundEnabled;
 
 	public static int durabilityRuby;
@@ -41,8 +40,7 @@ public class ConfigHandler {
 		chiselSapphireEnabled = config.get(chisels, "chiselSapphireEnabled", true).getBoolean();
 		chiselEmeraldEnabled = config.get(chisels, "chiselEmeraldEnabled", true).getBoolean();
 //		chiselFluxedEnabled = config.get(chisels, "chiselFluxedEnabled", true).getBoolean();
-//		chiselBloodyEnabled = config.get(chisels, "chiselBloodyEnabled", true).getBoolean();
-//		chiselBoundEnabled = config.get(chisels, "chiselBoundEnabled", true).getBoolean();
+		chiselBoundEnabled = config.get(chisels, "chiselBoundEnabled", true).getBoolean();
 
 		durabilityRuby = config.get(durability, "durabilityRuby", 700).getInt();
 		durabilitySapphire = config.get(durability, "durabilitySapphire", 700).getInt();

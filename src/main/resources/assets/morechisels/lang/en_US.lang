@@ -5,8 +5,13 @@ gui.morechisels.config.title=More Chisels Configuration
 item.morechisels.chisel.ruby.name=Ruby Chisel
 item.morechisels.chisel.sapphire.name=Sapphire Chisel
 item.morechisels.chisel.emerald.name=Emerald Chisel
+item.morechisels.chisel.bound.name=Bound Chisel
 
 # Tooltips
+tip.morechisels.pretty=Let's make all the pretty!
+tip.morechisels.activated=Activated
+tip.morechisels.deactivated=Deactivated
+tip.morechisels.bound.owner=Current Owner: %s
 
 # Chat
 
