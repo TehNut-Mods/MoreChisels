@@ -6,9 +6,12 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import tehnut.morechisels.compat.BloodMagicCompat;
+import tehnut.morechisels.compat.RedstoneFluxCompat;
 import tehnut.morechisels.items.ItemRecipeRegistry;
 import tehnut.morechisels.items.ItemRegistry;
 import tehnut.morechisels.proxies.CommonProxy;
+import tehnut.morechisels.util.EnviroChecks;
 import tehnut.morechisels.util.EventHandler;
 import tehnut.morechisels.util.OreDictHandler;
 import org.apache.logging.log4j.LogManager;
@@ -38,6 +41,10 @@ public class MoreChisels {
 
 		ItemRegistry.registerItems();
 		ItemRecipeRegistry.registerRecipes();
+		if (EnviroChecks.isRFAPILoaded())
+			BloodMagicCompat.load();
+		if (EnviroChecks.isRFAPILoaded())
+			RedstoneFluxCompat.load();
 	}
 
 	@Mod.EventHandler

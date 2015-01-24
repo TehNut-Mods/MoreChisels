@@ -1,7 +1,7 @@
 package tehnut.morechisels.items.chisel;
 
 import WayofTime.alchemicalWizardry.api.items.interfaces.IBindable;
-import WayofTime.alchemicalWizardry.common.items.EnergyItems;
+import WayofTime.alchemicalWizardry.api.soulNetwork.SoulNetworkHandler;
 import com.cricketcraft.chisel.api.carving.ICarvingVariation;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -31,7 +31,7 @@ public class ItemChiselBound extends ItemChiselBase implements IBindable {
 
     @Override
     public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
-        EnergyItems.checkAndSetItemOwner(stack, player);
+        SoulNetworkHandler.checkAndSetItemOwner(stack, player);
 
         if (player.isSneaking()) {
             setActivated(stack, !getActivated(stack));
@@ -80,7 +80,7 @@ public class ItemChiselBound extends ItemChiselBase implements IBindable {
 
         if (world.getWorldTime() % 200 == stack.stackTagCompound.getInteger("worldTimeDelay") && stack.stackTagCompound.getBoolean("isActive")) {
             if (!player.capabilities.isCreativeMode)
-                EnergyItems.syphonBatteries(stack, player, 20);
+                SoulNetworkHandler.syphonAndDamageFromNetwork(stack, player, 20);
         }
 
         stack.setItemDamage(0);
@@ -104,22 +104,22 @@ public class ItemChiselBound extends ItemChiselBase implements IBindable {
 
     // Bound stuff
     public void setActivated(ItemStack stack, boolean newActivated) {
-        NBTTagCompound tag = stack.stackTagCompound;
+        NBTTagCompound itemTag = stack.stackTagCompound;
 
-        if (tag == null)
+        if (itemTag == null)
             stack.setTagCompound(new NBTTagCompound());
 
-        tag.setBoolean("isActive", newActivated);
+        itemTag.setBoolean("isActive", newActivated);
     }
 
     public boolean getActivated(ItemStack stack) {
-        NBTTagCompound tag = stack.stackTagCompound;
+        NBTTagCompound itemTag = stack.stackTagCompound;
 
-        if (tag == null)
+        if (itemTag == null)
             stack.setTagCompound(new NBTTagCompound());
 
 
-        return tag.getBoolean("isActive");
+        return itemTag.getBoolean("isActive");
     }
 
     // Chisel API
