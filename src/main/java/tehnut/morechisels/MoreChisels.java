@@ -41,7 +41,7 @@ public class MoreChisels {
 
 		ItemRegistry.registerItems();
 		ItemRecipeRegistry.registerRecipes();
-		if (EnviroChecks.isRFAPILoaded())
+		if (EnviroChecks.isBloodMagicLoaded())
 			BloodMagicCompat.load();
 		if (EnviroChecks.isRFAPILoaded())
 			RedstoneFluxCompat.load();
