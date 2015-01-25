@@ -6,14 +6,12 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import tehnut.morechisels.ConfigHandler;
-import tehnut.morechisels.compat.RedstoneFluxCompat;
 import tehnut.morechisels.items.ChiselType;
 import tehnut.morechisels.items.ItemChiselBase;
 import tehnut.morechisels.util.TextHelper;
@@ -34,8 +32,8 @@ public class ItemChiselFluxed extends ItemChiselBase implements IEnergyContainer
     @SideOnly(Side.CLIENT)
     @SuppressWarnings("unchecked")
     public void getSubItems(Item item, CreativeTabs creativeTabs, List list) {
-        list.add(Utils.setNewEnergyTag(new ItemStack(item, 1, 0), 0));
-        list.add(Utils.setNewEnergyTag(new ItemStack(item, 1, 0), capacity));
+        list.add(Utils.setNewEnergyTag(new ItemStack(item, 1), 0));
+        list.add(Utils.setNewEnergyTag(new ItemStack(item, 1), capacity));
     }
 
     @Override
@@ -65,11 +63,6 @@ public class ItemChiselFluxed extends ItemChiselBase implements IEnergyContainer
             stack.setTagCompound(new NBTTagCompound());
 
         list.add(getEnergyColor(String.format(TextHelper.localize("tip.morechisels.energy"), stack.stackTagCompound.getInteger("Energy"), getMaxEnergyStored(stack)), stack));
-    }
-
-    public void onUpdate(ItemStack stack, World world, Entity entity, int int1, boolean bool) {
-        if (stack.getItem() instanceof ItemChiselFluxed)
-            Utils.setNewEnergyTag(stack, 0);
     }
 
     private static String getEnergyColor(String string, ItemStack stack) {

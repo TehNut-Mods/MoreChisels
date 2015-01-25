@@ -10,6 +10,7 @@ import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.items.ItemRegistry;
 import tehnut.morechisels.items.chisel.ItemChiselFluxed;
 import tehnut.morechisels.util.EnviroChecks;
+import tehnut.morechisels.util.Utils;
 
 import static tehnut.morechisels.ConfigHandler.chiselFluxedEnabled;
 
@@ -31,16 +32,16 @@ public class RedstoneFluxCompat {
         if (EnviroChecks.isEnderIOLoaded() && ConfigHandler.addEnderIOFluxedChiselRecipes) {
             ItemStack basicCapacitor = new ItemStack(GameRegistry.findItem("EnderIO", "itemBasicCapacitor"), 1, 0);
 
-            GameRegistry.addRecipe(new ShapelessOreRecipe(chiselFluxed, ChiselItems.chisel, basicCapacitor));
+            GameRegistry.addRecipe(new ShapelessOreRecipe(Utils.setNewEnergyTag(new ItemStack(chiselFluxed), 0), ChiselItems.chisel, basicCapacitor));
         }
 
         if (EnviroChecks.isThermalExpansionLoaded() && ConfigHandler.addThermalExpansionFluxedChiselRecipes) {
             ItemStack hardenedFluxCapacitor = new ItemStack(GameRegistry.findItem("ThermalExpansion", "capacitor"), 1, 3);
 
-            GameRegistry.addRecipe(new ShapelessOreRecipe(chiselFluxed, ChiselItems.chisel, hardenedFluxCapacitor));
+            GameRegistry.addRecipe(new ShapelessOreRecipe(Utils.setNewEnergyTag(new ItemStack(chiselFluxed), 0), ChiselItems.chisel, hardenedFluxCapacitor));
         }
 
         if (EnviroChecks.isRedstoneArsenalLoaded() && ConfigHandler.addRedstoneArsenalFluxedChiselRecipes)
-            GameRegistry.addRecipe(new ShapedOreRecipe(chiselFluxed, " I", "S ", 'I', "ingotElectrumFlux", 'S', "stickWood"));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Utils.setNewEnergyTag(new ItemStack(chiselFluxed), 0), " I", "S ", 'I', "ingotElectrumFlux", 'S', "stickWood"));
     }
 }
