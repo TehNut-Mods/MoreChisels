@@ -1,0 +1,21 @@
+# Config
+gui.morechisels.config.title=更多凿 模组配置
+
+# Items
+item.morechisels.chisel.ruby.name=红宝石凿子
+item.morechisels.chisel.sapphire.name=蓝宝石凿子
+item.morechisels.chisel.emerald.name=绿宝石凿子
+item.morechisels.chisel.bound.name=约束凿子
+item.morechisels.chisel.fluxed.name=红石充能凿子
+
+# Tooltips
+tip.morechisels.pretty=让一切变的精致又华丽
+tip.morechisels.activated=激活
+tip.morechisels.deactivated=未激活
+tip.morechisels.bound.owner=主人: %s
+tip.morechisels.energy=%s / %s RF
+
+# Chat
+
+# Console
+info.morechisels.console.config.refresh
