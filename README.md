@@ -9,13 +9,12 @@ Downloads for MoreChisels (as well as all of my other mods) can be found on my [
 ##Chisels done:
 
 * Gems: Ruby, Sapphire, Emerald
-* Materials: Wood, Stone, Gold
+* Fluxed Chisel: Runs on Redstone Flux.
+* Bound Chisel: Runs on your Blood Magic LP network.
 
 ##Chisels to come:
 
-* Fluxed Chisel: Runs on Redstone Flux.
-* Bound Chisel: Runs on your Blood Magic LP network.
-* More stuff?
+* See [this](https://github.com/TehNut/MoreChisels/issues/3) issue.
 
 ## Want to suggest some chisel types?
 
