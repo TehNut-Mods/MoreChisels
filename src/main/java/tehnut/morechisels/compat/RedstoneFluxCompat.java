@@ -2,6 +2,7 @@ package tehnut.morechisels.compat;
 
 import com.cricketcraft.chisel.init.ChiselItems;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
@@ -28,7 +29,11 @@ public class RedstoneFluxCompat {
         ItemRegistry.registerCompatItem(chiselFluxed, "ItemChiselFluxed", chiselFluxedEnabled, EnviroChecks.isRFAPILoaded());
     }
 
+    // Somebody please do these better...
     private static void registerRecipes() {
+        if ((!ConfigHandler.addEnderIOFluxedChiselRecipes && !ConfigHandler.addThermalExpansionFluxedChiselRecipes && !ConfigHandler.addRedstoneArsenalFluxedChiselRecipes) || (!EnviroChecks.isEnderIOLoaded() && !EnviroChecks.isThermalExpansionLoaded() && !EnviroChecks.isRedstoneArsenalLoaded()))
+            GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(chiselFluxed), ChiselItems.diamondChisel, Blocks.redstone_block, Blocks.redstone_block, Blocks.redstone_block));
+
         if (EnviroChecks.isEnderIOLoaded() && ConfigHandler.addEnderIOFluxedChiselRecipes) {
             ItemStack basicCapacitor = new ItemStack(GameRegistry.findItem("EnderIO", "itemBasicCapacitor"), 1, 0);
 

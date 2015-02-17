@@ -2,7 +2,6 @@ package tehnut.morechisels.util;
 
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import tehnut.morechisels.ConfigHandler;
@@ -25,10 +24,10 @@ public class EventHandler {
     @SubscribeEvent
     public void onTooltip(ItemTooltipEvent event) {
         ItemStack stack = event.itemStack;
-        Item item = event.itemStack.getItem();
         List list = event.toolTip;
 
-        if (stack.getDisplayName().equals(TextHelper.localize("item.morechisels.chisel.bedrockium.name")))
-            list.add(TextHelper.localize("tip.morechisels.bedrockium"));
+        if (stack != null)
+            if (stack.getDisplayName().equals(TextHelper.localize("item.morechisels.chisel.bedrockium.name")))
+                list.add(TextHelper.localize("tip.morechisels.bedrockium"));
     }
 }

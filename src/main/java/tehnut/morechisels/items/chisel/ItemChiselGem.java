@@ -5,7 +5,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
-import net.minecraftforge.oredict.OreDictionary;
 import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.ModInformation;
 import tehnut.morechisels.items.ItemChiselBase;
@@ -17,14 +16,16 @@ public class ItemChiselGem extends ItemChiselBase {
 
     private boolean setDisplayName;
     private String name;
+    private int chiselNumber;
 
     private IIcon overlayIcon;
 
-    public ItemChiselGem(String name, int durability, boolean setDisplayName) {
+    public ItemChiselGem(String name, int durability, boolean setDisplayName, int chiselNumber) {
         super(name, durability);
 
         this.setDisplayName = setDisplayName;
         this.name = name;
+        this.chiselNumber = chiselNumber;
     }
 
     @SideOnly(Side.CLIENT)
@@ -46,7 +47,7 @@ public class ItemChiselGem extends ItemChiselBase {
     public int getColorFromItemStack(ItemStack stack, int pass) {
 
         if (pass == 1) {
-            return Utils.getColorFromWhitelist(ConfigHandler.gemChiselWhitelist[ItemRegistry.gemChiselCount - 1]);
+            return Utils.getColorFromWhitelist(ConfigHandler.gemChiselWhitelist[chiselNumber]);
         } else {
             return super.getColorFromItemStack(stack, pass);
         }

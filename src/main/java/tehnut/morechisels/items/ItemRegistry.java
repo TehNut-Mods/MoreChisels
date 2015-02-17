@@ -29,7 +29,7 @@ public class ItemRegistry {
                     String[] splitWhitelist = whitelist.split(":");
 
                     if (gem.equals(splitWhitelist[0])) {
-                        chiselGem[gemChiselCount] = new ItemChiselGem(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), true);
+                        chiselGem[gemChiselCount] = new ItemChiselGem(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), true, gemChiselCount);
                         registerOreItem(chiselGem[gemChiselCount], "ItemChisel" + splitWhitelist[0], "gem" + splitWhitelist[0]);
                         gemChiselCount++;
                     }
