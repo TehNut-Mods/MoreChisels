@@ -5,6 +5,11 @@ import net.minecraft.nbt.NBTTagCompound;
 
 public class Utils {
 
+    /**
+     * @param stack  - The ItemStack.
+     * @param energy - Energy to set stack to.
+     * @return - The ItemStack with an energy tag.
+     */
     public static ItemStack setNewEnergyTag(ItemStack stack, int energy) {
         if (stack.stackTagCompound == null)
             stack.setTagCompound(new NBTTagCompound());

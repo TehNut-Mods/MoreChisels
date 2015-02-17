@@ -125,13 +125,18 @@ public class ItemChiselBound extends ItemChiselBase implements IBindable {
     // Chisel API
     @Override
     public boolean onChisel(World world, ItemStack chisel, ICarvingVariation target) {
+        return false;
+    }
 
-        NBTTagCompound tag = chisel.stackTagCompound;
+    @Override
+    public boolean canChisel(World world, ItemStack chisel, ICarvingVariation target) {
 
-        if (tag == null)
+        NBTTagCompound itemTag = chisel.stackTagCompound;
+
+        if (itemTag == null)
             chisel.setTagCompound(new NBTTagCompound());
 
-        return tag.getBoolean("isActive");
+        return itemTag.getBoolean("isActive");
     }
 
     @Override

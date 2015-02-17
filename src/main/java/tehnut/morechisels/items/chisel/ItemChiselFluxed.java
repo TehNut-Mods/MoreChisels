@@ -50,7 +50,7 @@ public class ItemChiselFluxed extends ItemChiselBase implements IEnergyContainer
 
         int currentEnergy = stack.stackTagCompound.getInteger("Energy");
 
-        return 1.0 - ((double)currentEnergy / (double)capacity);
+        return 1.0 - ((double) currentEnergy / (double) capacity);
     }
 
     @Override
@@ -141,6 +141,16 @@ public class ItemChiselFluxed extends ItemChiselBase implements IEnergyContainer
             chisel.setTagCompound(new NBTTagCompound());
 
         extractEnergy(chisel, 200, false);
+        return false;
+    }
+
+    @Override
+    public boolean canChisel(World world, ItemStack chisel, ICarvingVariation target) {
+
+        NBTTagCompound tag = chisel.stackTagCompound;
+
+        if (tag == null)
+            chisel.setTagCompound(new NBTTagCompound());
 
         return tag.getInteger("Energy") > 0;
     }

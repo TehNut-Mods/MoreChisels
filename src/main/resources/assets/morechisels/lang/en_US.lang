@@ -7,6 +7,7 @@ item.morechisels.chisel.sapphire.name=Sapphire Chisel
 item.morechisels.chisel.emerald.name=Emerald Chisel
 item.morechisels.chisel.bound.name=Bound Chisel
 item.morechisels.chisel.fluxed.name=Fluxed Chisel
+item.morechisels.chisel.bedrockium.name=Bedrockium Chisel
 
 # Tooltips
 tip.morechisels.pretty=Let's make all the pretty!
@@ -14,8 +15,9 @@ tip.morechisels.activated=Activated
 tip.morechisels.deactivated=Deactivated
 tip.morechisels.bound.owner=Current Owner: %s
 tip.morechisels.energy=%s / %s RF
+tip.morechisels.bedrockium=Why you would even need this...
 
 # Chat
 
 # Console
-info.morechisels.console.config.refresh
+info.morechisels.console.config.refresh=Refreshed configuration file.

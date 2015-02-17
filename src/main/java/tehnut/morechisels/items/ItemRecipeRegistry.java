@@ -9,26 +9,31 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class ItemRecipeRegistry {
 
-	public static void registerRecipes() {
+    public static void registerRecipes() {
 
-		if (!Configurations.chiselRecipe) {
-			addChiselRecipe(ItemRegistry.chiselRuby, "gemRuby");
-			addChiselRecipe(ItemRegistry.chiselSapphire, "gemSapphire");
-			addChiselRecipe(ItemRegistry.chiselEmerald, "gemEmerald");
-		} else {
-			addModifiedChiselRecipe(ItemRegistry.chiselRuby, "gemRuby");
-			addModifiedChiselRecipe(ItemRegistry.chiselSapphire, "gemSapphire");
-			addModifiedChiselRecipe(ItemRegistry.chiselEmerald, "gemEmerald");
-		}
-	}
+        if (!Configurations.chiselRecipe) {
+            addStandardChiselRecipe(ItemRegistry.chiselRuby, "gemRuby");
+            addStandardChiselRecipe(ItemRegistry.chiselSapphire, "gemSapphire");
+            addStandardChiselRecipe(ItemRegistry.chiselEmerald, "gemEmerald");
+        } else {
+            addModifiedChiselRecipe(ItemRegistry.chiselRuby, "gemRuby");
+            addModifiedChiselRecipe(ItemRegistry.chiselSapphire, "gemSapphire");
+            addModifiedChiselRecipe(ItemRegistry.chiselEmerald, "gemEmerald");
+        }
+    }
 
-	private static void addChiselRecipe(Item chisel, String type) {
-		if (!OreDictionary.getOres(type).isEmpty())
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1, 0), " O", "S ", 'O', type, 'S', "stickWood"));
-	}
+    public static void addStandardChiselRecipe(Item chisel, String type) {
+        if (!OreDictionary.getOres(type).isEmpty())
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1, 0), " O", "S ", 'O', type, 'S', "stickWood"));
+    }
 
-	private static void addModifiedChiselRecipe(Item chisel, String type) {
-		if (!OreDictionary.getOres(type).isEmpty())
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1, 0), " OO", " OO", "S  ", 'O', type, 'S', "stickWood"));
-	}
+    public static void addStandardChiselRecipe(Item chisel, Item type) {
+        if (type != null)
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1, 0), " O", "S ", 'O', type, 'S', "stickWood"));
+    }
+
+    public static void addModifiedChiselRecipe(Item chisel, String type) {
+        if (!OreDictionary.getOres(type).isEmpty())
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1, 0), " OO", " OO", "S  ", 'O', type, 'S', "stickWood"));
+    }
 }

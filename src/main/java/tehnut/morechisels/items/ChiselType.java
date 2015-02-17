@@ -1,17 +1,18 @@
 package tehnut.morechisels.items;
 
-import static tehnut.morechisels.ConfigHandler.*;
-
 import java.util.Locale;
+
+import static tehnut.morechisels.ConfigHandler.*;
 
 public enum ChiselType {
 
+    BLOODY(durabilityBloody),
+    BOUND(),
+    BEDROCKIUM(durabilityBedrockium),
+    FLUXED(),
     RUBY(durabilityRuby),
     SAPPHIRE(durabilitySapphire),
-    EMERALD(durabilityEmerald),
-    FLUXED(),
-    BLOODY(durabilityBloody),
-    BOUND();
+    EMERALD(durabilityEmerald);
 
     /**
      * Used for all types of durability (RF, EU, etc)

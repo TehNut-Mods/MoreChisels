@@ -12,6 +12,10 @@ public class EnviroChecks {
         return Loader.isModLoaded("EnderIO");
     }
 
+    public static boolean isExtraUtilitiesLoaded() {
+        return Loader.isModLoaded("ExtraUtilities");
+    }
+
     public static boolean isThermalExpansionLoaded() {
         return Loader.isModLoaded("ThermalExpansion");
     }
