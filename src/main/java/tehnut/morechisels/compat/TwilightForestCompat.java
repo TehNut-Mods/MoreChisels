@@ -1,5 +1,6 @@
 package tehnut.morechisels.compat;
 
+import com.cricketcraft.chisel.config.Configurations;
 import net.minecraft.item.Item;
 import tehnut.morechisels.items.ChiselType;
 import tehnut.morechisels.items.ItemChiselBase;
@@ -29,7 +30,12 @@ public class TwilightForestCompat {
     }
 
     private static void registerRecipes() {
-        ItemRecipeRegistry.addStandardChiselRecipe(chiselIronwood, "ironwood");
-        ItemRecipeRegistry.addStandardChiselRecipe(chiselSteeleaf, "steeleaf");
+        if (Configurations.chiselRecipe) {
+            ItemRecipeRegistry.addStandardChiselRecipe(chiselIronwood, "ironwood");
+            ItemRecipeRegistry.addStandardChiselRecipe(chiselSteeleaf, "steeleaf");
+        } else {
+            ItemRecipeRegistry.addModifiedChiselRecipe(chiselIronwood, "ironwood");
+            ItemRecipeRegistry.addModifiedChiselRecipe(chiselSteeleaf, "steeleaf");
+        }
     }
 }
