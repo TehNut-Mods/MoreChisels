@@ -20,6 +20,10 @@ public class EnviroChecks {
         return Loader.isModLoaded("ThermalExpansion");
     }
 
+    public static boolean isTwilightForestLoaded() {
+        return Loader.isModLoaded("TwilightForest");
+    }
+
     public static boolean isRedstoneArsenalLoaded() {
         return Loader.isModLoaded("RedstoneArsenal");
     }

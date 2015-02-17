@@ -12,7 +12,9 @@ public enum ChiselType {
     FLUXED(),
     RUBY(durabilityRuby),
     SAPPHIRE(durabilitySapphire),
-    EMERALD(durabilityEmerald);
+    EMERALD(durabilityEmerald),
+    IRONWOOD(durabilityIronwood),
+    STEELEAF(durabilitySteeleaf);
 
     /**
      * Used for all types of durability (RF, EU, etc)

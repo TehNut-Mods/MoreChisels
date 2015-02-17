@@ -11,5 +11,7 @@ public class CompatRegistry {
             RedstoneFluxCompat.load();
         if (isExtraUtilitiesLoaded())
             ExtraUtilitiesCompat.load();
+        if (isTwilightForestLoaded())
+            TwilightForestCompat.load();
     }
 }

@@ -20,6 +20,8 @@ public class ConfigHandler {
     public static boolean chiselFluxedEnabled;
     public static boolean chiselBoundEnabled;
     public static boolean chiselBedrockiumEnabled;
+    public static boolean chiselIronwoodEnabled;
+    public static boolean chiselSteeleafEnabled;
 //    public static String[] gemChiselWhitelist;
 //    public static String[] gemChiselWhitelistDefaults = { "Emerald:700", "Ruby:700", "Sapphire:700" };
 
@@ -29,6 +31,8 @@ public class ConfigHandler {
     public static int durabilityFluxed;
     public static int durabilityBloody;
     public static int durabilityBedrockium;
+    public static int durabilityIronwood;
+    public static int durabilitySteeleaf;
 
     public static boolean addEnderIOFluxedChiselRecipes;
     public static boolean addThermalExpansionFluxedChiselRecipes;
@@ -50,6 +54,8 @@ public class ConfigHandler {
         chiselFluxedEnabled = config.get(chisels, "chiselFluxedEnabled", true).getBoolean();
         chiselBoundEnabled = config.get(chisels, "chiselBoundEnabled", true).getBoolean();
         chiselBedrockiumEnabled = config.get(chisels, "chiselBedrockiumEnabled", true).getBoolean();
+        chiselIronwoodEnabled = config.get(chisels, "chiselIronwoodEnabled", true).getBoolean();
+        chiselSteeleafEnabled = config.get(chisels, "chiselSteeleafEnabled", true).getBoolean();
 //        gemChiselWhitelist = config.get(chisels, "gemChiselWhitelist", gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix. \nSyntax is: \nGemName:Durability").getStringList();
 
         durabilityRuby = config.get(durability, "durabilityRuby", 700).getInt();
@@ -58,6 +64,8 @@ public class ConfigHandler {
         durabilityFluxed = config.get(durability, "durabilityFluxed", 100000).getInt();
         durabilityBloody = config.get(durability, "durabilityBloody", 20000).getInt();
         durabilityBedrockium = config.get(durability, "durabilityBedrockium", Integer.MAX_VALUE).getInt();
+        durabilityIronwood = config.get(durability, "durabilityIronwood", 750).getInt();
+        durabilitySteeleaf = config.get(durability, "durabilitySteeleaf", 1500).getInt();
 
         addEnderIOFluxedChiselRecipes = config.get(misc, "addEnderIOFluxedChiselRecipes", false, "Requires EnderIO to be present.").getBoolean();
         addThermalExpansionFluxedChiselRecipes = config.get(misc, "addThermalExpansionFluxedChiselRecipes", true, "Requires ThermalExpansion to be present.").getBoolean();
