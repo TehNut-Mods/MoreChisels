@@ -22,8 +22,8 @@ public class ConfigHandler {
     public static boolean chiselBedrockiumEnabled;
     public static boolean chiselIronwoodEnabled;
     public static boolean chiselSteeleafEnabled;
-//    public static String[] gemChiselWhitelist;
-//    public static String[] gemChiselWhitelistDefaults = { "Emerald:700", "Ruby:700", "Sapphire:700" };
+    public static String[] gemChiselWhitelist;
+    private static String[] gemChiselWhitelistDefaults = { "Emerald:700:#22ED4E", "Ruby:700:#DD0707", "Sapphire:700:#1F52F8" };
 
     public static int durabilityRuby;
     public static int durabilitySapphire;
@@ -56,7 +56,7 @@ public class ConfigHandler {
         chiselBedrockiumEnabled = config.get(chisels, "chiselBedrockiumEnabled", true).getBoolean();
         chiselIronwoodEnabled = config.get(chisels, "chiselIronwoodEnabled", true).getBoolean();
         chiselSteeleafEnabled = config.get(chisels, "chiselSteeleafEnabled", true).getBoolean();
-//        gemChiselWhitelist = config.get(chisels, "gemChiselWhitelist", gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix. \nSyntax is: \nGemName:Durability").getStringList();
+        gemChiselWhitelist = config.get(chisels, "gemChiselWhitelist", gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix. \nSyntax is: \nGemName:Durability:HexColor").getStringList();
 
         durabilityRuby = config.get(durability, "durabilityRuby", 700).getInt();
         durabilitySapphire = config.get(durability, "durabilitySapphire", 700).getInt();

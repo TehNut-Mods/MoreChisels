@@ -1,8 +1,11 @@
 package tehnut.morechisels.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
+import tehnut.morechisels.ConfigHandler;
+import tehnut.morechisels.items.chisel.ItemChiselGem;
 
 import java.util.ArrayList;
 
@@ -11,25 +14,32 @@ import static tehnut.morechisels.ConfigHandler.*;
 public class ItemRegistry {
 
     // Items
-    public static Item chiselRuby;
-    public static Item chiselSapphire;
-    public static Item chiselEmerald;
+    public static Item chiselGem[];
 
-    public static ArrayList<String> chisels = new ArrayList<String>();
+    public static int gemChiselCount = 0;
 
     public static void registerItems() {
-
         // Gems
-        chiselRuby = new ItemChiselBase(ChiselType.RUBY);
-        registerOreItem(chiselRuby, "ItemChiselRuby", chiselRubyEnabled, "gemRuby");
-        chiselSapphire = new ItemChiselBase(ChiselType.SAPPHIRE);
-        registerOreItem(chiselSapphire, "ItemChiselSapphire", chiselSapphireEnabled, "gemSapphire");
-        chiselEmerald = new ItemChiselBase(ChiselType.EMERALD);
-        registerOreItem(chiselEmerald, "ItemChiselEmerald", chiselEmeraldEnabled, "gemEmerald");
+        for (String ore : OreDictionary.getOreNames()) {
+            if (ore.startsWith("gem")) {
+                String gem = ore.substring(3);
+
+                chiselGem = new Item[ConfigHandler.gemChiselWhitelist.length];
+                for (String whitelist : ConfigHandler.gemChiselWhitelist) {
+                    String[] splitWhitelist = whitelist.split(":");
+
+                    if (gem.equals(splitWhitelist[0])) {
+                        chiselGem[gemChiselCount] = new ItemChiselGem(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), true);
+                        registerOreItem(chiselGem[gemChiselCount], "ItemChisel" + splitWhitelist[0], "gem" + splitWhitelist[0]);
+                        gemChiselCount++;
+                    }
+                }
+            }
+        }
     }
 
-    public static void registerOreItem(Item item, String name, boolean config, String ore) {
-        if (config && !OreDictionary.getOres(ore).isEmpty())
+    public static void registerOreItem(Item item, String name, String ore) {
+        if (!OreDictionary.getOres(ore).isEmpty())
             GameRegistry.registerItem(item, name);
     }
 

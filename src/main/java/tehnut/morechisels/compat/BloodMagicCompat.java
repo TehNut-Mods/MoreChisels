@@ -5,11 +5,13 @@ import com.cricketcraft.chisel.init.ChiselItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
+import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.items.ItemRegistry;
 import tehnut.morechisels.items.chisel.ItemChiselBound;
 import tehnut.morechisels.util.EnviroChecks;
 
 import static tehnut.morechisels.ConfigHandler.chiselBoundEnabled;
+import static tehnut.morechisels.ConfigHandler.gemChiselWhitelist;
 
 public class BloodMagicCompat {
 
@@ -28,9 +30,8 @@ public class BloodMagicCompat {
     private static void registerRecipes() {
         addBindingRecipe(ChiselItems.chisel, "ingotIron");
         addBindingRecipe(ChiselItems.diamondChisel, "gemDiamond");
-        addBindingRecipe(ItemRegistry.chiselRuby, "gemRuby");
-        addBindingRecipe(ItemRegistry.chiselSapphire, "gemSapphire");
-        addBindingRecipe(ItemRegistry.chiselEmerald, "gemEmerald");
+
+        // TODO - Add gem chisel binding recipes
     }
 
     private static void addBindingRecipe(Item chisel, String type) {

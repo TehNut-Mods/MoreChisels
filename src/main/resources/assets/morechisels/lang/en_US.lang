@@ -2,14 +2,12 @@
 gui.morechisels.config.title=More Chisels Configuration
 
 # Items
-item.morechisels.chisel.ruby.name=Ruby Chisel
-item.morechisels.chisel.sapphire.name=Sapphire Chisel
-item.morechisels.chisel.emerald.name=Emerald Chisel
 item.morechisels.chisel.bound.name=Bound Chisel
 item.morechisels.chisel.fluxed.name=Fluxed Chisel
 item.morechisels.chisel.bedrockium.name=Bedrockium Chisel
 item.morechisels.chisel.ironwood.name=Ironwood Chisel
 item.morechisels.chisel.steeleaf.name=Steeleaf Chisel
+item.morechisels.chisel.gem.name=%s Chisel
 
 # Tooltips
 tip.morechisels.pretty=Let's make all the pretty!
