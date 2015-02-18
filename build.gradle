@@ -31,10 +31,12 @@ if (new File(projectDir, '.git').exists()) {
 }
 
 repositories {
-	
+	maven { url = "http://coloredlightscore.us.to/maven/" }
 }
 
 dependencies {
+  compile "chisel-2-dev.com.cricketcraft.chise:Chisel2:${chisel_version}:deobf"
+
 	compile fileTree(dir: 'libs', include: '*.jar')
 }
 
