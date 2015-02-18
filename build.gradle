@@ -12,7 +12,6 @@ buildscript {
 
 apply plugin: 'forge'
 apply plugin: 'maven-publish'
-apply plugin: 'curseforge'
 
 def build_number = 'CUSTOM'
 
@@ -32,13 +31,11 @@ if (new File(projectDir, '.git').exists()) {
 }
 
 repositories {
-	maven { url = "http://coloredlightscore.us.to/maven/" }
+	maven { url = "http://coloredlightscore.us.to/maven/chisel-2-dev/" }
 }
 
 dependencies {
-  compile "chisel-2-dev.com.cricketcraft.chise:Chisel2:${chisel_version}:deobf"
-
-	compile fileTree(dir: 'libs', include: '*.jar')
+  compile "com.cricketcraft.chisel:Chisel2:${chisel_version}:deobf"
 }
 
 minecraft {
@@ -119,11 +116,6 @@ publishing {
     }
 }
 
-curse {
-    projectId = '227904'
-    apiKey = project.curseForgeApiKey
-    releaseType = 'release'
-
-    displayName = 'More Chisels'
-    addGameVersion '1.7.10'
+fileTree('gradle').include('curse.gradle').collect().sort().each {
+    apply from: it
 }
