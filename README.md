@@ -4,7 +4,7 @@ Assorted chisels for [Chisel-2](https://github.com/TheCricket/Chisel-2).
 
 ##Downloads
 
-Downloads for MoreChisels (as well as all of my other mods) can be found on my [Jenkins](http://tehnut.info/jenkins/).
+Downloads for MoreChisels (as well as all of my other mods) can be found on my [Jenkins](http://tehnut.info/jenkins/) or [CurseForge](http://minecraft.curseforge.com/mc-mods/227904-morechisels).
 
 ##Chisels done:
 
