@@ -12,6 +12,7 @@ buildscript {
 
 apply plugin: 'forge'
 apply plugin: 'maven-publish'
+apply plugin: 'curseforge'
 
 def build_number = 'CUSTOM'
 
@@ -116,4 +117,13 @@ publishing {
             mavenLocal()
         }
     }
+}
+
+curse {
+    projectId = '227904'
+    apiKey = project.curseForgeApiKey
+    releaseType = 'release'
+
+    displayName = 'More Chisels'
+    addGameVersion '1.7.10'
 }
