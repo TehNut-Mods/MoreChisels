@@ -26,6 +26,7 @@ public class ConfigGui extends GuiConfig {
 		list.add(new ConfigElement(config.getCategory(chisels.toLowerCase())));
 		list.add(new ConfigElement(config.getCategory(durability.toLowerCase())));
 		list.add(new ConfigElement(config.getCategory(misc.toLowerCase())));
+		list.add(new ConfigElement(config.getCategory(recipes.toLowerCase())));
 
 		return list;
 	}

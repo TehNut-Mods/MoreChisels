@@ -10,9 +10,6 @@ public enum ChiselType {
     BOUND(),
     BEDROCKIUM(durabilityBedrockium),
     FLUXED(),
-    RUBY(durabilityRuby),
-    SAPPHIRE(durabilitySapphire),
-    EMERALD(durabilityEmerald),
     IRONWOOD(durabilityIronwood),
     STEELEAF(durabilitySteeleaf);
 

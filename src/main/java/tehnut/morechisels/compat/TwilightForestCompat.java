@@ -30,7 +30,7 @@ public class TwilightForestCompat {
     }
 
     private static void registerRecipes() {
-        if (Configurations.chiselRecipe) {
+        if (!Configurations.chiselRecipe) {
             ItemRecipeRegistry.addStandardChiselRecipe(chiselIronwood, "ironwood");
             ItemRecipeRegistry.addStandardChiselRecipe(chiselSteeleaf, "steeleaf");
         } else {

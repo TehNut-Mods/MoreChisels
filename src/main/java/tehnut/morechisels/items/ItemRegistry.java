@@ -38,11 +38,24 @@ public class ItemRegistry {
         }
     }
 
+    /**
+     *
+     * @param item - Item to register
+     * @param name - Name of Item to register
+     * @param ore - OreDict item required in order to register
+     */
     public static void registerOreItem(Item item, String name, String ore) {
         if (!OreDictionary.getOres(ore).isEmpty())
             GameRegistry.registerItem(item, name);
     }
 
+    /**
+     *
+     * @param item - Item to register
+     * @param name - Name of Item to register
+     * @param config - Does the config allow the item
+     * @param modLoaded - Is the required mod loaded
+     */
     public static void registerCompatItem(Item item, String name, boolean config, boolean modLoaded) {
         if (config && modLoaded)
             GameRegistry.registerItem(item, name);

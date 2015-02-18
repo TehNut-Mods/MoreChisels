@@ -8,7 +8,6 @@ import net.minecraft.util.IIcon;
 import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.ModInformation;
 import tehnut.morechisels.items.ItemChiselBase;
-import tehnut.morechisels.items.ItemRegistry;
 import tehnut.morechisels.util.TextHelper;
 import tehnut.morechisels.util.Utils;
 

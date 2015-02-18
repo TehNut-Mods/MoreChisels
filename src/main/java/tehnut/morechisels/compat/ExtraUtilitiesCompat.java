@@ -28,7 +28,7 @@ public class ExtraUtilitiesCompat {
     private static void registerRecipes() {
         Item bedrockiumIngot = GameRegistry.findItem("ExtraUtilities", "bedrockiumIngot");
 
-        if (Configurations.chiselRecipe)
+        if (!Configurations.chiselRecipe)
             ItemRecipeRegistry.addStandardChiselRecipe(chiselBedrockium, bedrockiumIngot);
         else
             ItemRecipeRegistry.addModifiedChiselRecipe(chiselBedrockium, bedrockiumIngot);
