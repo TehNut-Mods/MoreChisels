@@ -8,9 +8,12 @@ Downloads for MoreChisels (as well as all of my other mods) can be found on my [
 
 ##Chisels done:
 
-* Gems: Ruby, Sapphire, Emerald
+* Gems: Whitelisting in config to add chisels OreDict gems
 * Fluxed Chisel: Runs on Redstone Flux.
 * Bound Chisel: Runs on your Blood Magic LP network.
+* Ironwood/Steeleaf: Twilight Forest compat 
+* Bedrockium: Extra Utilities compat
+* Skyroot/Holystone/Zanite/Gravitite: Aether II compat
 
 ##Chisels to come:
 
