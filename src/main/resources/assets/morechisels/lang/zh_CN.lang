@@ -2,11 +2,18 @@
 gui.morechisels.config.title=更多凿 模组配置
 
 # Items
-item.morechisels.chisel.ruby.name=红宝石凿子
-item.morechisels.chisel.sapphire.name=蓝宝石凿子
-item.morechisels.chisel.emerald.name=绿宝石凿子
 item.morechisels.chisel.bound.name=约束凿子
 item.morechisels.chisel.fluxed.name=红石充能凿子
+item.morechisels.chisel.bedrockium.name=基岩凿子
+item.morechisels.chisel.ironwood.name=铁木凿子
+item.morechisels.chisel.steeleaf.name=钢叶凿子
+item.morechisels.chisel.manasteel.name=魔力钢凿子
+item.morechisels.chisel.elementium.name=源质钢凿子
+item.morechisels.chisel.skyroot.name=天根木凿子
+item.morechisels.chisel.holystone.name=神圣石凿子
+item.morechisels.chisel.zanite.name=紫玉凿子
+item.morechisels.chisel.gravitite.name=重力凿子
+item.morechisels.chisel.gem.name=%s凿子
 
 # Tooltips
 tip.morechisels.pretty=让一切变的精致又华丽
@@ -14,6 +21,7 @@ tip.morechisels.activated=激活
 tip.morechisels.deactivated=未激活
 tip.morechisels.bound.owner=主人: %s
 tip.morechisels.energy=%s / %s RF
+tip.morechisels.bedrockium=为什么你会想要这个...
 
 # Chat
 
