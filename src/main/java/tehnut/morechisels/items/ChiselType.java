@@ -11,7 +11,13 @@ public enum ChiselType {
     BEDROCKIUM(durabilityBedrockium),
     FLUXED(),
     IRONWOOD(durabilityIronwood),
-    STEELEAF(durabilitySteeleaf);
+    STEELEAF(durabilitySteeleaf),
+    MANASTEEL(durabilityManasteel),
+    ELEMENTIUM(durabilityElementium),
+    SKYROOT(durabilitySkyroot),
+    HOLYSTONE(durabilityHolystone),
+    ZANITE(durabilityZanite),
+    GRAVITITE(durabilityGravitite);
 
     /**
      * Used for all types of durability (RF, EU, etc)

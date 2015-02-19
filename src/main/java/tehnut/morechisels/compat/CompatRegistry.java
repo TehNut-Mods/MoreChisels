@@ -13,5 +13,9 @@ public class CompatRegistry {
             ExtraUtilitiesCompat.load();
         if (isTwilightForestLoaded())
             TwilightForestCompat.load();
+        if (isBotaniaLoaded())
+            BotaniaCompat.load();
+        if (isAetherIILoaded())
+            AetherIICompat.load();
     }
 }

@@ -7,6 +7,12 @@ item.morechisels.chisel.fluxed.name=Fluxed Chisel
 item.morechisels.chisel.bedrockium.name=Bedrockium Chisel
 item.morechisels.chisel.ironwood.name=Ironwood Chisel
 item.morechisels.chisel.steeleaf.name=Steeleaf Chisel
+item.morechisels.chisel.manasteel.name=Manasteel Chisel
+item.morechisels.chisel.elementium.name=Elementium Chisel
+item.morechisels.chisel.skyroot.name=Skyroot Chisel
+item.morechisels.chisel.holystone.name=Holystone Chisel
+item.morechisels.chisel.zanite.name=Zanite Chisel
+item.morechisels.chisel.gravitite.name=Gravitite Chisel
 item.morechisels.chisel.gem.name=%s Chisel
 
 # Tooltips

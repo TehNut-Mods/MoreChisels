@@ -31,7 +31,12 @@ public class BloodMagicCompat {
         addBindingRecipe(ChiselItems.chisel, "ingotIron");
         addBindingRecipe(ChiselItems.diamondChisel, "gemDiamond");
 
-        // TODO - Add gem chisel binding recipes
+        for (int i = 0; i < ItemRegistry.chiselGem.length; i++)
+            addBindingRecipe(ItemRegistry.chiselGem[i]);
+    }
+
+    private static void addBindingRecipe(Item chisel) {
+        BindingRegistry.registerRecipe(new ItemStack(chiselBound), new ItemStack(chisel));
     }
 
     private static void addBindingRecipe(Item chisel, String type) {

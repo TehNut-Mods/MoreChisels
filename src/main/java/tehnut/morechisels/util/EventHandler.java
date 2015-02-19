@@ -16,7 +16,7 @@ public class EventHandler {
     public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
         if (eventArgs.modID.equals(ModInformation.ID)) {
             ConfigHandler.syncConfig();
-            MoreChisels.logger.info(TextHelper.localize("info.morechisels.console.config.refresh"));
+            LogHelper.info(TextHelper.localize("info.morechisels.console.config.refresh"));
         }
     }
 

@@ -4,8 +4,16 @@ import cpw.mods.fml.common.Loader;
 
 public class EnviroChecks {
 
+    public static boolean isAetherIILoaded() {
+        return Loader.isModLoaded("aether");
+    }
+
     public static boolean isBloodMagicLoaded() {
         return Loader.isModLoaded("AWWayofTime");
+    }
+
+    public static boolean isBotaniaLoaded() {
+        return Loader.isModLoaded("Botania");
     }
 
     public static boolean isEnderIOLoaded() {

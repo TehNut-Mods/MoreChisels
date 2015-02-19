@@ -1,6 +1,5 @@
 package tehnut.morechisels.compat;
 
-import com.cricketcraft.chisel.config.Configurations;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import tehnut.morechisels.items.ChiselType;
@@ -28,9 +27,6 @@ public class ExtraUtilitiesCompat {
     private static void registerRecipes() {
         Item bedrockiumIngot = GameRegistry.findItem("ExtraUtilities", "bedrockiumIngot");
 
-        if (!Configurations.chiselRecipe)
-            ItemRecipeRegistry.addStandardChiselRecipe(chiselBedrockium, bedrockiumIngot);
-        else
-            ItemRecipeRegistry.addModifiedChiselRecipe(chiselBedrockium, bedrockiumIngot);
+        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselBedrockium, bedrockiumIngot);
     }
 }
