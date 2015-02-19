@@ -12,6 +12,8 @@ public enum ChiselType {
     FLUXED(),
     IRONWOOD(durabilityIronwood),
     STEELEAF(durabilitySteeleaf),
+    KNIGHTMETAL(durabilityKnightmetal),
+    FIERY(durabilityFiery),
     MANASTEEL(durabilityManasteel),
     ELEMENTIUM(durabilityElementium),
     SKYROOT(durabilitySkyroot),
