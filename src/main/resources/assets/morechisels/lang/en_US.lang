@@ -15,6 +15,8 @@ item.morechisels.chisel.skyroot.name=Skyroot Chisel
 item.morechisels.chisel.holystone.name=Holystone Chisel
 item.morechisels.chisel.zanite.name=Zanite Chisel
 item.morechisels.chisel.gravitite.name=Gravitite Chisel
+item.morechisels.chisel.thaumium.name=Thaumium Chisel
+item.morechisels.chisel.voidmetal.name=Voidmetal Chisel
 item.morechisels.chisel.gem.name=%s Chisel
 
 # Tooltips
