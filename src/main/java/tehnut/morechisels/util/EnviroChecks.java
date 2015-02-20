@@ -24,16 +24,20 @@ public class EnviroChecks {
         return Loader.isModLoaded("ExtraUtilities");
     }
 
+    public static boolean isThaumcraftLoaded() {
+        return Loader.isModLoaded("Thaumcraft");
+    }
+
     public static boolean isThermalExpansionLoaded() {
         return Loader.isModLoaded("ThermalExpansion");
     }
 
-    public static boolean isTwilightForestLoaded() {
-        return Loader.isModLoaded("TwilightForest");
-    }
-
     public static boolean isRedstoneArsenalLoaded() {
         return Loader.isModLoaded("RedstoneArsenal");
+    }
+
+    public static boolean isTwilightForestLoaded() {
+        return Loader.isModLoaded("TwilightForest");
     }
 
     public static boolean isRFAPILoaded() {

@@ -4,6 +4,7 @@ gui.morechisels.config.title=More Chisels Configuration
 # Items
 item.morechisels.chisel.bound.name=Bound Chisel
 item.morechisels.chisel.fluxed.name=Fluxed Chisel
+item.morechisels.chisel.unstable.name=Unstable Chisel
 item.morechisels.chisel.bedrockium.name=Bedrockium Chisel
 item.morechisels.chisel.ironwood.name=Ironwood Chisel
 item.morechisels.chisel.steeleaf.name=Steeleaf Chisel

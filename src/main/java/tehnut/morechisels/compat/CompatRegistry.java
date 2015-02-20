@@ -17,5 +17,7 @@ public class CompatRegistry {
             BotaniaCompat.load();
         if (isAetherIILoaded())
             AetherIICompat.load();
+        if (isThaumcraftLoaded())
+            ThaumcraftCompat.load();
     }
 }

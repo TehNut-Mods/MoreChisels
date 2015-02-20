@@ -6,20 +6,13 @@ import static tehnut.morechisels.ConfigHandler.*;
 
 public enum ChiselType {
 
-    BLOODY(durabilityBloody),
-    BOUND(),
-    BEDROCKIUM(durabilityBedrockium),
-    FLUXED(),
-    IRONWOOD(durabilityIronwood),
-    STEELEAF(durabilitySteeleaf),
-    KNIGHTMETAL(durabilityKnightmetal),
-    FIERY(durabilityFiery),
-    MANASTEEL(durabilityManasteel),
-    ELEMENTIUM(durabilityElementium),
-    SKYROOT(durabilitySkyroot),
-    HOLYSTONE(durabilityHolystone),
-    ZANITE(durabilityZanite),
-    GRAVITITE(durabilityGravitite);
+    BLOODY(durabilityBloody), BOUND(), // Blood Magic
+    BEDROCKIUM(durabilityBedrockium), UNSTABLE(durabilityUnstable), // Extra Utilities
+    FLUXED(), // RF
+    IRONWOOD(durabilityIronwood), STEELEAF(durabilitySteeleaf), KNIGHTMETAL(durabilityKnightmetal), FIERY(durabilityFiery), // Twilight Forest
+    MANASTEEL(durabilityManasteel), ELEMENTIUM(durabilityElementium), // Botania
+    SKYROOT(durabilitySkyroot), HOLYSTONE(durabilityHolystone), ZANITE(durabilityZanite), GRAVITITE(durabilityGravitite), // Aether II
+    THAUMIUM(durabilityThaumium), VOIDMETAL(durabilityVoidmetal); // Thaumcraft
 
     /**
      * Used for all types of durability (RF, EU, etc)
