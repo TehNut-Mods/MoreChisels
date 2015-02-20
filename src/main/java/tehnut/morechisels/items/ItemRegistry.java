@@ -20,9 +20,6 @@ public class ItemRegistry {
 
     public static void registerItems() {
         // Gems
-        OreDictionary.registerOre("gemSapphire", Items.apple);
-        OreDictionary.registerOre("gemRuby", Items.carrot);
-
         chiselGem = new Item[ConfigHandler.gemChiselWhitelist.length];
 
         for (String ore : OreDictionary.getOreNames()) {
