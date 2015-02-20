@@ -35,6 +35,7 @@ public class MoreChisels {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        proxy.load();
 
         ItemRegistry.registerItems();
         ItemRecipeRegistry.registerRecipes();

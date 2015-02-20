@@ -1,12 +1,17 @@
 package tehnut.morechisels.util;
 
+import com.cricketcraft.chisel.init.ChiselItems;
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraft.client.renderer.ItemRenderer;
+import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
+import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import org.lwjgl.opengl.GL11;
 import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.ModInformation;
-import tehnut.morechisels.MoreChisels;
 
 import java.util.List;
 
@@ -29,5 +34,30 @@ public class EventHandler {
         if (stack != null)
             if (stack.getDisplayName().equals(TextHelper.localize("item.morechisels.chisel.bedrockium.name")))
                 list.add(TextHelper.localize("tip.morechisels.bedrockium"));
+    }
+
+    public static class ClientEventHandler {
+
+        String specialPeople[] = {
+            /*TehNut*/ "eb21559e-bb22-46f2-897b-71eee2d5c09b",
+            /*TehNut Dev*/ "2ec627b4-782c-33b9-8668-a9992029ca84",
+            /*BBoldt*/ "c30338e2-e28a-4c90-b940-bfe9197f9e82",
+            /*ChatFawkes*/ "b7399e3a-e08d-4e2f-b78a-0135bba240bb"
+        };
+
+        String chiselDevs[] = {
+            /*CptSpaceToaster*/ "6dee4d8f-56a2-4cad-8a25-2505856bb4c9",
+            /*Drullkus*/ "5399b615-3440-4c66-939d-ab1375952ac3",
+            /*tterrag*/ "671516b1-4fb3-4c03-aa7c-9c88cfab3ae8"
+        };
+
+
+        @SubscribeEvent
+        public void onPlayerRender(RenderPlayerEvent.Specials.Pre event) {
+            if (ConfigHandler.addCoolStuffForCoolPeople) {
+                Utils.renderItemOnPlayersBack(new ItemStack(ChiselItems.diamondChisel), specialPeople, event.entityPlayer);
+                Utils.renderItemOnPlayersBack(new ItemStack(ChiselItems.chisel), chiselDevs, event.entityPlayer);
+            }
+        }
     }
 }
