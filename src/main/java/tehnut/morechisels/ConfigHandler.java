@@ -99,8 +99,8 @@ public class ConfigHandler {
         durabilityGravitite = config.get(durability, "durabilityGravitite", 720).getInt();
 
         enableLogging = config.get(misc, "enableLogging", true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.").getBoolean();
-        manaPerChiseling = config.get(misc, "manaPerChiseling", 20, "Amount of Mana to drain from the player's inventory everytime you chisel something.").getInt();
-        lifeEssencePerRepair = config.get(misc, "lifeEssencePerRepair", 200, "Amount of LP to drain from the player each time the Bloody Chisel repairs itself.").getInt();
+//        manaPerChiseling = config.get(misc, "manaPerChiseling", 20, "Amount of Mana to drain from the player's inventory everytime you chisel something.").getInt();
+//        lifeEssencePerRepair = config.get(misc, "lifeEssencePerRepair", 200, "Amount of LP to drain from the player each time the Bloody Chisel repairs itself.").getInt();
         addCoolStuffForCoolPeople = config.get(misc, "addCoolStuffForCoolPeople", true, "Disable this if you don't like cool people.").getBoolean();
 
         addEnderIOFluxedChiselRecipes = config.get(recipes, "addEnderIOFluxedChiselRecipes", false, "Requires EnderIO to be present.").getBoolean();
