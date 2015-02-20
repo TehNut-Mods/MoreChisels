@@ -25,6 +25,7 @@ public class ItemRecipeRegistry {
      *
      * @param chisel - Chisel to add recipe for
      * @param type - OreDict entry to use in recipe
+     * @param chiselEnabled - Is the chisel enabled in the config
      */
     public static void addConfiguredChiselRecipe(Item chisel, String type, boolean chiselEnabled) {
         if (!Configurations.chiselRecipe)
@@ -38,6 +39,7 @@ public class ItemRecipeRegistry {
      *
      * @param chisel - Chisel to add recipe for
      * @param type - Item to use in recipe
+     * @param chiselEnabled - Is the chisel enabled in the config
      */
     public static void addConfiguredChiselRecipe(Item chisel, Item type, boolean chiselEnabled) {
         if (!Configurations.chiselRecipe)
@@ -51,6 +53,7 @@ public class ItemRecipeRegistry {
      *
      * @param chisel - Chisel to add recipe for
      * @param type - Item to use in recipe
+     * @param chiselEnabled - Is the chisel enabled in the config
      */
     public static void addConfiguredChiselRecipe(Item chisel, Block type, boolean chiselEnabled) {
         if (!Configurations.chiselRecipe)
@@ -64,6 +67,7 @@ public class ItemRecipeRegistry {
      *
      * @param chisel - Chisel to add recipe for
      * @param type - OreDict entry to use in recipe
+     * @param chiselEnabled - Is the chisel enabled in the config
      */
     public static void addStandardChiselRecipe(Item chisel, String type, boolean chiselEnabled) {
         if (!OreDictionary.getOres(type).isEmpty() && chiselEnabled)
@@ -75,6 +79,7 @@ public class ItemRecipeRegistry {
      *
      * @param chisel - Chisel to add recipe for
      * @param type - Item to use in recipe
+     * @param chiselEnabled - Is the chisel enabled in the config
      */
     public static void addStandardChiselRecipe(Item chisel, Item type, boolean chiselEnabled) {
         if (type != null && chiselEnabled)
@@ -86,6 +91,7 @@ public class ItemRecipeRegistry {
      *
      * @param chisel - Chisel to add recipe for
      * @param type - Block to use in recipe
+     * @param chiselEnabled - Is the chisel enabled in the config
      */
     public static void addStandardChiselRecipe(Item chisel, Block type, boolean chiselEnabled) {
         if (type != null && chiselEnabled)
@@ -97,6 +103,7 @@ public class ItemRecipeRegistry {
      *
      * @param chisel - Chisel to add recipe for
      * @param type - OreDict entry to use in recipe
+     * @param chiselEnabled - Is the chisel enabled in the config
      */
     public static void addModifiedChiselRecipe(Item chisel, String type, boolean chiselEnabled) {
         if (!OreDictionary.getOres(type).isEmpty() && chiselEnabled)
@@ -108,6 +115,7 @@ public class ItemRecipeRegistry {
      *
      * @param chisel - Chisel to add recipe for
      * @param type - Item to use in recipe
+     * @param chiselEnabled - Is the chisel enabled in the config
      */
     public static void addModifiedChiselRecipe(Item chisel, Item type, boolean chiselEnabled) {
         if (type != null && chiselEnabled)
@@ -119,6 +127,7 @@ public class ItemRecipeRegistry {
      *
      * @param chisel - Chisel to add recipe for
      * @param type - Block to use in recipe
+     * @param chiselEnabled - Is the chisel enabled in the config
      */
     public static void addModifiedChiselRecipe(Item chisel, Block type, boolean chiselEnabled) {
         if (type != null && chiselEnabled)
