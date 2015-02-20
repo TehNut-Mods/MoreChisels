@@ -3,6 +3,8 @@ package tehnut.morechisels.util;
 import com.cricketcraft.chisel.init.ChiselItems;
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
@@ -49,10 +51,11 @@ public class EventHandler {
         };
 
         @SubscribeEvent
+        @SideOnly(Side.CLIENT)
         public void onPlayerRender(RenderPlayerEvent.Specials.Pre event) {
             if (ConfigHandler.addCoolStuffForCoolPeople) {
-                Utils.renderItemOnPlayersBack(new ItemStack(ChiselItems.diamondChisel), specialPeople, event.entityPlayer);
-                Utils.renderItemOnPlayersBack(new ItemStack(ChiselItems.chisel), chiselDevs, event.entityPlayer);
+                RenderUtils.renderItemOnPlayersBack(new ItemStack(ChiselItems.diamondChisel), specialPeople, event.entityPlayer);
+                RenderUtils.renderItemOnPlayersBack(new ItemStack(ChiselItems.chisel), chiselDevs, event.entityPlayer);
             }
         }
     }
