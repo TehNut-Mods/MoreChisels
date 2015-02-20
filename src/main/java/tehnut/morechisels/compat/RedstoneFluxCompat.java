@@ -11,6 +11,7 @@ import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.items.ItemRegistry;
 import tehnut.morechisels.items.chisel.ItemChiselFluxed;
 import tehnut.morechisels.util.EnviroChecks;
+import tehnut.morechisels.util.LogHelper;
 import tehnut.morechisels.util.Utils;
 
 import static tehnut.morechisels.ConfigHandler.chiselFluxedEnabled;
@@ -20,6 +21,7 @@ public class RedstoneFluxCompat {
     public static Item chiselFluxed;
 
     public static void load() {
+        LogHelper.info("RF compatibility is enabled and running");
         registerItems();
         registerRecipes();
     }

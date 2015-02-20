@@ -7,6 +7,7 @@ import tehnut.morechisels.items.ItemChiselBase;
 import tehnut.morechisels.items.ItemRecipeRegistry;
 import tehnut.morechisels.items.ItemRegistry;
 import tehnut.morechisels.util.EnviroChecks;
+import tehnut.morechisels.util.LogHelper;
 
 import static tehnut.morechisels.ConfigHandler.chiselBedrockiumEnabled;
 
@@ -15,6 +16,7 @@ public class ExtraUtilitiesCompat {
     public static Item chiselBedrockium;
 
     public static void load() {
+        LogHelper.info("ExtraUtilities compatibility is enabled and running");
         registerItems();
         registerRecipes();
     }
@@ -27,6 +29,6 @@ public class ExtraUtilitiesCompat {
     private static void registerRecipes() {
         Item bedrockiumIngot = GameRegistry.findItem("ExtraUtilities", "bedrockiumIngot");
 
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselBedrockium, bedrockiumIngot);
+        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselBedrockium, bedrockiumIngot, chiselBedrockiumEnabled);
     }
 }

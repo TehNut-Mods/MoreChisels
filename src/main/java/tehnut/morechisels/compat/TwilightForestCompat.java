@@ -7,6 +7,7 @@ import tehnut.morechisels.items.ItemChiselBase;
 import tehnut.morechisels.items.ItemRecipeRegistry;
 import tehnut.morechisels.items.ItemRegistry;
 import tehnut.morechisels.util.EnviroChecks;
+import tehnut.morechisels.util.LogHelper;
 
 import static tehnut.morechisels.ConfigHandler.*;
 
@@ -18,6 +19,7 @@ public class TwilightForestCompat {
     public static Item chiselFiery;
 
     public static void load() {
+        LogHelper.info("TwilightForest compatibility is enabled and running");
         registerItems();
         registerRecipes();
     }
@@ -40,9 +42,9 @@ public class TwilightForestCompat {
         Item knightmetalIngot = GameRegistry.findItem("TwilightForest", "item.knightMetal");
         Item fieryIngot = GameRegistry.findItem("TwilightForest", "item.fieryIngot");
 
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselIronwood, "ironwood");
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselSteeleaf, "steeleaf");
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselKnightmetal, knightmetalIngot);
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselFiery, fieryIngot);
+        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselIronwood, "ironwood", chiselIronwoodEnabled);
+        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselSteeleaf, "steeleaf", chiselSteeleafEnabled);
+        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselKnightmetal, knightmetalIngot, chiselKnightmetalEnabled);
+        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselFiery, fieryIngot, chiselFieryEnabled);
     }
 }

@@ -16,8 +16,7 @@ public class ItemRecipeRegistry {
         for (int i = 0; i < ItemRegistry.chiselGem.length; i++) {
             String[] gemType = ConfigHandler.gemChiselWhitelist[i].split(":");
 
-            addConfiguredChiselRecipe(ItemRegistry.chiselGem[i], "gem" + gemType[0]);
-            LogHelper.info("Added recipe for gem" + gemType[0]);
+            addConfiguredChiselRecipe(ItemRegistry.chiselGem[i], "gem" + gemType[0], true);
         }
     }
 
@@ -27,11 +26,11 @@ public class ItemRecipeRegistry {
      * @param chisel - Chisel to add recipe for
      * @param type - OreDict entry to use in recipe
      */
-    public static void addConfiguredChiselRecipe(Item chisel, String type) {
+    public static void addConfiguredChiselRecipe(Item chisel, String type, boolean chiselEnabled) {
         if (!Configurations.chiselRecipe)
-            addStandardChiselRecipe(chisel, type);
+            addStandardChiselRecipe(chisel, type, chiselEnabled);
         else
-            addModifiedChiselRecipe(chisel, type);
+            addModifiedChiselRecipe(chisel, type, chiselEnabled);
     }
 
     /**
@@ -40,11 +39,11 @@ public class ItemRecipeRegistry {
      * @param chisel - Chisel to add recipe for
      * @param type - Item to use in recipe
      */
-    public static void addConfiguredChiselRecipe(Item chisel, Item type) {
+    public static void addConfiguredChiselRecipe(Item chisel, Item type, boolean chiselEnabled) {
         if (!Configurations.chiselRecipe)
-            addStandardChiselRecipe(chisel, type);
+            addStandardChiselRecipe(chisel, type, chiselEnabled);
         else
-            addModifiedChiselRecipe(chisel, type);
+            addModifiedChiselRecipe(chisel, type, chiselEnabled);
     }
 
     /**
@@ -53,11 +52,11 @@ public class ItemRecipeRegistry {
      * @param chisel - Chisel to add recipe for
      * @param type - Item to use in recipe
      */
-    public static void addConfiguredChiselRecipe(Item chisel, Block type) {
+    public static void addConfiguredChiselRecipe(Item chisel, Block type, boolean chiselEnabled) {
         if (!Configurations.chiselRecipe)
-            addStandardChiselRecipe(chisel, type);
+            addStandardChiselRecipe(chisel, type, chiselEnabled);
         else
-            addModifiedChiselRecipe(chisel, type);
+            addModifiedChiselRecipe(chisel, type, chiselEnabled);
     }
 
     /**
@@ -66,9 +65,9 @@ public class ItemRecipeRegistry {
      * @param chisel - Chisel to add recipe for
      * @param type - OreDict entry to use in recipe
      */
-    public static void addStandardChiselRecipe(Item chisel, String type) {
-        if (!OreDictionary.getOres(type).isEmpty())
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1, 0), " O", "S ", 'O', type, 'S', "stickWood"));
+    public static void addStandardChiselRecipe(Item chisel, String type, boolean chiselEnabled) {
+        if (!OreDictionary.getOres(type).isEmpty() && chiselEnabled)
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " O", "S ", 'O', type, 'S', "stickWood"));
     }
 
     /**
@@ -77,9 +76,9 @@ public class ItemRecipeRegistry {
      * @param chisel - Chisel to add recipe for
      * @param type - Item to use in recipe
      */
-    public static void addStandardChiselRecipe(Item chisel, Item type) {
-        if (type != null)
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1, 0), " O", "S ", 'O', type, 'S', "stickWood"));
+    public static void addStandardChiselRecipe(Item chisel, Item type, boolean chiselEnabled) {
+        if (type != null && chiselEnabled)
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " O", "S ", 'O', type, 'S', "stickWood"));
     }
 
     /**
@@ -88,9 +87,9 @@ public class ItemRecipeRegistry {
      * @param chisel - Chisel to add recipe for
      * @param type - Block to use in recipe
      */
-    public static void addStandardChiselRecipe(Item chisel, Block type) {
-        if (type != null)
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1, 0), " O", "S ", 'O', type, 'S', "stickWood"));
+    public static void addStandardChiselRecipe(Item chisel, Block type, boolean chiselEnabled) {
+        if (type != null && chiselEnabled)
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " O", "S ", 'O', type, 'S', "stickWood"));
     }
 
     /**
@@ -99,9 +98,9 @@ public class ItemRecipeRegistry {
      * @param chisel - Chisel to add recipe for
      * @param type - OreDict entry to use in recipe
      */
-    public static void addModifiedChiselRecipe(Item chisel, String type) {
-        if (!OreDictionary.getOres(type).isEmpty())
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1, 0), " OO", " OO", "S  ", 'O', type, 'S', "stickWood"));
+    public static void addModifiedChiselRecipe(Item chisel, String type, boolean chiselEnabled) {
+        if (!OreDictionary.getOres(type).isEmpty() && chiselEnabled)
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " OO", " OO", "S  ", 'O', type, 'S', "stickWood"));
     }
 
     /**
@@ -110,9 +109,9 @@ public class ItemRecipeRegistry {
      * @param chisel - Chisel to add recipe for
      * @param type - Item to use in recipe
      */
-    public static void addModifiedChiselRecipe(Item chisel, Item type) {
-        if (type != null)
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1, 0), " OO", " OO", "S  ", 'O', type, 'S', "stickWood"));
+    public static void addModifiedChiselRecipe(Item chisel, Item type, boolean chiselEnabled) {
+        if (type != null && chiselEnabled)
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " OO", " OO", "S  ", 'O', type, 'S', "stickWood"));
     }
 
     /**
@@ -121,8 +120,8 @@ public class ItemRecipeRegistry {
      * @param chisel - Chisel to add recipe for
      * @param type - Block to use in recipe
      */
-    public static void addModifiedChiselRecipe(Item chisel, Block type) {
-        if (type != null)
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1, 0), " OO", " OO", "S  ", 'O', type, 'S', "stickWood"));
+    public static void addModifiedChiselRecipe(Item chisel, Block type, boolean chiselEnabled) {
+        if (type != null && chiselEnabled)
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " OO", " OO", "S  ", 'O', type, 'S', "stickWood"));
     }
 }

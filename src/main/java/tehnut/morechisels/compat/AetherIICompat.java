@@ -8,6 +8,7 @@ import tehnut.morechisels.items.ItemChiselBase;
 import tehnut.morechisels.items.ItemRecipeRegistry;
 import tehnut.morechisels.items.ItemRegistry;
 import tehnut.morechisels.util.EnviroChecks;
+import tehnut.morechisels.util.LogHelper;
 
 import static tehnut.morechisels.ConfigHandler.*;
 
@@ -19,6 +20,7 @@ public class AetherIICompat {
     public static Item chiselGravitite;
 
     public static void load() {
+        LogHelper.info("Aether II compatibility is enabled and running");
         registerItems();
         registerRecipes();
     }
@@ -44,9 +46,9 @@ public class AetherIICompat {
         Item zanite = GameRegistry.findItem("aether", "zaniteGemstone");
         Block gravitite = GameRegistry.findBlock("aether", "enchantedGravitite");
 
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselSkyroot, skyroot);
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselHolystone, holystone);
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselZanite, zanite);
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselGravitite, gravitite);
+        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselSkyroot, skyroot, chiselSkyrootEnabled);
+        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselHolystone, holystone, chiselHolystoneEnabled);
+        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselZanite, zanite, chiselZaniteEnabled);
+        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselGravitite, gravitite, chiselGravititeEnabled);
     }
 }
