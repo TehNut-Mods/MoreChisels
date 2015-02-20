@@ -11,20 +11,24 @@ import tehnut.morechisels.items.ItemChiselBase;
 import tehnut.morechisels.util.TextHelper;
 import tehnut.morechisels.util.Utils;
 
+import java.awt.*;
+
 public class ItemChiselGem extends ItemChiselBase {
 
     private boolean setDisplayName;
     private String name;
     private int chiselNumber;
+    private String hexColor;
 
     private IIcon overlayIcon;
 
-    public ItemChiselGem(String name, int durability, boolean setDisplayName, int chiselNumber) {
+    public ItemChiselGem(String name, int durability, String hexColor, boolean setDisplayName, int chiselNumber) {
         super(name, durability);
 
         this.setDisplayName = setDisplayName;
         this.name = name;
         this.chiselNumber = chiselNumber;
+        this.hexColor = hexColor;
     }
 
     @SideOnly(Side.CLIENT)
@@ -46,7 +50,7 @@ public class ItemChiselGem extends ItemChiselBase {
     public int getColorFromItemStack(ItemStack stack, int pass) {
 
         if (pass == 1) {
-            return Utils.getColorFromWhitelist(ConfigHandler.gemChiselWhitelist[chiselNumber]);
+            return Color.decode(hexColor).getRGB();
         } else {
             return super.getColorFromItemStack(stack, pass);
         }

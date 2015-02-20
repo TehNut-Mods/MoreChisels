@@ -48,20 +48,6 @@ public class Utils {
 
     /**
      *
-     * @param entry - Whitelist entry to get color from
-     * @return - The RGB color code from the whitelist entry
-     */
-    public static int getColorFromWhitelist(String entry) {
-        String[] split = entry.split(":");
-
-        if (split.length == 3)
-            return Color.decode(split[2]).getRGB();
-        else
-            return 150;
-    }
-
-    /**
-     *
      * @param stack - Binds the ItemStack's texture
      */
     public static void bindItemTexture(ItemStack stack) {

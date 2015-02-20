@@ -20,16 +20,20 @@ public class ItemRegistry {
 
     public static void registerItems() {
         // Gems
+        OreDictionary.registerOre("gemSapphire", Items.apple);
+        OreDictionary.registerOre("gemRuby", Items.carrot);
+
+        chiselGem = new Item[ConfigHandler.gemChiselWhitelist.length];
+
         for (String ore : OreDictionary.getOreNames()) {
             if (ore.startsWith("gem")) {
                 String gem = ore.substring(3);
 
-                chiselGem = new Item[ConfigHandler.gemChiselWhitelist.length];
                 for (String whitelist : ConfigHandler.gemChiselWhitelist) {
                     String[] splitWhitelist = whitelist.split(":");
 
                     if (gem.equals(splitWhitelist[0])) {
-                        chiselGem[gemChiselCount] = new ItemChiselGem(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), true, gemChiselCount);
+                        chiselGem[gemChiselCount] = new ItemChiselGem(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), splitWhitelist[2], true, gemChiselCount);
                         registerOreItem(chiselGem[gemChiselCount], "ItemChisel" + splitWhitelist[0], "gem" + splitWhitelist[0]);
                         gemChiselCount++;
                     }
