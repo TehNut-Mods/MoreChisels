@@ -1,5 +1,7 @@
 #More Chisels [![Build Status](http://tehnut.info/jenkins/job/MoreChisels/badge/icon)](http://tehnut.info/jenkins/job/MoreChisels/)
 
+![MoreChisels Icon](http://i.imgur.com/lY8Fev6.png)
+
 Assorted chisels for [Chisel-2](https://github.com/TheCricket/Chisel-2).
 
 ##Downloads
