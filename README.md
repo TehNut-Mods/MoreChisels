@@ -28,6 +28,5 @@ Downloads for MoreChisels (as well as all of my other mods) can be found on my [
 ##Dev setup
 
 1. Clone/Fork/Whatever you need to do to get it on your local machine.
-2. Run `gradlew [setupDevWorkspace|setupDecompWorkspace] [eclipse|idea]` This will automatically setup your workspace for you.
-3. Drop a Deobfuscated version of Chisel-2 in `../libs/` and add it as a library.
-4. Do things.
+2. Run `gradlew [setupDevWorkspace|setupDecompWorkspace] [eclipse|idea]` This will automatically setup your workspace for you. This also downloads the correct version of Chisel 2 for you.
+3. Do things.
