@@ -37,13 +37,22 @@ public class RenderUtils {
         for (String names : coolPeople) {
             if (player.getUniqueID().toString().equals(names)) {
                 GL11.glPushMatrix();
-
-                GL11.glTranslated(0.6, 0.8, 0.125);
-                GL11.glRotated(180, 0, 0, 0);
+                if (player.getCurrentArmor(2) != null) {
+                    GL11.glTranslated(0.6, 0.8, 0.2);
+                    GL11.glRotated(180, 0, 0, 0);
+                } else {
+                    GL11.glTranslated(0.6, 0.8, 0.125);
+                    GL11.glRotated(180, 0, 0, 0);
+                }
 
                 if (player.isSneaking()) {
-                    GL11.glTranslated(0.0, 0.1, -0.4);
-                    GL11.glRotatef(28.64789F, 1.0F, 0.0F, 0.0F);
+                    if (player.getCurrentArmor(2) != null) {
+                        GL11.glTranslated(0.0, 0.1, -0.4);
+                        GL11.glRotatef(28.64789F, 1.0F, 0.0F, 0.0F);
+                    } else {
+                        GL11.glTranslated(0.0, 0.1, -0.4);
+                        GL11.glRotatef(28.64789F, 1.0F, 0.0F, 0.0F);
+                    }
                 }
 
                 float f9 = 0.0625F;
