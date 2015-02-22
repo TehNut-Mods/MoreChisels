@@ -19,5 +19,7 @@ public class CompatRegistry {
             AetherIICompat.load();
         if (isThaumcraftLoaded())
             ThaumcraftCompat.load();
+        if (isSteamcraftLoaded())
+            SteamcraftCompat.load();
     }
 }

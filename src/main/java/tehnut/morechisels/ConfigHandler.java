@@ -32,6 +32,7 @@ public class ConfigHandler {
     public static boolean chiselGravititeEnabled;
     public static boolean chiselThaumiumEnabled;
     public static boolean chiselVoidmetalEnabled;
+    public static boolean chiselSteamEnabled;
     public static String[] gemChiselWhitelist;
     private static String[] gemChiselWhitelistDefaults = { "Emerald:700:#22ED4E", "Ruby:700:#DD0707", "Sapphire:700:#1F52F8" };
 
@@ -51,10 +52,12 @@ public class ConfigHandler {
     public static int durabilityGravitite;
     public static int durabilityThaumium;
     public static int durabilityVoidmetal;
+    public static int durabilitySteam;
 
     public static boolean enableLogging;
     public static int manaPerChiseling;
     public static int lifeEssencePerRepair;
+    public static int steamPerUse;
     public static boolean addCoolStuffForCoolPeople;
 
     public static boolean addEnderIOFluxedChiselRecipes;
@@ -90,6 +93,7 @@ public class ConfigHandler {
         chiselGravititeEnabled = config.get(chisels, "chiselGravititeEnabled", true).getBoolean();
         chiselThaumiumEnabled = config.get(chisels, "chiselThaumiumEnabled", true).getBoolean();
         chiselVoidmetalEnabled = config.get(chisels, "chiselVoidmetalEnabled", true).getBoolean();
+        chiselSteamEnabled = config.get(chisels, "chiselSteamEnabled", true).getBoolean();
         gemChiselWhitelist = config.get(chisels, "gemChiselWhitelist", gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix. \nSyntax is: \nGemName:Durability:HexColor").getStringList();
 
         // DURABILITY
@@ -109,10 +113,12 @@ public class ConfigHandler {
         durabilityGravitite = config.get(durability, "durabilityGravitite", 720).getInt();
         durabilityThaumium = config.get(durability, "durabilityThaumium", 400).getInt();
         durabilityVoidmetal = config.get(durability, "durabilityVoidmetal", 150).getInt();
+        durabilitySteam = config.get(durability, "durabilitySteam", 10000).getInt();
 
         enableLogging = config.get(misc, "enableLogging", true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.").getBoolean();
 //        manaPerChiseling = config.get(misc, "manaPerChiseling", 20, "Amount of Mana to drain from the player's inventory everytime you chisel something.").getInt();
 //        lifeEssencePerRepair = config.get(misc, "lifeEssencePerRepair", 200, "Amount of LP to drain from the player each time the Bloody Chisel repairs itself.").getInt();
+        steamPerUse = config.get(misc, "steamPerUse", 200, "Amount of Steam to drain every time you use the Steam Chisel.").getInt();
         addCoolStuffForCoolPeople = config.get(misc, "addCoolStuffForCoolPeople", true, "Disable this if you don't like cool people.").getBoolean();
 
         addEnderIOFluxedChiselRecipes = config.get(recipes, "addEnderIOFluxedChiselRecipes", false, "Requires EnderIO to be present.").getBoolean();

@@ -18,6 +18,7 @@ item.morechisels.chisel.zanite.name=Zanite Chisel
 item.morechisels.chisel.gravitite.name=Gravitite Chisel
 item.morechisels.chisel.thaumium.name=Thaumium Chisel
 item.morechisels.chisel.voidmetal.name=Voidmetal Chisel
+item.morechisels.chisel.steam.name=Steam Chisel
 item.morechisels.chisel.gem.name=%s Chisel
 
 # Tooltips
@@ -26,6 +27,7 @@ tip.morechisels.activated=Activated
 tip.morechisels.deactivated=Deactivated
 tip.morechisels.bound.owner=Current Owner: %s
 tip.morechisels.energy=%s / %s RF
+tip.morechisels.steam=%s / %s SU
 tip.morechisels.bedrockium=Why you would even need this...
 
 # Chat

@@ -21,6 +21,49 @@ public class Utils {
     }
 
     /**
+     * @param stack  - The ItemStack.
+     * @param steam - Energy to set stack to.
+     * @return - The ItemStack with an energy tag.
+     */
+    public static ItemStack setNewSteamTag(ItemStack stack, int steam) {
+        if (stack.stackTagCompound == null)
+            stack.setTagCompound(new NBTTagCompound());
+
+        if (stack.stackTagCompound != null && stack.stackTagCompound.getInteger("steamFill") <= 0)
+            stack.stackTagCompound.setInteger("steamFill", steam);
+
+        return stack;
+    }
+
+    /**
+     *
+     * @param stack - Item to check Steam of
+     * @return - Amount of Steam stored
+     */
+    public static int getCurrentSteam(ItemStack stack) {
+        NBTTagCompound tag = stack.stackTagCompound;
+
+        if (tag == null)
+            stack.setTagCompound(new NBTTagCompound());
+
+        return tag.getInteger("steamFill");
+    }
+
+    /**
+     *
+     * @param stack - Item to check Steam of
+     * @return - Amount of Steam stored
+     */
+    public static void reduceSteamLevel(ItemStack stack, int reduce) {
+        NBTTagCompound tag = stack.stackTagCompound;
+
+        if (tag == null)
+            stack.setTagCompound(new NBTTagCompound());
+
+        tag.setInteger("steamFill", getCurrentSteam(stack) - reduce);
+    }
+
+    /**
      * Inserts spaces into a string if a capital is found after a lowercase.
      *
      * @param input - String to split.

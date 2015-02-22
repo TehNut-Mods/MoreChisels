@@ -24,6 +24,10 @@ public class EnviroChecks {
         return Loader.isModLoaded("ExtraUtilities");
     }
 
+    public static boolean isSteamcraftLoaded() {
+        return Loader.isModLoaded("Steamcraft");
+    }
+
     public static boolean isThaumcraftLoaded() {
         return Loader.isModLoaded("Thaumcraft");
     }

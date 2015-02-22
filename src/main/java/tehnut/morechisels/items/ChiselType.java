@@ -12,6 +12,7 @@ public enum ChiselType {
     IRONWOOD(durabilityIronwood), STEELEAF(durabilitySteeleaf), KNIGHTMETAL(durabilityKnightmetal), FIERY(durabilityFiery), // Twilight Forest
     MANASTEEL(durabilityManasteel), ELEMENTIUM(durabilityElementium), // Botania
     SKYROOT(durabilitySkyroot), HOLYSTONE(durabilityHolystone), ZANITE(durabilityZanite), GRAVITITE(durabilityGravitite), // Aether II
+    STEAM(durabilitySteam),
     THAUMIUM(durabilityThaumium), VOIDMETAL(durabilityVoidmetal); // Thaumcraft
 
     /**
