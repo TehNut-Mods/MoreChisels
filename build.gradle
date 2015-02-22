@@ -36,6 +36,7 @@ repositories {
 
 dependencies {
   compile "com.cricketcraft.chisel:Chisel2:${chisel_version}:deobf"
+  compile fileTree(dir: 'libs', include: '*.jar')
 }
 
 minecraft {
