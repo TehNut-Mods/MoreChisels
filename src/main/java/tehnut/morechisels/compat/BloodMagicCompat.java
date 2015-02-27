@@ -37,17 +37,8 @@ public class BloodMagicCompat {
     }
 
     private static void registerRecipes() {
-        addBindingRecipe(ChiselItems.chisel, "ingotIron", chiselBoundEnabled);
-        addBindingRecipe(ChiselItems.diamondChisel, "gemDiamond", chiselBoundEnabled);
-
-        for (int i = 0; i < ItemRegistry.chiselGem.length; i++)
-            addBindingRecipe(ItemRegistry.chiselGem[i], chiselBoundEnabled);
-
-        addAltarRecipe(ChiselItems.chisel, "ingotIron", chiselBloodyEnabled);
-        addAltarRecipe(ChiselItems.diamondChisel, "gemDiamond", chiselBloodyEnabled);
-
-        for (int i = 0; i < ItemRegistry.chiselGem.length; i++)
-            addAltarRecipe(ItemRegistry.chiselGem[i], chiselBloodyEnabled);
+        addBindingRecipe(ChiselItems.diamondChisel, chiselBoundEnabled);
+        addAltarRecipe(ChiselItems.diamondChisel, chiselBloodyEnabled);
     }
 
     private static void addAltarRecipe(Item chisel, boolean chiselEnabled) {
@@ -55,18 +46,8 @@ public class BloodMagicCompat {
             AltarRecipeRegistry.registerAltarRecipe(new ItemStack(chiselBloody), new ItemStack(chisel), 2, 1000, 10, 10, false);
     }
 
-    private static void addAltarRecipe(Item chisel, String type, boolean chiselEnabled) {
-        if (!OreDictionary.getOres(type).isEmpty() && chiselEnabled)
-            AltarRecipeRegistry.registerAltarRecipe(new ItemStack(chiselBloody), new ItemStack(chisel), 2, 1000, 10, 10, false);
-    }
-
     private static void addBindingRecipe(Item chisel,boolean chiselEnabled) {
         if (chiselEnabled)
-            BindingRegistry.registerRecipe(new ItemStack(chiselBound), new ItemStack(chisel));
-    }
-
-    private static void addBindingRecipe(Item chisel, String type, boolean chiselEnabled) {
-        if (!OreDictionary.getOres(type).isEmpty() && chiselEnabled)
             BindingRegistry.registerRecipe(new ItemStack(chiselBound), new ItemStack(chisel));
     }
 }
