@@ -1,15 +1,10 @@
 package tehnut.morechisels.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
 import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.items.chisel.ItemChiselGem;
-
-import java.util.ArrayList;
-
-import static tehnut.morechisels.ConfigHandler.*;
 
 public class ItemRegistry {
 
@@ -30,7 +25,7 @@ public class ItemRegistry {
                     String[] splitWhitelist = whitelist.split(":");
 
                     if (gem.equals(splitWhitelist[0])) {
-                        chiselGem[gemChiselCount] = new ItemChiselGem(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), splitWhitelist[2], true, gemChiselCount);
+                        chiselGem[gemChiselCount] = new ItemChiselGem(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), splitWhitelist[2], true);
                         registerOreItem(chiselGem[gemChiselCount], "ItemChisel" + splitWhitelist[0], "gem" + splitWhitelist[0]);
                         gemChiselCount++;
                     }

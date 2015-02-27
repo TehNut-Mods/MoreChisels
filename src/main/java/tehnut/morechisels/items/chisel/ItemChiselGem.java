@@ -17,17 +17,15 @@ public class ItemChiselGem extends ItemChiselBase {
 
     private boolean setDisplayName;
     private String name;
-    private int chiselNumber;
     private String hexColor;
 
     private IIcon overlayIcon;
 
-    public ItemChiselGem(String name, int durability, String hexColor, boolean setDisplayName, int chiselNumber) {
+    public ItemChiselGem(String name, int durability, String hexColor, boolean setDisplayName) {
         super(name, durability);
 
         this.setDisplayName = setDisplayName;
         this.name = name;
-        this.chiselNumber = chiselNumber;
         this.hexColor = hexColor;
     }
 

@@ -8,7 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import tehnut.morechisels.ConfigHandler;
-import tehnut.morechisels.util.LogHelper;
 
 public class ItemRecipeRegistry {
 
