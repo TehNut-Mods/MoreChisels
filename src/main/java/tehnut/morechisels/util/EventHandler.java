@@ -47,7 +47,8 @@ public class EventHandler {
         String chiselDevs[] = {
             /*CptSpaceToaster*/ "6dee4d8f-56a2-4cad-8a25-2505856bb4c9",
             /*Drullkus*/ "5399b615-3440-4c66-939d-ab1375952ac3",
-            /*tterrag*/ "671516b1-4fb3-4c03-aa7c-9c88cfab3ae8"
+            /*tterrag*/ "671516b1-4fb3-4c03-aa7c-9c88cfab3ae8",
+            /*Cricket*/ "a7529984-8cb2-4fb9-b799-97980f770101"
         };
 
         @SubscribeEvent
