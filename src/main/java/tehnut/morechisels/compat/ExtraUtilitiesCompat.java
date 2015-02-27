@@ -1,10 +1,11 @@
 package tehnut.morechisels.compat;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 import tehnut.morechisels.items.ChiselType;
 import tehnut.morechisels.items.ItemChiselBase;
-import tehnut.morechisels.items.ItemRecipeRegistry;
 import tehnut.morechisels.items.ItemRegistry;
 import tehnut.morechisels.util.EnviroChecks;
 import tehnut.morechisels.util.LogHelper;
@@ -34,7 +35,7 @@ public class ExtraUtilitiesCompat {
     private static void registerRecipes() {
         Item bedrockiumIngot = GameRegistry.findItem("ExtraUtilities", "bedrockiumIngot");
 
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselBedrockium, bedrockiumIngot, chiselBedrockiumEnabled);
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselUnstable, "ingotUnstable", chiselUnstableEnabled);
+        GameRegistry.addRecipe(new ShapedOreRecipe(chiselBedrockium, " I", "U ", 'U', "ingotUnstable", 'I', bedrockiumIngot));
+        GameRegistry.addRecipe(new ShapedOreRecipe(chiselUnstable, "I", "O", 'I', "ingotUnstable", 'O', Blocks.obsidian));
     }
 }
