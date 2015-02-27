@@ -1,7 +1,9 @@
 package tehnut.morechisels.compat;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 import tehnut.morechisels.items.ChiselType;
 import tehnut.morechisels.items.ItemChiselBase;
 import tehnut.morechisels.items.ItemRecipeRegistry;
@@ -45,6 +47,6 @@ public class TwilightForestCompat {
         ItemRecipeRegistry.addConfiguredChiselRecipe(chiselIronwood, "ironwood", chiselIronwoodEnabled);
         ItemRecipeRegistry.addConfiguredChiselRecipe(chiselSteeleaf, "steeleaf", chiselSteeleafEnabled);
         ItemRecipeRegistry.addConfiguredChiselRecipe(chiselKnightmetal, knightmetalIngot, chiselKnightmetalEnabled);
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselFiery, fieryIngot, chiselFieryEnabled);
+        GameRegistry.addRecipe(new ShapedOreRecipe(chiselFiery, " I", "R ", 'I', fieryIngot, 'R', Items.blaze_rod));
     }
 }
