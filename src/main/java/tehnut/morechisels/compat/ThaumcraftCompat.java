@@ -5,6 +5,7 @@ import tehnut.morechisels.items.ChiselType;
 import tehnut.morechisels.items.ItemChiselBase;
 import tehnut.morechisels.items.ItemRecipeRegistry;
 import tehnut.morechisels.items.ItemRegistry;
+import tehnut.morechisels.items.chisel.ItemChiselVoidmetal;
 import tehnut.morechisels.util.EnviroChecks;
 import tehnut.morechisels.util.LogHelper;
 
@@ -25,7 +26,7 @@ public class ThaumcraftCompat {
         chiselThaumium = new ItemChiselBase(ChiselType.THAUMIUM);
         ItemRegistry.registerCompatItem(chiselThaumium, "ItemChiselThaumium", chiselThaumiumEnabled, EnviroChecks.isThaumcraftLoaded());
 
-        chiselVoidmetal = new ItemChiselBase(ChiselType.VOIDMETAL);
+        chiselVoidmetal = new ItemChiselVoidmetal();
         ItemRegistry.registerCompatItem(chiselVoidmetal, "ItemChiselVoidmetal", chiselVoidmetalEnabled, EnviroChecks.isThaumcraftLoaded());
     }
 
