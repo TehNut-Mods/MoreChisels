@@ -33,6 +33,7 @@ public class ConfigHandler {
     public static boolean chiselThaumiumEnabled;
     public static boolean chiselVoidmetalEnabled;
     public static boolean chiselSteamEnabled;
+    public static boolean chiselSouliumEnabled;
     public static String[] gemChiselWhitelist;
     private static String[] gemChiselWhitelistDefaults = { "Emerald:700:#22ED4E", "Ruby:700:#DD0707", "Sapphire:700:#1F52F8" };
 
@@ -53,6 +54,7 @@ public class ConfigHandler {
     public static int durabilityThaumium;
     public static int durabilityVoidmetal;
     public static int durabilitySteam;
+    public static int durabilitySoulium;
 
     public static boolean enableLogging;
     public static int manaPerChiseling;
@@ -94,6 +96,7 @@ public class ConfigHandler {
         chiselThaumiumEnabled = config.get(chisels, "chiselThaumiumEnabled", true).getBoolean();
         chiselVoidmetalEnabled = config.get(chisels, "chiselVoidmetalEnabled", true).getBoolean();
         chiselSteamEnabled = config.get(chisels, "chiselSteamEnabled", true).getBoolean();
+        chiselSouliumEnabled = config.get(chisels, "chiselSouliumEnabled", true).getBoolean();
         gemChiselWhitelist = config.get(chisels, "gemChiselWhitelist", gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix. \nSyntax is: \nGemName:Durability:HexColor").getStringList();
 
         // DURABILITY
@@ -113,6 +116,7 @@ public class ConfigHandler {
         durabilityThaumium = config.get(durability, "durabilityThaumium", 400).getInt();
         durabilityVoidmetal = config.get(durability, "durabilityVoidmetal", 150).getInt();
         durabilitySteam = config.get(durability, "durabilitySteam", 10000).getInt();
+        durabilitySoulium = config.get(durability, "durabilitySoulium", 650).getInt();
 
         enableLogging = config.get(misc, "enableLogging", true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.").getBoolean();
 //      manaPerChiseling = config.get(misc, "manaPerChiseling", 20, "Amount of Mana to drain from the player's inventory everytime you chisel something.").getInt();

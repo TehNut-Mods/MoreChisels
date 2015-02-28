@@ -24,6 +24,10 @@ public class EnviroChecks {
         return Loader.isModLoaded("ExtraUtilities");
     }
 
+    public static boolean isSoulShardsTOWLoaded() {
+        return Loader.isModLoaded("SSTOW");
+    }
+
     public static boolean isSteamcraftLoaded() {
         return Loader.isModLoaded("Steamcraft");
     }

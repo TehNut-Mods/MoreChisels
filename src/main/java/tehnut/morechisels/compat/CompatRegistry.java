@@ -21,5 +21,7 @@ public class CompatRegistry {
             ThaumcraftCompat.load();
         if (isSteamcraftLoaded())
             SteamcraftCompat.load();
+        if (isSoulShardsTOWLoaded())
+            SoulShardsTOWCompat.load();
     }
 }
