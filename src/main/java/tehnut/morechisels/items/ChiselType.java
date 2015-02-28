@@ -7,7 +7,7 @@ import static tehnut.morechisels.ConfigHandler.*;
 public enum ChiselType {
 
     BLOODY(durabilityBloody), BOUND(), // Blood Magic
-    BEDROCKIUM(durabilityBedrockium), UNSTABLE(durabilityUnstable), // Extra Utilities
+    BEDROCKIUM(0), UNSTABLE(durabilityUnstable), // Extra Utilities
     FLUXED(), // RF
     IRONWOOD(durabilityIronwood), STEELEAF(durabilitySteeleaf), KNIGHTMETAL(durabilityKnightmetal), FIERY(durabilityFiery), // Twilight Forest
     MANASTEEL(durabilityManasteel), ELEMENTIUM(durabilityElementium), // Botania

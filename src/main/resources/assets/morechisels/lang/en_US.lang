@@ -28,7 +28,8 @@ tip.morechisels.deactivated=Deactivated
 tip.morechisels.bound.owner=Current Owner: %s
 tip.morechisels.energy=%s / %s RF
 tip.morechisels.steam=%s / %s SU
-tip.morechisels.bedrockium=Why you would even need this...
+# These are roman numerals
+tip.morechisels.unbreakable=Unbreakable MCCCXXXVII
 
 # Chat
 

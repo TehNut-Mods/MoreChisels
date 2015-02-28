@@ -99,7 +99,6 @@ public class ConfigHandler {
         // DURABILITY
         durabilityFluxed = config.get(durability, "durabilityFluxed", 100000).getInt();
 //      durabilityBloody = config.get(durability, "durabilityBloody", 500).getInt();
-        durabilityBedrockium = config.get(durability, "durabilityBedrockium", Short.MAX_VALUE).getInt();
         durabilityUnstable = config.get(durability, "durabilityUnstable", 1800).getInt();
         durabilityIronwood = config.get(durability, "durabilityIronwood", 750).getInt();
         durabilitySteeleaf = config.get(durability, "durabilitySteeleaf", 200).getInt();

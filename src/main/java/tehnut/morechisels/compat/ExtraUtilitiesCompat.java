@@ -7,6 +7,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import tehnut.morechisels.items.ChiselType;
 import tehnut.morechisels.items.ItemChiselBase;
 import tehnut.morechisels.items.ItemRegistry;
+import tehnut.morechisels.items.chisel.ItemChiselBedrockium;
 import tehnut.morechisels.util.EnviroChecks;
 import tehnut.morechisels.util.LogHelper;
 
@@ -25,7 +26,7 @@ public class ExtraUtilitiesCompat {
     }
 
     private static void registerItems() {
-        chiselBedrockium = new ItemChiselBase(ChiselType.BEDROCKIUM);
+        chiselBedrockium = new ItemChiselBedrockium();
         ItemRegistry.registerCompatItem(chiselBedrockium, "ItemChiselBedrockium", chiselBedrockiumEnabled, EnviroChecks.isExtraUtilitiesLoaded());
 
         chiselUnstable = new ItemChiselBase(ChiselType.UNSTABLE);

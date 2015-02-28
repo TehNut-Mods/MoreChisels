@@ -23,17 +23,6 @@ public class EventHandler {
         }
     }
 
-    @SuppressWarnings("unchecked")
-    @SubscribeEvent
-    public void onTooltip(ItemTooltipEvent event) {
-        ItemStack stack = event.itemStack;
-        List list = event.toolTip;
-
-        if (stack != null)
-            if (stack.getDisplayName().equals(TextHelper.localize("item.morechisels.chisel.bedrockium.name")))
-                list.add(TextHelper.localize("tip.morechisels.bedrockium"));
-    }
-
     public static class ClientEventHandler {
 
         String specialPeople[] = {

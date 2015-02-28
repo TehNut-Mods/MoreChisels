@@ -4,18 +4,12 @@ import com.cricketcraft.chisel.api.IChiselItem;
 import com.cricketcraft.chisel.api.carving.ICarvingVariation;
 import com.cricketcraft.chisel.config.Configurations;
 import com.cricketcraft.chisel.init.ChiselTabs;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import net.minecraftforge.oredict.OreDictionary;
-import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.ModInformation;
-import tehnut.morechisels.util.TextHelper;
-import tehnut.morechisels.util.Utils;
 
 public class ItemChiselBase extends Item implements IChiselItem {
 
