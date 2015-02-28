@@ -24,6 +24,10 @@ public class EnviroChecks {
         return Loader.isModLoaded("ExtraUtilities");
     }
 
+    public static boolean isGalacticraftLoaded() {
+        return Loader.isModLoaded("GalacticraftMars");
+    }
+
     public static boolean isSoulShardsTOWLoaded() {
         return Loader.isModLoaded("SSTOW");
     }

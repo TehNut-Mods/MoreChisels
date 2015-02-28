@@ -23,5 +23,7 @@ public class CompatRegistry {
             SteamcraftCompat.load();
         if (isSoulShardsTOWLoaded())
             SoulShardsTOWCompat.load();
+        if (isGalacticraftLoaded())
+            GalacticraftCompat.load();
     }
 }

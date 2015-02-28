@@ -9,10 +9,11 @@ public enum ChiselType {
     BLOODY(durabilityBloody), BOUND(), // Blood Magic
     BEDROCKIUM(0), UNSTABLE(durabilityUnstable), // Extra Utilities
     FLUXED(), // RF
+    CHEESE(durabilityCheese), DESH(durabilityDesh),
     IRONWOOD(durabilityIronwood), STEELEAF(durabilitySteeleaf), KNIGHTMETAL(durabilityKnightmetal), FIERY(durabilityFiery), // Twilight Forest
     MANASTEEL(durabilityManasteel), ELEMENTIUM(durabilityElementium), // Botania
     SKYROOT(durabilitySkyroot), HOLYSTONE(durabilityHolystone), ZANITE(durabilityZanite), GRAVITITE(durabilityGravitite), // Aether II
-    STEAM(durabilitySteam), // Flaxbeard's Steam Power
+    STEAMPOWERED(durabilitySteam), // Flaxbeard's Steam Power
     SOULIUM(durabilitySoulium), // Soul Shards: The Old Ways
     THAUMIUM(durabilityThaumium), VOIDMETAL(durabilityVoidmetal); // Thaumcraft
 

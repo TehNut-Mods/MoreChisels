@@ -25,7 +25,7 @@ public class ItemChiselSteam extends ItemChiselBase implements ISteamChargable {
     private static int maxSteam = ConfigHandler.durabilitySteam;
 
     public ItemChiselSteam() {
-        super(ChiselType.STEAM);
+        super(ChiselType.STEAMPOWERED);
 
         setNoRepair();
         setMaxDamage(0);
