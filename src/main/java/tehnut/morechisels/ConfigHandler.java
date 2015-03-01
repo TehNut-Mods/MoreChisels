@@ -122,7 +122,7 @@ public class ConfigHandler {
         durabilityThaumium = config.get(durability, "durabilityThaumium", 400).getInt();
         durabilityVoidmetal = config.get(durability, "durabilityVoidmetal", 150).getInt();
         durabilitySteam = config.get(durability, "durabilitySteam", 10000).getInt();
-        durabilitySoulium = config.get(durability, "durabilitySoulium", 650).getInt();
+        durabilitySoulium = config.get(durability, "durabilitySoulium", 1030).getInt();
         durabilityCheese = config.get(durability, "durabilityCheese", 12).getInt();
         durabilityDesh = config.get(durability, "durabilityDesh", 1024).getInt();
 

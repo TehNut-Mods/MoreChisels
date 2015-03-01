@@ -47,6 +47,6 @@ public class TwilightForestCompat {
         ItemRecipeRegistry.addConfiguredChiselRecipe(chiselIronwood, "ironwood", chiselIronwoodEnabled);
         ItemRecipeRegistry.addConfiguredChiselRecipe(chiselSteeleaf, "steeleaf", chiselSteeleafEnabled);
         ItemRecipeRegistry.addConfiguredChiselRecipe(chiselKnightmetal, knightmetalIngot, chiselKnightmetalEnabled);
-        GameRegistry.addRecipe(new ShapedOreRecipe(chiselFiery, " I", "R ", 'I', fieryIngot, 'R', Items.blaze_rod));
+        ItemRecipeRegistry.addThemedChiselRecipe(chiselFiery, fieryIngot, Items.blaze_rod, chiselFieryEnabled);
     }
 }

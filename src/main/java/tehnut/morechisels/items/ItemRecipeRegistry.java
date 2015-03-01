@@ -9,6 +9,8 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import tehnut.morechisels.ConfigHandler;
 
+import javax.security.auth.login.Configuration;
+
 public class ItemRecipeRegistry {
 
     public static void registerRecipes() {
@@ -131,5 +133,15 @@ public class ItemRecipeRegistry {
     public static void addModifiedChiselRecipe(Item chisel, Block type, boolean chiselEnabled) {
         if (type != null && chiselEnabled)
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " OO", " OO", "S  ", 'O', type, 'S', "stickWood"));
+    }
+
+    public static void addThemedChiselRecipe(Item chisel, Item type, Item stickReplacement, boolean chiselEnabled) {
+        if (type != null && chiselEnabled)
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " O", "S ", 'O', type, 'S', stickReplacement));
+    }
+
+    public static void addThemedChiselRecipe(Item chisel, Item type, String stickReplacement, boolean chiselEnabled) {
+        if (type != null && chiselEnabled && !OreDictionary.getOres(stickReplacement).isEmpty())
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " O", "S ", 'O', type, 'S', stickReplacement));
     }
 }
