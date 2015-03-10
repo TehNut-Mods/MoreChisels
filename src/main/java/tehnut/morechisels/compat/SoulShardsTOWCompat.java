@@ -2,6 +2,7 @@ package tehnut.morechisels.compat;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 import tehnut.morechisels.items.ChiselType;
 import tehnut.morechisels.items.ItemChiselBase;
 import tehnut.morechisels.items.ItemRecipeRegistry;
@@ -27,8 +28,8 @@ public class SoulShardsTOWCompat {
     }
 
     private static void registerRecipes() {
-        Item souliumIngot = GameRegistry.findItem("SSTOW", "SOULIUM_INGOT");
+        Item souliumIngot = GameRegistry.findItem("SSTOW", "sstow_soulium_ingot");
 
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselSoulium, souliumIngot, chiselSouliumEnabled);
+        ItemRecipeRegistry.addThemedChiselRecipe(chiselSoulium, souliumIngot, "ingotIron", chiselSouliumEnabled);
     }
 }
