@@ -1,0 +1,48 @@
+# Config
+gui.morechisels.config.title=Конфигурация More Chisels
+
+# Items
+item.morechisels.chisel.bound.name=Связанная стамеска
+item.morechisels.chisel.fluxed.name=Флаксовая стамеска
+item.morechisels.chisel.unstable.name=Нестабильная стамеска
+item.morechisels.chisel.bedrockium.name=Стамеска из бедрокия
+item.morechisels.chisel.ironwood.name=Стамеска из железного дерева
+item.morechisels.chisel.steeleaf.name=Стамеска из стального листа
+item.morechisels.chisel.knightmetal.name=Стамеска из металла рыцаря
+item.morechisels.chisel.fiery.name=Огненная стамеска
+item.morechisels.chisel.manasteel.name=Стамеска из манастали
+item.morechisels.chisel.elementium.name=Стамеска из элементия
+item.morechisels.chisel.skyroot.name=Стамеска из парящего дерева
+item.morechisels.chisel.holystone.name=Стамеска из пемзы
+item.morechisels.chisel.zanite.name=Занитная стамеска
+item.morechisels.chisel.gravitite.name=Гравититная стамеска
+item.morechisels.chisel.thaumium.name=Таумическая стамеска
+item.morechisels.chisel.voidmetal.name=Стамеска из пустотного металла
+item.morechisels.chisel.steampowered.name=Паровая стамеска
+item.morechisels.chisel.soulium.name=Стамеска душ
+item.morechisels.chisel.gem.name=%s стамеска
+
+# Materials
+material.morechisels.emerald.name=Изумрудная
+material.morechisels.sapphire.name=Сапфировая
+material.morechisels.ruby.name=Рубиновая
+material.morechisels.amethyst.name=Аметистовая
+material.morechisels.peridot.name=Оливиновая
+material.morechisels.topaz.name=Топазовая
+material.morechisels.tanzanite.name=Танзанитовая
+material.morechisels.amber.name=Янтарная
+
+# Tooltips
+tip.morechisels.pretty=Давайте сделаем всё красивым!
+tip.morechisels.activated=Активирована
+tip.morechisels.deactivated=Деактивирована
+tip.morechisels.bound.owner=Текущий владелец: %s
+tip.morechisels.energy=%s / %s RF
+tip.morechisels.steam=%s / %s SU
+# These are roman numerals
+tip.morechisels.unbreakable=Неразрушимость MCCCXXXVII
+
+# Chat
+
+# Console
+info.morechisels.console.config.refresh=Файл конфигурации обновлён.
