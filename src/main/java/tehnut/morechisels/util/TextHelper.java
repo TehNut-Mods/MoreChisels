@@ -31,4 +31,8 @@ public class TextHelper {
 	public static String localize(String key) {
 		return StatCollector.translateToLocal(key);
 	}
+
+    public static String localizeFormatted(String key, String formatKey) {
+        return String.format(localize(key), localize(formatKey));
+    }
 }

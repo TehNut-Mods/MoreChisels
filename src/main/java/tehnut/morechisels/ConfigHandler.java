@@ -37,7 +37,7 @@ public class ConfigHandler {
     public static boolean chiselCheeseEnabled;
     public static boolean chiselDeshEnabled;
     public static String[] gemChiselWhitelist;
-    private static String[] gemChiselWhitelistDefaults = { "Emerald:700:#22ED4E", "Ruby:700:#DD0707", "Sapphire:700:#1F52F8" };
+    private static String[] gemChiselWhitelistDefaults = { "Emerald:700:#22ED4E", "Ruby:700:#DD0707", "Sapphire:700:#1F52F8", "Amethyst:2500:#FF00CE", "Peridot:700:#43A749", "Topaz:700:#f43E00", "Tanzanite:700:#59008B", "Malachite:700:#26E5CD", "Amber:300:#FFCE00" };
 
     public static int durabilityFluxed;
     public static int durabilityBloody;
@@ -61,7 +61,7 @@ public class ConfigHandler {
     public static int durabilityDesh;
 
     public static boolean enableLogging;
-    public static int manaPerChiseling;
+//    public static int manaPerChiseling;
     public static int lifeEssencePerRepair;
     public static int steamPerUse;
     public static boolean addCoolStuffForCoolPeople;

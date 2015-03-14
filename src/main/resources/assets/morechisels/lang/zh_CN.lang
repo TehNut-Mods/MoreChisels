@@ -18,8 +18,19 @@ item.morechisels.chisel.zanite.name=紫玉凿子
 item.morechisels.chisel.gravitite.name=重力凿子
 item.morechisels.chisel.thaumium.name=神秘之凿
 item.morechisels.chisel.voidmetal.name=虚空之凿
-item.morechisels.chisel.steam.name=蒸汽凿子
+item.morechisels.chisel.steampowered.name=蒸汽凿子
+item.morechisels.chisel.soulium.name=Soul Chisel
 item.morechisels.chisel.gem.name=%s凿子
+
+# Materials
+material.morechisels.emerald.name=Emerald
+material.morechisels.sapphire.name=Sapphire
+material.morechisels.ruby.name=Ruby
+material.morechisels.amethyst.name=Amethyst
+material.morechisels.peridot.name=Peridot
+material.morechisels.topaz.name=Topaz
+material.morechisels.tanzanite.name=Tanzanite
+material.morechisels.amber.name=Amber
 
 # Tooltips
 tip.morechisels.pretty=让一切变的精致又华丽
@@ -28,9 +39,10 @@ tip.morechisels.deactivated=未激活
 tip.morechisels.bound.owner=主人: %s
 tip.morechisels.energy=%s / %s RF
 tip.morechisels.steam=%s / %s SU
-tip.morechisels.bedrockium=为什么你会想要这个...
+# These are roman numerals
+tip.morechisels.unbreakable=Unbreakable MCCCXXXVII
 
 # Chat
 
 # Console
-info.morechisels.console.config.refresh
+info.morechisels.console.config.refresh=Refreshed configuration file.

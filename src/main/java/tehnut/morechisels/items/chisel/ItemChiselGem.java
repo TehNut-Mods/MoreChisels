@@ -5,6 +5,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.StatCollector;
 import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.ModInformation;
 import tehnut.morechisels.items.ItemChiselBase;
@@ -39,8 +40,12 @@ public class ItemChiselGem extends ItemChiselBase {
     @Override
     public String getItemStackDisplayName(ItemStack stack) {
         String capName = Character.toUpperCase(name.charAt(0)) + name.substring(1);
+        String materialUnloc = "material." + ModInformation.ID + "." + name.toLowerCase() + ".name";
 
-        return Utils.splitAtCapital(String.format(TextHelper.localize("item.morechisels.chisel.gem.name"), capName));
+        if (StatCollector.canTranslate(materialUnloc))
+            return TextHelper.localizeFormatted("item.morechisels.chisel.gem.name", materialUnloc);
+        else
+            return Utils.splitAtCapital(String.format(TextHelper.localize("item.morechisels.chisel.gem.name"), capName));
     }
 
     @SideOnly(Side.CLIENT)

@@ -22,6 +22,16 @@ item.morechisels.chisel.steampowered.name=Steam Powered Chisel
 item.morechisels.chisel.soulium.name=Soul Chisel
 item.morechisels.chisel.gem.name=%s Chisel
 
+# Materials
+material.morechisels.emerald.name=Emerald
+material.morechisels.sapphire.name=Sapphire
+material.morechisels.ruby.name=Ruby
+material.morechisels.amethyst.name=Amethyst
+material.morechisels.peridot.name=Peridot
+material.morechisels.topaz.name=Topaz
+material.morechisels.tanzanite.name=Tanzanite
+material.morechisels.amber.name=Amber
+
 # Tooltips
 tip.morechisels.pretty=Let's make all the pretty!
 tip.morechisels.activated=Activated
