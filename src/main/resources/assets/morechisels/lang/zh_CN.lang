@@ -19,18 +19,18 @@ item.morechisels.chisel.gravitite.name=重力凿子
 item.morechisels.chisel.thaumium.name=神秘之凿
 item.morechisels.chisel.voidmetal.name=虚空之凿
 item.morechisels.chisel.steampowered.name=蒸汽凿子
-item.morechisels.chisel.soulium.name=Soul Chisel
+item.morechisels.chisel.soulium.name=灵魂之凿
 item.morechisels.chisel.gem.name=%s凿子
 
 # Materials
-material.morechisels.emerald.name=Emerald
-material.morechisels.sapphire.name=Sapphire
-material.morechisels.ruby.name=Ruby
-material.morechisels.amethyst.name=Amethyst
-material.morechisels.peridot.name=Peridot
-material.morechisels.topaz.name=Topaz
-material.morechisels.tanzanite.name=Tanzanite
-material.morechisels.amber.name=Amber
+material.morechisels.emerald.name=绿宝石
+material.morechisels.sapphire.name=蓝宝石
+material.morechisels.ruby.name=红宝石
+material.morechisels.amethyst.name=紫晶
+material.morechisels.peridot.name=橄榄石
+material.morechisels.topaz.name=黄玉
+material.morechisels.tanzanite.name=坦桑石
+material.morechisels.amber.name=琥珀
 
 # Tooltips
 tip.morechisels.pretty=让一切变的精致又华丽
@@ -40,9 +40,9 @@ tip.morechisels.bound.owner=主人: %s
 tip.morechisels.energy=%s / %s RF
 tip.morechisels.steam=%s / %s SU
 # These are roman numerals
-tip.morechisels.unbreakable=Unbreakable MCCCXXXVII
+tip.morechisels.unbreakable=耐久 1337
 
 # Chat
 
 # Console
-info.morechisels.console.config.refresh=Refreshed configuration file.
+info.morechisels.console.config.refresh=配置文件已更新.
