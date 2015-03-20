@@ -135,13 +135,42 @@ public class ItemRecipeRegistry {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " OO", " OO", "S  ", 'O', type, 'S', "stickWood"));
     }
 
+    /**
+     * Chisel modified recipe creation
+     *
+     * @param chisel - Chisel to add recipe for
+     * @param type - Item to use in recipe
+     * @param stickReplacement - Item to use for the stick
+     * @param chiselEnabled - Is the chisel enabled in the config
+     */
     public static void addThemedChiselRecipe(Item chisel, Item type, Item stickReplacement, boolean chiselEnabled) {
         if (type != null && chiselEnabled)
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " O", "S ", 'O', type, 'S', stickReplacement));
     }
 
+    /**
+     * Chisel modified recipe creation
+     *
+     * @param chisel - Chisel to add recipe for
+     * @param type - Item to use in recipe
+     * @param stickReplacement - OreDict entry to use for the stick
+     * @param chiselEnabled - Is the chisel enabled in the config
+     */
     public static void addThemedChiselRecipe(Item chisel, Item type, String stickReplacement, boolean chiselEnabled) {
         if (type != null && chiselEnabled && !OreDictionary.getOres(stickReplacement).isEmpty())
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " O", "S ", 'O', type, 'S', stickReplacement));
+    }
+
+    /**
+     * Chisel modified recipe creation
+     *
+     * @param chisel - Chisel to add recipe for
+     * @param type - Block to use in recipe
+     * @param stickReplacement - OreDict entry to use for the stick
+     * @param chiselEnabled - Is the chisel enabled in the config
+     */
+    public static void addThemedChiselRecipe(Item chisel, String type, String stickReplacement, boolean chiselEnabled) {
+        if (type != null && chiselEnabled && !OreDictionary.getOres(type).isEmpty() && !OreDictionary.getOres(stickReplacement).isEmpty())
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(chisel, 1), " O", "S ", 'O', type, 'S', stickReplacement));
     }
 }

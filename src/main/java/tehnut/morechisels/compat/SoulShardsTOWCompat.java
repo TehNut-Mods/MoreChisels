@@ -1,6 +1,5 @@
 package tehnut.morechisels.compat;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import tehnut.morechisels.items.ChiselType;
 import tehnut.morechisels.items.ItemChiselBase;
@@ -27,8 +26,6 @@ public class SoulShardsTOWCompat {
     }
 
     private static void registerRecipes() {
-        Item souliumIngot = GameRegistry.findItem("SSTOW", "sstow_soulium_ingot");
-
-        ItemRecipeRegistry.addThemedChiselRecipe(chiselSoulium, souliumIngot, "ingotIron", chiselSouliumEnabled);
+        ItemRecipeRegistry.addThemedChiselRecipe(chiselSoulium, "ingotSoulium", "ingotIron", chiselSouliumEnabled);
     }
 }
