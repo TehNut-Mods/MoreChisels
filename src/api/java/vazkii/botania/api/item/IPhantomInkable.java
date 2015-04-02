@@ -6,15 +6,19 @@
  * Botania is Open Source and distributed under the
  * Botania License: http://botaniamod.net/license.php
  * 
- * File Created @ [Jan 24, 2015, 3:08:40 PM (GMT)]
+ * File Created @ [Mar 17, 2015, 4:57:44 PM (GMT)]
  */
 package vazkii.botania.api.item;
 
+import net.minecraft.item.ItemStack;
+
 /**
- * Base Interface for the Manaseer Monocle and items of the sort.
- * Having a IBauble of this type equipped on the 0th slot (amulet)
- * will draw bursts without depth testing and to see sub tile radiuses.
+ * An Item that implements this can be crafted with Phantom Ink.
  */
-public interface IBurstViewerBauble {
+public interface IPhantomInkable {
+
+	public boolean hasPhantomInk(ItemStack stack);
+
+	public void setPhantomInk(ItemStack stack, boolean ink);
 
 }

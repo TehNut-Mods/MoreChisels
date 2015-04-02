@@ -154,6 +154,22 @@ public class SubTileEntity {
 	}
 
 	/**
+	 * Returns a descriptor for the radius of this sub tile. This is called while a player
+	 * is looking at the block with a Manaseer Monocle (IBurstViewerBauble).
+	 */
+	@SideOnly(Side.CLIENT)
+	public RadiusDescriptor getRadius() {
+		return null;
+	}
+
+	/**
+	 * Gets a ChunkCoordinates instance with the position of this sub tile.
+	 */
+	public ChunkCoordinates toChunkCoordinates() {
+		return new ChunkCoordinates(supertile.xCoord, supertile.yCoord, supertile.zCoord);
+	}
+
+	/**
 	 * @see IWandBindable#canSelect(EntityPlayer, ItemStack, int, int, int, int)
 	 */
 	public boolean canSelect(EntityPlayer player, ItemStack wand, int x, int y, int z, int side) {

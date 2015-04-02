@@ -6,15 +6,15 @@
  * Botania is Open Source and distributed under the
  * Botania License: http://botaniamod.net/license.php
  * 
- * File Created @ [Jan 24, 2015, 3:08:40 PM (GMT)]
+ * File Created @ [Feb 22, 2015, 2:02:02 PM (GMT)]
  */
 package vazkii.botania.api.item;
 
 /**
- * Base Interface for the Manaseer Monocle and items of the sort.
- * Having a IBauble of this type equipped on the 0th slot (amulet)
- * will draw bursts without depth testing and to see sub tile radiuses.
+ * A bauble that counts as a cosmetic only item. These can be added to
+ * other baubles to add the render to them. Other cosmetic baubles
+ * can't be stacked on this.
  */
-public interface IBurstViewerBauble {
+public interface ICosmeticBauble extends IBaubleRender {
 
 }
