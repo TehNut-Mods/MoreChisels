@@ -17,19 +17,12 @@ public class ItemChiselBase extends Item implements IChiselItem {
 
     /**
      *
-     * @param type - Pre-defined chisel type from ChiselType
+     * @param type - Pre-defined chisel type from {@link tehnut.morechisels.items.ChiselType}
      */
     public ItemChiselBase(ChiselType type) {
-        super();
+        this(type.name(), type.durability);
 
         this.type = type;
-
-        setUnlocalizedName(ModInformation.ID + ".chisel." + type.toString());
-        setTextureName(ModInformation.TEXLOC + "chisel_" + type.toString());
-        setCreativeTab(ChiselTabs.tabChisel);
-        setMaxStackSize(1);
-        if (Configurations.allowChiselDamage)
-            setMaxDamage(type.durability);
     }
 
     /**
@@ -47,6 +40,15 @@ public class ItemChiselBase extends Item implements IChiselItem {
         if (Configurations.allowChiselDamage)
             setMaxDamage(durability);
     }
+
+    /**
+     * @return - Returns teh {@link tehnut.morechisels.items.ChiselType} of the given Chisel.
+     */
+    public ChiselType getType() {
+        return this.type;
+    }
+
+    // Start Chisel API
 
     @Override
     public boolean canOpenGui(World world, EntityPlayer player, ItemStack chisel) {
