@@ -42,7 +42,7 @@ public class ItemChiselBase extends Item implements IChiselItem {
     }
 
     /**
-     * @return - Returns teh {@link tehnut.morechisels.items.ChiselType} of the given Chisel.
+     * @return - Returns the {@link tehnut.morechisels.items.ChiselType} of the given Chisel.
      */
     public ChiselType getType() {
         return this.type;
