@@ -1,0 +1,47 @@
+# Config
+gui.morechisels.config.title=Configuración de MoreChisels
+
+# Items
+item.morechisels.chisel.bound.name=Cincel de hueso
+item.morechisels.chisel.fluxed.name=Cincel de fluxed
+item.morechisels.chisel.unstable.name=Cincel inestable
+item.morechisels.chisel.bedrockium.name=Cicel de Bedrockium
+item.morechisels.chisel.ironwood.name=Cincel de Ironwood
+item.morechisels.chisel.steeleaf.name=Cincel de Steeleaf
+item.morechisels.chisel.knightmetal.name=Cincel de Knightmetal
+item.morechisels.chisel.fiery.name=Cincel de Fiery
+item.morechisels.chisel.manasteel.name=Cincel de Manasteel
+item.morechisels.chisel.elementium.name=Cincel de Elementium
+item.morechisels.chisel.skyroot.name=Cincel de Skyroot
+item.morechisels.chisel.holystone.name=Cincel de Holystone
+item.morechisels.chisel.zanite.name=Cincel de Zanite
+item.morechisels.chisel.gravitite.name=Cincel de Gravitite
+item.morechisels.chisel.thaumium.name=Cincel de Thaumium
+item.morechisels.chisel.voidmetal.name=Cincel de Voidmetal
+item.morechisels.chisel.steampowered.name=Cincel de Steam Powered
+item.morechisels.chisel.soulium.name=Cincel de Soul
+item.morechisels.chisel.gem.name=%s Cincel
+
+# Materials
+material.morechisels.emerald.name=Esmeralda
+material.morechisels.sapphire.name=Zafiro
+material.morechisels.ruby.name=Rubí
+material.morechisels.amethyst.name=Ametista
+material.morechisels.peridot.name=Peridot
+material.morechisels.topaz.name=Topazio
+material.morechisels.tanzanite.name=Tanzanita
+material.morechisels.amber.name=Ambar
+
+# Tooltips
+tip.morechisels.pretty=Vamos a hacer todo bonito!
+tip.morechisels.activated=Activado
+tip.morechisels.deactivated=Desactivado
+tip.morechisels.bound.owner=Propietario actual: %s
+tip.morechisels.energy=%s / %s RF
+tip.morechisels.steam=%s / %s SU
+
+# These are roman numerals
+tip.morechisels.unbreakable=Irrompible MCCCXXXVII
+
+# Console
+info.morechisels.console.config.refresh=Archivo de información recargado.
