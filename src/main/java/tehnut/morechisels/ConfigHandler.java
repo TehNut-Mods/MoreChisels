@@ -103,7 +103,7 @@ public class ConfigHandler {
         chiselSouliumEnabled = config.get(chisels, "chiselSouliumEnabled", true).getBoolean();
         chiselCheeseEnabled = config.get(chisels, "chiselCheeseEnabled", true).getBoolean();
         chiselDeshEnabled = config.get(chisels, "chiselDeshEnabled", true).getBoolean();
-        gemChiselWhitelist = config.get(chisels, "gemChiselWhitelist", gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix. \nSyntax is: \nGemName:Durability:HexColor").getStringList();
+        gemChiselWhitelist = config.get(chisels, "gemChiselWhitelist", gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix.\nSyntax is:\nGemName:Durability:HexColor").getStringList();
 
         // DURABILITY
         durabilityFluxed = config.get(durability, "durabilityFluxed", 100000).getInt();
