@@ -1,17 +1,15 @@
 package tehnut.morechisels.util;
 
-import com.cricketcraft.chisel.init.ChiselItems;
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.client.event.RenderPlayerEvent;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import team.chisel.init.ChiselItems;
 import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.ModInformation;
-
-import java.util.List;
 
 public class EventHandler {
 
@@ -19,7 +17,7 @@ public class EventHandler {
     public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
         if (eventArgs.modID.equals(ModInformation.ID)) {
             ConfigHandler.syncConfig();
-            LogHelper.info(TextHelper.localize("info.morechisels.console.config.refresh"));
+            LogHelper.info(StatCollector.translateToLocal("info.morechisels.console.config.refresh"));
         }
     }
 

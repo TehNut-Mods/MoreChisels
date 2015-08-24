@@ -1,5 +1,6 @@
 package tehnut.morechisels.util;
 
+import cpw.mods.fml.common.Loader;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 
@@ -73,5 +74,21 @@ public class Utils {
 
     public static String splitAtCapital(String input) {
         return input.replaceAll("(\\p{Ll})(\\p{Lu})", "$1 $2");
+    }
+
+    /**
+     * Loads a class if the given modid is found
+     *
+     * @param clazz - Compatibility class
+     * @param modid - Required modid
+     */
+    public static void registerCompat(Class clazz, String modid) {
+        if (Loader.isModLoaded(modid)) {
+            try {
+                Class.forName(clazz.getCanonicalName());
+            } catch (ClassNotFoundException e) {
+                LogHelper.error("Could not find compatibility class for mod { " + modid + " }. Please report this.");
+            }
+        }
     }
 }

@@ -2,9 +2,9 @@ package tehnut.morechisels.client.gui;
 
 import cpw.mods.fml.client.config.GuiConfig;
 import cpw.mods.fml.client.config.IConfigElement;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.config.ConfigElement;
 import tehnut.morechisels.ModInformation;
-import tehnut.morechisels.util.TextHelper;
 import net.minecraft.client.gui.GuiScreen;
 
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import static tehnut.morechisels.ConfigHandler.*;
 public class ConfigGui extends GuiConfig {
 
 	public ConfigGui(GuiScreen parentScreen) {
-		super(parentScreen, getConfigElements(parentScreen), ModInformation.ID, false, false, TextHelper.localize("gui." + ModInformation.ID + ".config.title"));
+		super(parentScreen, getConfigElements(parentScreen), ModInformation.ID, false, false, StatCollector.translateToLocal("gui." + ModInformation.ID + ".config.title"));
 	}
 
 	@SuppressWarnings("rawtypes")

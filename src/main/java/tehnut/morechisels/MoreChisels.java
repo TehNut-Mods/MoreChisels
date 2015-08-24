@@ -7,12 +7,13 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.MinecraftForge;
-import tehnut.morechisels.compat.CompatRegistry;
-import tehnut.morechisels.items.ItemRecipeRegistry;
-import tehnut.morechisels.items.ItemRegistry;
-import tehnut.morechisels.proxies.CommonProxy;
+import tehnut.morechisels.compat.*;
+import tehnut.morechisels.item.ItemRecipeRegistry;
+import tehnut.morechisels.registry.ItemRegistry;
+import tehnut.morechisels.proxy.CommonProxy;
 import tehnut.morechisels.util.EventHandler;
 import tehnut.morechisels.util.LogHelper;
+import tehnut.morechisels.util.Utils;
 
 @Mod(modid = ModInformation.ID, name = ModInformation.NAME, version = ModInformation.VERSION, dependencies = ModInformation.DEPEND, guiFactory = ModInformation.GUIFACTORY)
 public class MoreChisels {
@@ -39,7 +40,15 @@ public class MoreChisels {
 
         ItemRegistry.registerItems();
         ItemRecipeRegistry.registerRecipes();
-        CompatRegistry.registerCompat();
+
+        Utils.registerCompat(CompatibilityAetherII.class, "aether");
+        Utils.registerCompat(CompatibilityBloodMagic.class, "AWWayofTime");
+        Utils.registerCompat(CompatibilityBotania.class, "Botania");
+        Utils.registerCompat(CompatibilityExtraUtilities.class, "ExtraUtilities");
+        Utils.registerCompat(CompatibilityGalacticraft.class, "GalacticraftMars");
+        Utils.registerCompat(CompatibilitySoulShards.class, "SSTOW");
+        Utils.registerCompat(CompatibilityThaumcraft.class, "Thaumcraft");
+        Utils.registerCompat(CompatibilityTwilightForest.class, "TwilightForest");
     }
 
     @Mod.EventHandler
