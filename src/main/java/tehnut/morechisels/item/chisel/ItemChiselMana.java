@@ -5,10 +5,10 @@ import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
 import vazkii.botania.api.mana.IManaUsingItem;
 
-public class ItemChiselElementium extends ItemChiselBase implements IManaUsingItem {
+public class ItemChiselMana extends ItemChiselBase implements IManaUsingItem {
 
-    public ItemChiselElementium() {
-        super(ChiselType.ELEMENTIUM);
+    public ItemChiselMana(ChiselType type) {
+        super(type);
     }
 
     @Override
