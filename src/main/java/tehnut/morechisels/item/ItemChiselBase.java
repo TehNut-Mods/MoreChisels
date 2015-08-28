@@ -1,5 +1,6 @@
 package tehnut.morechisels.item;
 
+import com.cricketcraft.chisel.api.ChiselTabs;
 import com.cricketcraft.chisel.api.IChiselItem;
 import com.cricketcraft.chisel.api.carving.ICarvingVariation;
 import net.minecraft.block.Block;
@@ -7,7 +8,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import team.chisel.init.ChiselTabs;
 import tehnut.morechisels.ModInformation;
 
 public class ItemChiselBase extends Item implements IChiselItem {

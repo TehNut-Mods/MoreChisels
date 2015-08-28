@@ -6,7 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
-import team.chisel.config.Configurations;
+import tehnut.morechisels.ConfigHandler;
 
 public class RecipeRegistry {
 
@@ -22,7 +22,7 @@ public class RecipeRegistry {
      * @param chiselEnabled - Is the chisel enabled in the config
      */
     public static void addConfiguredChiselRecipe(Item chisel, String type, boolean chiselEnabled) {
-        if (!Configurations.chiselRecipe)
+        if (!ConfigHandler.chiselRecipeType)
             addStandardChiselRecipe(chisel, type, chiselEnabled);
         else
             addModifiedChiselRecipe(chisel, type, chiselEnabled);
@@ -36,7 +36,7 @@ public class RecipeRegistry {
      * @param chiselEnabled - Is the chisel enabled in the config
      */
     public static void addConfiguredChiselRecipe(Item chisel, Item type, boolean chiselEnabled) {
-        if (!Configurations.chiselRecipe)
+        if (!ConfigHandler.chiselRecipeType)
             addStandardChiselRecipe(chisel, type, chiselEnabled);
         else
             addModifiedChiselRecipe(chisel, type, chiselEnabled);
@@ -50,7 +50,7 @@ public class RecipeRegistry {
      * @param chiselEnabled - Is the chisel enabled in the config
      */
     public static void addConfiguredChiselRecipe(Item chisel, Block type, boolean chiselEnabled) {
-        if (!Configurations.chiselRecipe)
+        if (!ConfigHandler.chiselRecipeType)
             addStandardChiselRecipe(chisel, type, chiselEnabled);
         else
             addModifiedChiselRecipe(chisel, type, chiselEnabled);

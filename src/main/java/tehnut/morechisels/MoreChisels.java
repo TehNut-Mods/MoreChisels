@@ -15,6 +15,8 @@ import tehnut.morechisels.util.EventHandler;
 import tehnut.morechisels.util.LogHelper;
 import tehnut.morechisels.util.Utils;
 
+import java.io.File;
+
 @Mod(modid = ModInformation.ID, name = ModInformation.NAME, version = ModInformation.VERSION, dependencies = ModInformation.DEPEND, guiFactory = ModInformation.GUIFACTORY)
 public class MoreChisels {
 
@@ -24,8 +26,11 @@ public class MoreChisels {
     @Mod.Instance
     public static MoreChisels instance;
 
+    public static File configFolder;
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        configFolder = event.getModConfigurationDirectory();
         ConfigHandler.init(event.getSuggestedConfigurationFile());
 
         LogHelper.checkLogger();
