@@ -49,12 +49,7 @@ public class ItemChiselGem extends ItemChiselBase {
     @SideOnly(Side.CLIENT)
     @Override
     public int getColorFromItemStack(ItemStack stack, int pass) {
-
-        if (pass == 1) {
-            return Color.decode(hexColor).getRGB();
-        } else {
-            return super.getColorFromItemStack(stack, pass);
-        }
+        return pass == 1 ? Color.decode(hexColor).getRGB() : super.getColorFromItemStack(stack, pass);
     }
 
     @Override
@@ -69,11 +64,6 @@ public class ItemChiselGem extends ItemChiselBase {
 
     @Override
     public IIcon getIcon(ItemStack stack, int pass) {
-        if (pass == 0) {
-            return this.itemIcon;
-        } else if (pass == 1) {
-            return this.overlayIcon;
-        }
-        return getIconFromDamageForRenderPass(stack.getItemDamage(), pass);
+        return pass == 0 ? this.itemIcon : this.overlayIcon;
     }
 }

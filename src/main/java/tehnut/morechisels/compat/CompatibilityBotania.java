@@ -1,7 +1,7 @@
 package tehnut.morechisels.compat;
 
 import net.minecraft.item.Item;
-import tehnut.morechisels.item.ItemRecipeRegistry;
+import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.item.chisel.ItemChiselElementium;
 import tehnut.morechisels.item.chisel.ItemChiselManasteel;
@@ -31,7 +31,7 @@ public class CompatibilityBotania {
 
     private static void registerRecipes() {
 
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselManasteel, "ingotManasteel", chiselManasteelEnabled);
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselElementium, "ingotElvenElementium", chiselElementiumEnabled);
+        RecipeRegistry.addConfiguredChiselRecipe(chiselManasteel, "ingotManasteel", chiselManasteelEnabled);
+        RecipeRegistry.addConfiguredChiselRecipe(chiselElementium, "ingotElvenElementium", chiselElementiumEnabled);
     }
 }

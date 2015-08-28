@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
-import tehnut.morechisels.item.ItemRecipeRegistry;
+import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.util.LogHelper;
 
@@ -37,7 +37,7 @@ public class CompatibilityGalacticraft {
         Item gcStick = GameRegistry.findItem("GalacticraftMars", "item.null");
         int gcStickMeta = 1;
 
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselCheese, cheese, chiselCheeseEnabled);
+        RecipeRegistry.addConfiguredChiselRecipe(chiselCheese, cheese, chiselCheeseEnabled);
         GameRegistry.addRecipe(new ShapedOreRecipe(chiselDesh, " I", "S ", 'I', "ingotDesh", 'S', new ItemStack(gcStick, 1, gcStickMeta)));
     }
 }

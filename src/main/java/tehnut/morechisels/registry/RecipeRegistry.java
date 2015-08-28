@@ -1,4 +1,4 @@
-package tehnut.morechisels.item;
+package tehnut.morechisels.registry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -8,9 +8,8 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import team.chisel.config.Configurations;
 import tehnut.morechisels.ConfigHandler;
-import tehnut.morechisels.registry.ItemRegistry;
 
-public class ItemRecipeRegistry {
+public class RecipeRegistry {
 
     public static void registerRecipes() {
         for (int i = 0; i < ItemRegistry.chiselGem.length; i++) {

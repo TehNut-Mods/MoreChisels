@@ -3,7 +3,7 @@ package tehnut.morechisels.compat;
 import net.minecraft.item.Item;
 import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
-import tehnut.morechisels.item.ItemRecipeRegistry;
+import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.util.LogHelper;
 
@@ -25,6 +25,6 @@ public class CompatibilitySoulShards {
     }
 
     private static void registerRecipes() {
-        ItemRecipeRegistry.addThemedChiselRecipe(chiselSoulium, "ingotSoulium", "ingotIron", chiselSouliumEnabled);
+        RecipeRegistry.addThemedChiselRecipe(chiselSoulium, "ingotSoulium", "ingotIron", chiselSouliumEnabled);
     }
 }

@@ -8,7 +8,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.MinecraftForge;
 import tehnut.morechisels.compat.*;
-import tehnut.morechisels.item.ItemRecipeRegistry;
+import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.proxy.CommonProxy;
 import tehnut.morechisels.util.EventHandler;
@@ -30,8 +30,9 @@ public class MoreChisels {
 
         LogHelper.checkLogger();
 
-        MinecraftForge.EVENT_BUS.register(new EventHandler());
-        FMLCommonHandler.instance().bus().register(new EventHandler());
+        EventHandler handler = new EventHandler();
+        MinecraftForge.EVENT_BUS.register(handler);
+        FMLCommonHandler.instance().bus().register(handler);
     }
 
     @Mod.EventHandler
@@ -39,7 +40,7 @@ public class MoreChisels {
         proxy.load();
 
         ItemRegistry.registerItems();
-        ItemRecipeRegistry.registerRecipes();
+        RecipeRegistry.registerRecipes();
 
         Utils.registerCompat(CompatibilityAetherII.class, "aether");
         Utils.registerCompat(CompatibilityBloodMagic.class, "AWWayofTime");

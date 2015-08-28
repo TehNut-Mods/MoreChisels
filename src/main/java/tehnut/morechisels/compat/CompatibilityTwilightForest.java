@@ -5,7 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
-import tehnut.morechisels.item.ItemRecipeRegistry;
+import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.util.LogHelper;
 
@@ -42,9 +42,9 @@ public class CompatibilityTwilightForest {
         Item knightmetalIngot = GameRegistry.findItem("TwilightForest", "item.knightMetal");
         Item fieryIngot = GameRegistry.findItem("TwilightForest", "item.fieryIngot");
 
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselIronwood, "ironwood", chiselIronwoodEnabled);
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselSteeleaf, "steeleaf", chiselSteeleafEnabled);
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselKnightmetal, knightmetalIngot, chiselKnightmetalEnabled);
-        ItemRecipeRegistry.addThemedChiselRecipe(chiselFiery, fieryIngot, Items.blaze_rod, chiselFieryEnabled);
+        RecipeRegistry.addConfiguredChiselRecipe(chiselIronwood, "ironwood", chiselIronwoodEnabled);
+        RecipeRegistry.addConfiguredChiselRecipe(chiselSteeleaf, "steeleaf", chiselSteeleafEnabled);
+        RecipeRegistry.addConfiguredChiselRecipe(chiselKnightmetal, knightmetalIngot, chiselKnightmetalEnabled);
+        RecipeRegistry.addThemedChiselRecipe(chiselFiery, fieryIngot, Items.blaze_rod, chiselFieryEnabled);
     }
 }

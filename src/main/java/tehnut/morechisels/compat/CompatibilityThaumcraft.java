@@ -1,7 +1,7 @@
 package tehnut.morechisels.compat;
 
 import net.minecraft.item.Item;
-import tehnut.morechisels.item.ItemRecipeRegistry;
+import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.item.chisel.ItemChiselThaumium;
 import tehnut.morechisels.item.chisel.ItemChiselVoidmetal;
@@ -29,7 +29,7 @@ public class CompatibilityThaumcraft {
     }
 
     private static void registerRecipes() {
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselThaumium, "ingotThaumium", chiselThaumiumEnabled);
-        ItemRecipeRegistry.addConfiguredChiselRecipe(chiselVoidmetal, "ingotVoid", chiselVoidmetalEnabled);
+        RecipeRegistry.addConfiguredChiselRecipe(chiselThaumium, "ingotThaumium", chiselThaumiumEnabled);
+        RecipeRegistry.addConfiguredChiselRecipe(chiselVoidmetal, "ingotVoid", chiselVoidmetalEnabled);
     }
 }
