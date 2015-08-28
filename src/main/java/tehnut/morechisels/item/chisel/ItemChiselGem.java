@@ -1,5 +1,6 @@
 package tehnut.morechisels.item.chisel;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -8,6 +9,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 import tehnut.morechisels.ModInformation;
 import tehnut.morechisels.item.ItemChiselBase;
+import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.util.Utils;
 
 import java.awt.*;
@@ -26,6 +28,9 @@ public class ItemChiselGem extends ItemChiselBase {
         this.setDisplayName = setDisplayName;
         this.name = name;
         this.hexColor = hexColor;
+
+        GameRegistry.registerItem(this, "ItemChiselGem" + name);
+        RecipeRegistry.addConfiguredChiselRecipe(this, "gem" + name, true);
     }
 
     @SideOnly(Side.CLIENT)

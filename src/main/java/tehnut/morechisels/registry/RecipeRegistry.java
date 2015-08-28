@@ -7,16 +7,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import team.chisel.config.Configurations;
-import tehnut.morechisels.ConfigHandler;
 
 public class RecipeRegistry {
 
     public static void registerRecipes() {
-        for (int i = 0; i < ItemRegistry.chiselGem.length; i++) {
-            String[] gemType = ConfigHandler.gemChiselWhitelist[i].split(":");
-
-            addConfiguredChiselRecipe(ItemRegistry.chiselGem[i], "gem" + gemType[0], true);
-        }
+        // Do stuff
     }
 
     /**

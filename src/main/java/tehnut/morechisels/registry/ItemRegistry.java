@@ -7,16 +7,8 @@ import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.item.chisel.ItemChiselGem;
 
 public class ItemRegistry {
-
-    // Items
-    public static Item chiselGem[];
-
-    public static int gemChiselCount = 0;
-
     public static void registerItems() {
         // Gems
-        chiselGem = new Item[ConfigHandler.gemChiselWhitelist.length];
-
         for (String ore : OreDictionary.getOreNames()) {
             if (ore.startsWith("gem")) {
                 String gem = ore.substring(3);
@@ -24,11 +16,8 @@ public class ItemRegistry {
                 for (String whitelist : ConfigHandler.gemChiselWhitelist) {
                     String[] splitWhitelist = whitelist.split(":");
 
-                    if (gem.equals(splitWhitelist[0])) {
-                        chiselGem[gemChiselCount] = new ItemChiselGem(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), splitWhitelist[2], true);
-                        registerOreItem(chiselGem[gemChiselCount], "ItemChisel" + splitWhitelist[0], "gem" + splitWhitelist[0]);
-                        gemChiselCount++;
-                    }
+                    if (gem.equals(splitWhitelist[0]))
+                        new ItemChiselGem(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), splitWhitelist[2], true);
                 }
             }
         }
