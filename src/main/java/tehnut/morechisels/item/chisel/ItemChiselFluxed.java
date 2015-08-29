@@ -1,7 +1,6 @@
 package tehnut.morechisels.item.chisel;
 
 import cofh.api.energy.IEnergyContainerItem;
-import com.cricketcraft.chisel.api.carving.ICarvingVariation;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -13,6 +12,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import team.chisel.api.carving.ICarvingVariation;
 import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
@@ -137,7 +137,7 @@ public class ItemChiselFluxed extends ItemChiselBase implements IEnergyContainer
 
     // Start IChiselItem
     @Override
-    public boolean onChisel(World world, ItemStack chisel, ICarvingVariation target) {
+    public boolean onChisel(World world, EntityPlayer player, ItemStack chisel, ICarvingVariation target) {
 
         NBTTagCompound tag = chisel.stackTagCompound;
 
@@ -149,7 +149,7 @@ public class ItemChiselFluxed extends ItemChiselBase implements IEnergyContainer
     }
 
     @Override
-    public boolean canChisel(World world, ItemStack chisel, ICarvingVariation target) {
+    public boolean canChisel(World world, EntityPlayer player, ItemStack chisel, ICarvingVariation target) {
 
         NBTTagCompound tag = chisel.stackTagCompound;
 

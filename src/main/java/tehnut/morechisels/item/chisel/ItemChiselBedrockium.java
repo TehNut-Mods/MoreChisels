@@ -1,6 +1,5 @@
 package tehnut.morechisels.item.chisel;
 
-import com.cricketcraft.chisel.api.carving.ICarvingVariation;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -8,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import team.chisel.api.carving.ICarvingVariation;
 import tehnut.morechisels.item.ChiselType;
 import tehnut.morechisels.item.ItemChiselBase;
 
@@ -29,12 +29,12 @@ public class ItemChiselBedrockium extends ItemChiselBase {
     }
     
     @Override
-    public boolean onChisel(World world, ItemStack chisel, ICarvingVariation target) {
+    public boolean onChisel(World world, EntityPlayer player, ItemStack chisel, ICarvingVariation target) {
         return false;
     }
 
     @Override
-    public boolean hasModes(ItemStack chisel) {
+    public boolean hasModes(EntityPlayer player, ItemStack chisel) {
         return true;
     }
 }

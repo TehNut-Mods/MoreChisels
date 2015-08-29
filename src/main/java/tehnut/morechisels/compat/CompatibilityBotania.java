@@ -13,6 +13,7 @@ public class CompatibilityBotania {
 
     public static Item chiselManasteel;
     public static Item chiselElementium;
+    public static Item chiselTerrasteel;
 
     static {
         LogHelper.info("Botania compatibility is enabled and running");
@@ -27,6 +28,9 @@ public class CompatibilityBotania {
 
         chiselElementium = new ItemChiselMana(ChiselType.ELEMENTIUM);
         ItemRegistry.registerCompatItem(chiselElementium, "ItemChiselElementium", chiselElementiumEnabled);
+
+        chiselTerrasteel = new ItemChiselMana(ChiselType.TERRASTEEL);
+        ItemRegistry.registerCompatItem(chiselTerrasteel, "ItemChiselTerrasteel", chiselTerrasteelEnabled);
     }
 
     private static void registerRecipes() {

@@ -1,13 +1,13 @@
 package tehnut.morechisels.item;
 
-import com.cricketcraft.chisel.api.ChiselTabs;
-import com.cricketcraft.chisel.api.IChiselItem;
-import com.cricketcraft.chisel.api.carving.ICarvingVariation;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import team.chisel.api.ChiselTabs;
+import team.chisel.api.IChiselItem;
+import team.chisel.api.carving.ICarvingVariation;
 import tehnut.morechisels.ModInformation;
 
 public class ItemChiselBase extends Item implements IChiselItem {
@@ -55,12 +55,12 @@ public class ItemChiselBase extends Item implements IChiselItem {
     }
 
     @Override
-    public boolean onChisel(World world, ItemStack chisel, ICarvingVariation target) {
+    public boolean onChisel(World world, EntityPlayer player, ItemStack chisel, ICarvingVariation target) {
         return true;
     }
 
     @Override
-    public boolean canChisel(World world, ItemStack chisel, ICarvingVariation target) {
+    public boolean canChisel(World world, EntityPlayer player, ItemStack chisel, ICarvingVariation target) {
         return true;
     }
 
@@ -70,7 +70,7 @@ public class ItemChiselBase extends Item implements IChiselItem {
     }
 
     @Override
-    public boolean hasModes(ItemStack chisel) {
+    public boolean hasModes(EntityPlayer player, ItemStack chisel) {
         return hasModes;
     }
 }
