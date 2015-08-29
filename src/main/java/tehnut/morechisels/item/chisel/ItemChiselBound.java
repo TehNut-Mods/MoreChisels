@@ -27,6 +27,8 @@ public class ItemChiselBound extends ItemChiselBase implements IBindable {
 
     public ItemChiselBound() {
         super(ChiselType.BOUND);
+
+        this.hasModes = true;
     }
 
     @Override

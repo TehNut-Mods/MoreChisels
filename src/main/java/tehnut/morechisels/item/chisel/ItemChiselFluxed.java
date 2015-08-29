@@ -26,8 +26,11 @@ public class ItemChiselFluxed extends ItemChiselBase implements IEnergyContainer
 
     public ItemChiselFluxed() {
         super(ChiselType.FLUXED);
+
         setNoRepair();
         setMaxDamage(0);
+
+        this.hasModes = true;
     }
 
     @SideOnly(Side.CLIENT)

@@ -17,6 +17,8 @@ public class ItemChiselBedrockium extends ItemChiselBase {
 
     public ItemChiselBedrockium() {
         super(ChiselType.BEDROCKIUM);
+
+        this.hasModes = true;
     }
 
     @Override

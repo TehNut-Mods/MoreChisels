@@ -17,6 +17,8 @@ public class ItemChiselVoidmetal extends ItemChiselBase implements IWarpingGear,
 
     public ItemChiselVoidmetal() {
         super(ChiselType.VOIDMETAL);
+
+        this.hasModes = true;
     }
 
     public void onUpdate(ItemStack stack, World world, Entity entity, int p_77663_4_, boolean p_77663_5_) {

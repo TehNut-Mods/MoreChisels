@@ -28,6 +28,7 @@ public class ItemChiselGem extends ItemChiselBase {
         this.setDisplayName = setDisplayName;
         this.name = name;
         this.hexColor = hexColor;
+        this.hasModes = true;
 
         GameRegistry.registerItem(this, "ItemChiselGem" + name);
         RecipeRegistry.addConfiguredChiselRecipe(this, "gem" + name, true);

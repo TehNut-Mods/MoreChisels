@@ -13,6 +13,7 @@ import tehnut.morechisels.ModInformation;
 public class ItemChiselBase extends Item implements IChiselItem {
 
     private ChiselType type;
+    protected boolean hasModes = false;
 
     /**
      *
@@ -70,6 +71,6 @@ public class ItemChiselBase extends Item implements IChiselItem {
 
     @Override
     public boolean hasModes(ItemStack chisel) {
-        return false;
+        return hasModes;
     }
 }
