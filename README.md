@@ -4,6 +4,8 @@
 
 Assorted chisels for [Chisel-2](https://github.com/TheCricket/Chisel-2).
 
+Builds `21` and on have switched to the [ChiselTeam](https://github.com/Chisel-Team/Chisel) fork of Chisel which can be found [here](http://minecraft.curseforge.com/mc-mods/235279-chisel).
+
 ##Downloads
 
 Downloads for MoreChisels (as well as all of my other mods) can be found on my [Jenkins](http://tehnut.info/jenkins/) or [CurseForge](http://minecraft.curseforge.com/mc-mods/227904-morechisels).
