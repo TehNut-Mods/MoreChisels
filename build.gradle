@@ -36,12 +36,23 @@ if (new File(projectDir, '.git').exists()) {
 
 repositories {
 	maven { url = "http://maven.tterrag.com/" }
+
+    ivy {
+        name "Botania"
+        artifactPattern "http://botaniamod.net/files/deobf/[module] r[revision]-deobf.[ext]"
+    }
+    ivy {
+        name "Baubles"
+        artifactPattern "https://dl.dropboxusercontent.com/u/47135879/[module]-deobf-1.7.10-[revision].[ext]"
+    }
 }
 
 dependencies {
-  compile "team.chisel:Chisel:${chisel_version}:deobf"
-  compile "team.chisel.ctmlib:CTMLib:MC${mc_version}-${ctmlib_version}:deobf"
-  compile fileTree(dir: 'libs', include: '*.jar')
+    compile "team.chisel:Chisel:${chisel_version}:deobf"
+    compile "team.chisel.ctmlib:CTMLib:MC${mc_version}-${ctmlib_version}:deobf"
+    compile name: 'Botania', version: "${botania_version}", ext: 'jar'
+    compile name: 'Baubles', version: "${baubles_version}", ext: 'jar'
+    compile fileTree(dir: 'libs', include: '*.jar')
 }
 
 minecraft {
