@@ -2,12 +2,12 @@ package tehnut.morechisels.util;
 
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
 import net.minecraftforge.client.event.RenderPlayerEvent;
-import team.chisel.init.ChiselItems;
 import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.ModInformation;
 
@@ -38,12 +38,17 @@ public class EventHandler {
             /*Cricket*/ "a7529984-8cb2-4fb9-b799-97980f770101"
         };
 
+        ItemStack ironChisel = new ItemStack(GameRegistry.findItem("chisel", "chisel"));
+        ItemStack diamondChisel = new ItemStack(GameRegistry.findItem("chisel", "diamondChisel"));
+
         @SubscribeEvent
         @SideOnly(Side.CLIENT)
         public void onPlayerRender(RenderPlayerEvent.Specials.Pre event) {
             if (ConfigHandler.addCoolStuffForCoolPeople) {
-                RenderUtils.renderItemOnPlayersBack(new ItemStack(ChiselItems.diamondChisel), specialPeople, event.entityPlayer);
-                RenderUtils.renderItemOnPlayersBack(new ItemStack(ChiselItems.chisel), chiselDevs, event.entityPlayer);
+                if (ironChisel != null)
+                    RenderUtils.renderItemOnPlayersBack(diamondChisel, specialPeople, event.entityPlayer);
+                if (diamondChisel != null)
+                    RenderUtils.renderItemOnPlayersBack(ironChisel, chiselDevs, event.entityPlayer);
             }
         }
     }
