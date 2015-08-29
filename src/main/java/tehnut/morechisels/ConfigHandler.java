@@ -33,7 +33,6 @@ public class ConfigHandler {
     public static boolean chiselGravititeEnabled;
     public static boolean chiselThaumiumEnabled;
     public static boolean chiselVoidmetalEnabled;
-    public static boolean chiselSteamEnabled;
     public static boolean chiselSouliumEnabled;
     public static boolean chiselCheeseEnabled;
     public static boolean chiselDeshEnabled;
@@ -42,7 +41,6 @@ public class ConfigHandler {
 
     public static int durabilityFluxed;
     public static int durabilityBloody;
-    public static int durabilityBedrockium;
     public static int durabilityUnstable;
     public static int durabilityIronwood;
     public static int durabilitySteeleaf;
@@ -56,15 +54,12 @@ public class ConfigHandler {
     public static int durabilityGravitite;
     public static int durabilityThaumium;
     public static int durabilityVoidmetal;
-    public static int durabilitySteam;
     public static int durabilitySoulium;
     public static int durabilityCheese;
     public static int durabilityDesh;
 
     public static boolean enableLogging;
-//    public static int manaPerChiseling;
     public static int lifeEssencePerRepair;
-    public static int steamPerUse;
     public static boolean addCoolStuffForCoolPeople;
 
     public static boolean addEnderIOFluxedChiselRecipes;
@@ -84,59 +79,50 @@ public class ConfigHandler {
         config.setCategoryComment(recipes, "Recipe settings.");
 
         // CHISELS
-        chiselFluxedEnabled = config.get(chisels, "chiselFluxedEnabled", true).getBoolean();
-        chiselBoundEnabled = config.get(chisels, "chiselBoundEnabled", true).getBoolean();
-//        chiselBloodyEnabled = config.get(chisels, "chiselBloodyEnabled", true).getBoolean();
-        chiselBedrockiumEnabled = config.get(chisels, "chiselBedrockiumEnabled", true).getBoolean();
-        chiselUnstableEnabled = config.get(chisels, "chiselUnstableEnabled", true).getBoolean();
-        chiselIronwoodEnabled = config.get(chisels, "chiselIronwoodEnabled", true).getBoolean();
-        chiselSteeleafEnabled = config.get(chisels, "chiselSteeleafEnabled", true).getBoolean();
-        chiselKnightmetalEnabled = config.get(chisels, "chiselKnightmetalEnabled", true).getBoolean();
-        chiselFieryEnabled = config.get(chisels, "chiselFieryEnabled", true).getBoolean();
-//        chiselManasteelEnabled = config.get(chisels, "chiselManasteelEnabled", true).getBoolean();
-//        chiselElementiumEnabled = config.get(chisels, "chiselElementiumEnabled", true).getBoolean();
-        chiselSkyrootEnabled = config.get(chisels, "chiselSkyrootEnabled", true).getBoolean();
-        chiselHolystoneEnabled = config.get(chisels, "chiselHolystoneEnabled", true).getBoolean();
-        chiselZaniteEnabled = config.get(chisels, "chiselZaniteEnabled", true).getBoolean();
-        chiselGravititeEnabled = config.get(chisels, "chiselGravititeEnabled", true).getBoolean();
-        chiselThaumiumEnabled = config.get(chisels, "chiselThaumiumEnabled", true).getBoolean();
-        chiselVoidmetalEnabled = config.get(chisels, "chiselVoidmetalEnabled", true).getBoolean();
-//        chiselSteamEnabled = config.get(chisels, "chiselSteamEnabled", true).getBoolean();
-        chiselSouliumEnabled = config.get(chisels, "chiselSouliumEnabled", true).getBoolean();
-        chiselCheeseEnabled = config.get(chisels, "chiselCheeseEnabled", true).getBoolean();
-        chiselDeshEnabled = config.get(chisels, "chiselDeshEnabled", true).getBoolean();
-        gemChiselWhitelist = config.get(chisels, "gemChiselWhitelist", gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix.\nSyntax is:\nGemName:Durability:HexColor").getStringList();
+        chiselFluxedEnabled = config.getBoolean("chiselFluxedEnabled", chisels, true, "");
+        chiselBoundEnabled = config.getBoolean("chiselBoundEnabled", chisels, true, "");
+        chiselBedrockiumEnabled = config.getBoolean("chiselBedrockiumEnabled", chisels, true, "");
+        chiselUnstableEnabled = config.getBoolean("chiselUnstableEnabled", chisels, true, "");
+        chiselIronwoodEnabled = config.getBoolean("chiselIronwoodEnabled", chisels, true, "");
+        chiselSteeleafEnabled = config.getBoolean("chiselSteeleafEnabled", chisels, true, "");
+        chiselKnightmetalEnabled = config.getBoolean("chiselKnightmetalEnabled", chisels, true, "");
+        chiselFieryEnabled = config.getBoolean("chiselFieryEnabled", chisels, true, "");
+        chiselSkyrootEnabled = config.getBoolean("chiselSkyrootEnabled", chisels, true, "");
+        chiselHolystoneEnabled = config.getBoolean("chiselHolystoneEnabled", chisels, true, "");
+        chiselZaniteEnabled = config.getBoolean("chiselZaniteEnabled", chisels, true, "");
+        chiselGravititeEnabled = config.getBoolean("chiselGravititeEnabled", chisels, true, "");
+        chiselThaumiumEnabled = config.getBoolean("chiselThaumiumEnabled", chisels, true, "");
+        chiselVoidmetalEnabled = config.getBoolean("chiselVoidmetalEnabled", chisels, true, "");
+        chiselSouliumEnabled = config.getBoolean("chiselSouliumEnabled", chisels, true, "");
+        chiselCheeseEnabled = config.getBoolean("chiselCheeseEnabled", chisels, true, "");
+        chiselDeshEnabled = config.getBoolean("chiselDeshEnabled", chisels, true, "");
+        gemChiselWhitelist = config.getStringList("gemChiselWhitelist", chisels, gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix.\nSyntax is:\nGemName:Durability:HexColor");
 
         // DURABILITY
-        durabilityFluxed = config.get(durability, "durabilityFluxed", 100000).getInt();
-//        durabilityBloody = config.get(durability, "durabilityBloody", 500).getInt();
-        durabilityUnstable = config.get(durability, "durabilityUnstable", 1800).getInt();
-        durabilityIronwood = config.get(durability, "durabilityIronwood", 750).getInt();
-        durabilitySteeleaf = config.get(durability, "durabilitySteeleaf", 200).getInt();
-        durabilityKnightmetal = config.get(durability, "durabilityKnightmetal", 650).getInt();
-        durabilityFiery = config.get(durability, "durabilityFiery", 1300).getInt();
-        durabilityManasteel = config.get(durability, "durabilityManasteel", 300).getInt();
-        durabilityElementium = config.get(durability, "durabilityElementium", 720).getInt();
-        durabilitySkyroot = config.get(durability, "durabilitySkyroot", 60).getInt();
-        durabilityHolystone = config.get(durability, "durabilityHolystone", 130).getInt();
-        durabilityZanite = config.get(durability, "durabilityZanite", 720).getInt();
-        durabilityGravitite = config.get(durability, "durabilityGravitite", 720).getInt();
-        durabilityThaumium = config.get(durability, "durabilityThaumium", 400).getInt();
-        durabilityVoidmetal = config.get(durability, "durabilityVoidmetal", 150).getInt();
-//        durabilitySteam = config.get(durability, "durabilitySteam", 10000).getInt();
-        durabilitySoulium = config.get(durability, "durabilitySoulium", 1030).getInt();
-        durabilityCheese = config.get(durability, "durabilityCheese", 12).getInt();
-        durabilityDesh = config.get(durability, "durabilityDesh", 1024).getInt();
+        durabilityFluxed = config.getInt("durabilityFluxed", durability, 100000, 0, Short.MAX_VALUE, "");
+        durabilityUnstable = config.getInt("durabilityUnstable", durability, 1800, 0, Short.MAX_VALUE, "");
+        durabilityIronwood = config.getInt("durabilityIronwood", durability, 750, 0, Short.MAX_VALUE, "");
+        durabilitySteeleaf = config.getInt("durabilitySteeleaf", durability, 200, 0, Short.MAX_VALUE, "");
+        durabilityKnightmetal = config.getInt("durabilityKnightmetal", durability, 650, 0, Short.MAX_VALUE, "");
+        durabilityFiery = config.getInt("durabilityFiery", durability, 1300, 0, Short.MAX_VALUE, "");
+        durabilityManasteel = config.getInt("durabilityManasteel", durability, 300, 0, Short.MAX_VALUE, "");
+        durabilityElementium = config.getInt("durabilityElementium", durability, 720, 0, Short.MAX_VALUE, "");
+        durabilitySkyroot = config.getInt("durabilitySkyroot", durability, 60, 0, Short.MAX_VALUE, "");
+        durabilityHolystone = config.getInt("durabilityHolystone", durability, 130, 0, Short.MAX_VALUE, "");
+        durabilityZanite = config.getInt("durabilityZanite", durability, 720, 0, Short.MAX_VALUE, "");
+        durabilityGravitite = config.getInt("durabilityGravitite", durability, 720, 0, Short.MAX_VALUE, "");
+        durabilityThaumium = config.getInt("durabilityThaumium", durability, 400, 0, Short.MAX_VALUE, "");
+        durabilityVoidmetal = config.getInt("durabilityVoidmetal", durability, 150, 0, Short.MAX_VALUE, "");
+        durabilitySoulium = config.getInt("durabilitySoulium", durability, 1030, 0, Short.MAX_VALUE, "");
+        durabilityCheese = config.getInt("durabilityCheese", durability, 12, 0, Short.MAX_VALUE, "");
+        durabilityDesh = config.getInt("durabilityDesh", durability, 1024, 0, Short.MAX_VALUE, "");
 
-        enableLogging = config.get(misc, "enableLogging", true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.").getBoolean();
-//        manaPerChiseling = config.get(misc, "manaPerChiseling", 20, "Amount of Mana to drain from the player's inventory everytime you chisel something.").getInt();
-//        lifeEssencePerRepair = config.get(misc, "lifeEssencePerRepair", 200, "Amount of LP to drain from the player each time the Bloody Chisel repairs itself.").getInt();
-        steamPerUse = config.get(misc, "steamPerUse", 200, "Amount of Steam to drain every time you use the Steam Chisel.").getInt();
-        addCoolStuffForCoolPeople = config.get(misc, "addCoolStuffForCoolPeople", true, "Disable this if you don't like cool people.").getBoolean();
+        enableLogging = config.getBoolean("enableLogging", misc, true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.");
+        addCoolStuffForCoolPeople = config.getBoolean("addCoolStuffForCoolPeople", misc, true, "Disable this if you don't like cool people.");
 
-        addEnderIOFluxedChiselRecipes = config.get(recipes, "addEnderIOFluxedChiselRecipes", false, "Requires EnderIO to be present.").getBoolean();
-        addThermalExpansionFluxedChiselRecipes = config.get(recipes, "addThermalExpansionFluxedChiselRecipes", true, "Requires ThermalExpansion to be present.").getBoolean();
-        addRedstoneArsenalFluxedChiselRecipes = config.get(recipes, "addRedstoneArsenalFluxedChiselRecipes", false, "Requires RedstoneArsenal to be present.").getBoolean();
+        addEnderIOFluxedChiselRecipes = config.getBoolean("addEnderIOFluxedChiselRecipes", recipes, false, "Requires EnderIO to be present.");
+        addThermalExpansionFluxedChiselRecipes = config.getBoolean("addThermalExpansionFluxedChiselRecipes", recipes, true, "Requires ThermalExpansion to be present.");
+        addRedstoneArsenalFluxedChiselRecipes = config.getBoolean("addRedstoneArsenalFluxedChiselRecipes", recipes, false, "Requires RedstoneArsenal to be present.");
         chiselRecipeType = Boolean.parseBoolean(Utils.manuallyGetConfigValue("chisel.cfg", "chiselAlternateRecipe"));
 
         config.save();
