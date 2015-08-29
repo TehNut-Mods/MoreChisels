@@ -40,7 +40,7 @@ repositories {
 
 dependencies {
   compile "team.chisel:Chisel:${chisel_version}:deobf"
-  compile "team.chisel.ctmlib:CTMLib:d0a5d2c-3:deobf"
+  compile "team.chisel.ctmlib:CTMLib:MC${mc_version}-${ctmlib_version}:deobf"
   compile fileTree(dir: 'libs', include: '*.jar')
 }
 
