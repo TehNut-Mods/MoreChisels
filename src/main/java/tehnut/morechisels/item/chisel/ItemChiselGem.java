@@ -46,7 +46,7 @@ public class ItemChiselGem extends ItemChiselBase {
         String materialUnloc = "material." + ModInformation.ID + "." + name.toLowerCase() + ".name";
 
         if (StatCollector.canTranslate(materialUnloc))
-            return StatCollector.translateToLocalFormatted("item.morechisels.chisel.gem.name", materialUnloc);
+            return StatCollector.translateToLocalFormatted("item.morechisels.chisel.gem.name", StatCollector.translateToLocal(materialUnloc));
         else
             return Utils.splitAtCapital(StatCollector.translateToLocalFormatted("item.morechisels.chisel.gem.name", capName));
     }
