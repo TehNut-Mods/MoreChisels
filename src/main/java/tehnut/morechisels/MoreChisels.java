@@ -12,7 +12,6 @@ import tehnut.morechisels.registry.RecipeRegistry;
 import tehnut.morechisels.registry.ItemRegistry;
 import tehnut.morechisels.proxy.CommonProxy;
 import tehnut.morechisels.util.EventHandler;
-import tehnut.morechisels.util.LogHelper;
 import tehnut.morechisels.util.Utils;
 
 import java.io.File;
@@ -32,8 +31,6 @@ public class MoreChisels {
     public void preInit(FMLPreInitializationEvent event) {
         configFolder = event.getModConfigurationDirectory();
         ConfigHandler.init(event.getSuggestedConfigurationFile());
-
-        LogHelper.checkLogger();
 
         EventHandler handler = new EventHandler();
         MinecraftForge.EVENT_BUS.register(handler);

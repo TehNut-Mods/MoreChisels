@@ -10,13 +10,6 @@ public class LogHelper {
 
     private static Logger logger = LogManager.getLogger(ModInformation.NAME);
 
-    public static void checkLogger() {
-        if (enableLogging)
-            logger.info("Logging is go!");
-        else
-            logger.info("Logging disabled. Enable if you wish to submit a log.");
-    }
-
     public static void info(Object info) {
         if (enableLogging)
             logger.info(info);

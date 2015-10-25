@@ -2,13 +2,13 @@
 {
   "modid": "morechisels",
   "name": "More Chisels",
-  "description": "More chisels for Chisel 2",
+  "description": "More chisels for Chisel",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "http://tehnut.info/",
   "updateUrl": "http://tehnut.info/jenkins/",
   "authorList": [ "TehNut" ],
-  "credits": "Cricket for maintaining Chisel 2. tterrag for making it easy to build from.",
+  "credits": "The Chisel team",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
