@@ -5,10 +5,11 @@ import net.minecraft.item.Item;
 import net.minecraftforge.oredict.OreDictionary;
 import tehnut.morechisels.ConfigHandler;
 import tehnut.morechisels.item.chisel.ItemChiselGem;
+import tehnut.morechisels.item.chisel.ItemChiselIngot;
 
 public class ItemRegistry {
     public static void registerItems() {
-        // Gems
+        // Gems and Ingots
         for (String ore : OreDictionary.getOreNames()) {
             if (ore.startsWith("gem")) {
                 String gem = ore.substring(3);
@@ -18,6 +19,16 @@ public class ItemRegistry {
 
                     if (gem.equals(splitWhitelist[0]))
                         new ItemChiselGem(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), splitWhitelist[2], true);
+                }
+            }
+            else if (ore.startsWith("ingot")) {
+                String ingot = ore.substring(3);
+
+                for (String whitelist : ConfigHandler.ingotChiselWhitelist) {
+                    String[] splitWhitelist = whitelist.split(":");
+
+                    if (ingot.equals(splitWhitelist[0]))
+                        new ItemChiselIngot(splitWhitelist[0], Integer.parseInt(splitWhitelist[1]), splitWhitelist[2], true);
                 }
             }
         }
