@@ -36,10 +36,11 @@ public class ConfigHandler {
     public static boolean chiselSouliumEnabled;
     public static boolean chiselCheeseEnabled;
     public static boolean chiselDeshEnabled;
+    public static boolean chiselNeptuniumEnabled;
     public static String[] gemChiselWhitelist;
     private static String[] gemChiselWhitelistDefaults = { "Emerald:700:#22ED4E", "Ruby:700:#DD0707", "Sapphire:700:#1F52F8", "Amethyst:2500:#FF00CE", "Peridot:700:#43A749", "Topaz:700:#f43E00", "Tanzanite:700:#59008B", "Malachite:700:#26E5CD", "Amber:300:#FFCE00" };
     public static String[] ingotChiselWhitelist;
-    private static String[] ingotChiselWhitelistDefaults = { "Gold:300:#eadc59", "Emerald:700:#22ED4E" };
+    private static String[] ingotChiselWhitelistDefaults = { "Gold:300:#eadc59", "Iron:700:#22ED4E", "Brick:700:#22ED4E", "BrickNether:700:#22ED4E" };
 
     public static int durabilityFluxed;
     public static int durabilityBloody;
@@ -59,6 +60,7 @@ public class ConfigHandler {
     public static int durabilitySoulium;
     public static int durabilityCheese;
     public static int durabilityDesh;
+    public static int durabilityNeptunium;
 
     public static boolean enableLogging;
     public static int lifeEssencePerRepair;
@@ -98,6 +100,7 @@ public class ConfigHandler {
         chiselSouliumEnabled = config.getBoolean("chiselSouliumEnabled", chisels, true, "");
         chiselCheeseEnabled = config.getBoolean("chiselCheeseEnabled", chisels, true, "");
         chiselDeshEnabled = config.getBoolean("chiselDeshEnabled", chisels, true, "");
+        chiselNeptuniumEnabled = config.getBoolean("chiselNeptuniumEnabled", chisels, true, "");
         gemChiselWhitelist = config.getStringList("gemChiselWhitelist", chisels, gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix.\nSyntax is:\nGemName:Durability:HexColor");
         ingotChiselWhitelist = config.getStringList("ingotChiselWhitelist", chisels, ingotChiselWhitelistDefaults, "Whitelist for chisels created by Ingots. Add the OreDict suffix.\nSyntax is:\nIngotName:Durability:HexColor");
 
@@ -119,6 +122,7 @@ public class ConfigHandler {
         durabilitySoulium = config.getInt("durabilitySoulium", durability, 1030, 0, Short.MAX_VALUE, "");
         durabilityCheese = config.getInt("durabilityCheese", durability, 12, 0, Short.MAX_VALUE, "");
         durabilityDesh = config.getInt("durabilityDesh", durability, 1024, 0, Short.MAX_VALUE, "");
+        durabilityNeptunium = config.getInt("durabilityNeptunium", durability, 2500, 0, Short.MAX_VALUE, "");
 
         enableLogging = config.getBoolean("enableLogging", misc, true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.");
         addCoolStuffForCoolPeople = config.getBoolean("addCoolStuffForCoolPeople", misc, true, "Disable this if you don't like cool people.");

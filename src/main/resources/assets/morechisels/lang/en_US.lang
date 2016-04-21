@@ -21,7 +21,9 @@ item.morechisels.chisel.voidmetal.name=Voidmetal Chisel
 item.morechisels.chisel.steampowered.name=Steam Powered Chisel
 item.morechisels.chisel.cheese.name=Cheesil
 item.morechisels.chisel.soulium.name=Soul Chisel
+item.morechisels.chisel.neptunium.name=Neptunium Chisel
 item.morechisels.chisel.gem.name=%s Chisel
+item.morechisels.chisel.ingot.name=%s Chisel
 
 # Materials
 material.morechisels.emerald.name=Emerald
@@ -32,6 +34,11 @@ material.morechisels.peridot.name=Peridot
 material.morechisels.topaz.name=Topaz
 material.morechisels.tanzanite.name=Tanzanite
 material.morechisels.amber.name=Amber
+
+material.morechisels.gold.name=Gold
+material.morechisels.iron.name=Iron
+material.morechisels.brick.name=Brick
+material.morechisels.bricknether.name=Nether Brick
 
 # Tooltips
 tip.morechisels.pretty=Let's make all the pretty!

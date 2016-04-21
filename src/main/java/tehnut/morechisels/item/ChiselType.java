@@ -15,7 +15,8 @@ public enum ChiselType {
     SKYROOT(durabilitySkyroot), HOLYSTONE(durabilityHolystone), ZANITE(durabilityZanite), GRAVITITE(durabilityGravitite), // Aether II
 //    STEAMPOWERED(durabilitySteam), // Flaxbeard's Steam Power
     SOULIUM(durabilitySoulium), // Soul Shards: The Old Ways
-    THAUMIUM(durabilityThaumium), VOIDMETAL(durabilityVoidmetal); // Thaumcraft
+    THAUMIUM(durabilityThaumium), VOIDMETAL(durabilityVoidmetal), // Thaumcraft
+    NEPTUNIUM(durabilityNeptunium); // Aquaculture
 
     /**
      * Used for all types of durability (RF, EU, etc)
