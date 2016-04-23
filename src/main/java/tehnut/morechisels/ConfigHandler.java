@@ -39,6 +39,7 @@ public class ConfigHandler {
     public static boolean chiselNeptuniumEnabled;
     public static boolean chiselInfinityEnabled;
     public static boolean chiselWalrusEnabled;
+    public static boolean chiselCertusQuartzEnabled;
     public static String[] gemChiselWhitelist;
     private static String[] gemChiselWhitelistDefaults = { "Emerald:700:#22ED4E", "Lapis:700:#0000ff", "Quartz:250:#fff0f0", "Ruby:700:#DD0707", "Sapphire:700:#1F52F8", "Amethyst:2500:#FF00CE", "Peridot:700:#43A749", "Topaz:700:#f43E00", "Tanzanite:700:#59008B", "Malachite:700:#26E5CD", "Amber:300:#FFCE00" };
     public static String[] ingotChiselWhitelist;
@@ -64,6 +65,7 @@ public class ConfigHandler {
     public static int durabilityDesh;
     public static int durabilityNeptunium;
     public static int durabilityWalrus;
+    public static int durabilityCertusQuartz;
 
     public static boolean enableLogging;
     public static int lifeEssencePerRepair;
@@ -106,6 +108,7 @@ public class ConfigHandler {
         chiselNeptuniumEnabled = config.getBoolean("chiselNeptuniumEnabled", chisels, true, "");
         chiselInfinityEnabled = config.getBoolean("chiselInfinityEnabled", chisels, true, "");
         chiselWalrusEnabled = config.getBoolean("chiselWalrusEnabled", chisels, true, "");
+        chiselCertusQuartzEnabled = config.getBoolean("chiselCertusQuartzEnabled", chisels, true, "");
         gemChiselWhitelist = config.getStringList("gemChiselWhitelist", chisels, gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix.\nSyntax is:\nGemName:Durability:HexColor");
         ingotChiselWhitelist = config.getStringList("ingotChiselWhitelist", chisels, ingotChiselWhitelistDefaults, "Whitelist for chisels created by Ingots. Add the OreDict suffix.\nSyntax is:\nIngotName:Durability:HexColor");
 
@@ -129,6 +132,7 @@ public class ConfigHandler {
         durabilityDesh = config.getInt("durabilityDesh", durability, 1024, 0, Short.MAX_VALUE, "");
         durabilityNeptunium = config.getInt("durabilityNeptunium", durability, 2500, 0, Short.MAX_VALUE, "");
         durabilityWalrus = config.getInt("durabilityWalrus", durability, 42, 0, Short.MAX_VALUE, "");
+        durabilityCertusQuartz = config.getInt("durabilityCertusQuartz", durability, 250, 0, Short.MAX_VALUE, "");
 
         enableLogging = config.getBoolean("enableLogging", misc, true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.");
         addCoolStuffForCoolPeople = config.getBoolean("addCoolStuffForCoolPeople", misc, true, "Disable this if you don't like cool people.");

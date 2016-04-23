@@ -54,7 +54,8 @@ public class MoreChisels {
         Utils.registerCompat(CompatibilityTwilightForest.class, "TwilightForest");
         Utils.registerCompat(CompatibilityAquaculture.class, "Aquaculture");
         Utils.registerCompat(CompatibilityAvaritia.class, "Avaritia");
-        Utils.registerCompat(CompatibilityExtracells.class, "extracells");
+        Utils.registerCompat(CompatibilityExtraCells.class, "extracells");
+        Utils.registerCompat(CompatibilityAppliedEnergistics.class, "appliedenergistics2");
     }
 
     @Mod.EventHandler
