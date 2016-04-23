@@ -37,6 +37,7 @@ public class ConfigHandler {
     public static boolean chiselCheeseEnabled;
     public static boolean chiselDeshEnabled;
     public static boolean chiselNeptuniumEnabled;
+    public static boolean chiselInfinityEnabled;
     public static String[] gemChiselWhitelist;
     private static String[] gemChiselWhitelistDefaults = { "Emerald:700:#22ED4E", "Ruby:700:#DD0707", "Sapphire:700:#1F52F8", "Amethyst:2500:#FF00CE", "Peridot:700:#43A749", "Topaz:700:#f43E00", "Tanzanite:700:#59008B", "Malachite:700:#26E5CD", "Amber:300:#FFCE00" };
     public static String[] ingotChiselWhitelist;
@@ -101,6 +102,7 @@ public class ConfigHandler {
         chiselCheeseEnabled = config.getBoolean("chiselCheeseEnabled", chisels, true, "");
         chiselDeshEnabled = config.getBoolean("chiselDeshEnabled", chisels, true, "");
         chiselNeptuniumEnabled = config.getBoolean("chiselNeptuniumEnabled", chisels, true, "");
+        chiselInfinityEnabled = config.getBoolean("chiselInfinityEnabled", chisels, true, "");
         gemChiselWhitelist = config.getStringList("gemChiselWhitelist", chisels, gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix.\nSyntax is:\nGemName:Durability:HexColor");
         ingotChiselWhitelist = config.getStringList("ingotChiselWhitelist", chisels, ingotChiselWhitelistDefaults, "Whitelist for chisels created by Ingots. Add the OreDict suffix.\nSyntax is:\nIngotName:Durability:HexColor");
 
