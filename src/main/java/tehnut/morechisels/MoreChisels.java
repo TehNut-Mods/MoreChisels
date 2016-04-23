@@ -56,6 +56,7 @@ public class MoreChisels {
         Utils.registerCompat(CompatibilityAvaritia.class, "Avaritia");
         Utils.registerCompat(CompatibilityExtraCells.class, "extracells");
         Utils.registerCompat(CompatibilityAppliedEnergistics.class, "appliedenergistics2");
+        Utils.registerCompat(CompatibilityStevesCarts.class, "StevesCarts");
     }
 
     @Mod.EventHandler

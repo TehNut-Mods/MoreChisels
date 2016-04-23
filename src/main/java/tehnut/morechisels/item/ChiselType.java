@@ -19,7 +19,8 @@ public enum ChiselType {
     NEPTUNIUM(durabilityNeptunium), // Aquaculture
     INFINITY(0), // Avaritia
     WALRUS(durabilityWalrus), // Extra Cells
-    CERTUSQUARTZ(durabilityCertusQuartz); // Applied Energistics
+    CERTUSQUARTZ(durabilityCertusQuartz), // Applied Energistics
+    REINFORCEDMETAL(durabilityReinforcedMetal), GALGADORIANMETAL(durabilityGalgadorianMetal); // Applied Energistics
 
     /**
      * Used for all types of durability (RF, EU, etc)

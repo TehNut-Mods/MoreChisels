@@ -25,11 +25,15 @@ item.morechisels.chisel.neptunium.name=Neptunium Chisel
 item.morechisels.chisel.infinity.name=Mountain Carver
 item.morechisels.chisel.walrus.name=Walrus Chisel
 item.morechisels.chisel.certusquartz.name=Certus Quartz Chisel
+item.morechisels.chisel.reinforcedmetal.name=Reinforced Metal Chisel
+item.morechisels.chisel.galgadorianmetal.name=Enhanced Galgadorian Chisel
 item.morechisels.chisel.gem.name=%s Chisel
 item.morechisels.chisel.ingot.name=%s Chisel
 
 # Materials
 material.morechisels.emerald.name=Emerald
+material.morechisels.quartz.name=Nether Quartz
+material.morechisels.lapis.name=Lapis Lazuli
 material.morechisels.sapphire.name=Sapphire
 material.morechisels.ruby.name=Ruby
 material.morechisels.amethyst.name=Amethyst
