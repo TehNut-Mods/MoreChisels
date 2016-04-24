@@ -58,6 +58,7 @@ public class MoreChisels {
         Utils.registerCompat(CompatibilityAppliedEnergistics.class, "appliedenergistics2");
         Utils.registerCompat(CompatibilityStevesCarts.class, "StevesCarts");
         Utils.registerCompat(CompatibilityBetweenlands.class, "thebetweenlands");
+        Utils.registerCompat(CompatibilityBetterStorage.class, "betterstorage");
     }
 
     @Mod.EventHandler
