@@ -47,6 +47,13 @@ public class ItemChiselBase extends Item implements IChiselItem {
         return this.type;
     }
 
+    /**
+     * @return - Returns weather the chisel should be rendered like a tool in third persson.
+     */
+	public boolean isFull3D() {
+		return true;
+	}
+
     // Start Chisel API
 
     @Override
