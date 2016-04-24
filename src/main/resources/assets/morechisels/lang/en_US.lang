@@ -27,6 +27,9 @@ item.morechisels.chisel.walrus.name=Walrus Chisel
 item.morechisels.chisel.certusquartz.name=Certus Quartz Chisel
 item.morechisels.chisel.reinforcedmetal.name=Reinforced Metal Chisel
 item.morechisels.chisel.galgadorianmetal.name=Enhanced Galgadorian Chisel
+item.morechisels.chisel.syrmorite.name=Syrmorite Chisel
+item.morechisels.chisel.octine.name=Octine Chisel
+item.morechisels.chisel.valonite.name=Valonite Chisel
 item.morechisels.chisel.gem.name=%s Chisel
 item.morechisels.chisel.ingot.name=%s Chisel
 

@@ -42,6 +42,9 @@ public class ConfigHandler {
     public static boolean chiselCertusQuartzEnabled;
     public static boolean chiselReinforcedMetalEnabled;
     public static boolean chiselGalgadorianMetalEnabled;
+    public static boolean chiselSyrmoriteEnabled;
+    public static boolean chiselOctineEnabled;
+    public static boolean chiselValoniteEnabled;
     public static String[] gemChiselWhitelist;
     private static String[] gemChiselWhitelistDefaults = { "Emerald:700:#22ED4E", "Lapis:200:#0000ff", "Quartz:250:#fff0f0", "Ruby:700:#DD0707", "Sapphire:700:#1F52F8", "Amethyst:2500:#FF00CE", "Peridot:700:#43A749", "Topaz:700:#f43E00", "Tanzanite:700:#59008B", "Malachite:700:#26E5CD", "Amber:300:#FFCE00" };
     public static String[] ingotChiselWhitelist;
@@ -70,6 +73,9 @@ public class ConfigHandler {
     public static int durabilityCertusQuartz;
     public static int durabilityReinforcedMetal;
     public static int durabilityGalgadorianMetal;
+    public static int durabilitySyrmorite;
+    public static int durabilityOctine;
+    public static int durabilityValonite;
 
     public static boolean enableLogging;
     public static int lifeEssencePerRepair;
@@ -115,6 +121,9 @@ public class ConfigHandler {
         chiselCertusQuartzEnabled = config.getBoolean("chiselCertusQuartzEnabled", chisels, true, "");
         chiselReinforcedMetalEnabled = config.getBoolean("chiselReinforcedMetalEnabled", chisels, true, "");
         chiselGalgadorianMetalEnabled = config.getBoolean("chiselGalgadorianMetalEnabled", chisels, true, "");
+        chiselSyrmoriteEnabled = config.getBoolean("chiselSyrmoriteEnabled", chisels, true, "");
+        chiselOctineEnabled = config.getBoolean("chiselOctineEnabled", chisels, true, "");
+        chiselValoniteEnabled = config.getBoolean("chiselValoniteEnabled", chisels, true, "");
         gemChiselWhitelist = config.getStringList("gemChiselWhitelist", chisels, gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix.\nSyntax is:\nGemName:Durability:HexColor");
         ingotChiselWhitelist = config.getStringList("ingotChiselWhitelist", chisels, ingotChiselWhitelistDefaults, "Whitelist for chisels created by Ingots. Add the OreDict suffix.\nSyntax is:\nIngotName:Durability:HexColor");
 
@@ -140,7 +149,9 @@ public class ConfigHandler {
         durabilityWalrus = config.getInt("durabilityWalrus", durability, 42, 0, Short.MAX_VALUE, "");
         durabilityCertusQuartz = config.getInt("durabilityCertusQuartz", durability, 250, 0, Short.MAX_VALUE, "");
         durabilityReinforcedMetal = config.getInt("durabilityReinforcedMetal", durability, 10000, 0, Short.MAX_VALUE, "");
-        durabilityGalgadorianMetal = config.getInt("durabilityGalgadorianMetal", durability, 1000000, 0, Short.MAX_VALUE, "");
+        durabilitySyrmorite = config.getInt("durabilitySyrmorite", durability, 200, 0, Short.MAX_VALUE, "");
+        durabilityOctine = config.getInt("durabilityOctine", durability, 900, 0, Short.MAX_VALUE, "");
+        durabilityValonite = config.getInt("durabilityValonite", durability, 2500, 0, Short.MAX_VALUE, "");
 
         enableLogging = config.getBoolean("enableLogging", misc, true, "Allows MoreChisels to log things to console. This must be enabled when submitting a log for support.");
         addCoolStuffForCoolPeople = config.getBoolean("addCoolStuffForCoolPeople", misc, true, "Disable this if you don't like cool people.");
