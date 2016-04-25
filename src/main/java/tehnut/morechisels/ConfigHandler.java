@@ -48,8 +48,6 @@ public class ConfigHandler {
     public static boolean chiselCardboardEnabled;
     public static String[] gemChiselWhitelist;
     private static String[] gemChiselWhitelistDefaults = { "Emerald:700:#22ED4E", "Lapis:200:#0000ff", "Quartz:250:#fff0f0", "Ruby:700:#DD0707", "Sapphire:700:#1F52F8", "Amethyst:2500:#FF00CE", "Peridot:700:#43A749", "Topaz:700:#f43E00", "Tanzanite:700:#59008B", "Malachite:700:#26E5CD", "Amber:300:#FFCE00" };
-    public static String[] ingotChiselWhitelist;
-    private static String[] ingotChiselWhitelistDefaults = { "Gold:300:#eadc59", "Iron:700:#22ED4E", "Brick:700:#22ED4E", "BrickNether:700:#22ED4E", "Copper:700:#22ED4E", "Aluminum:700:#22ED4E", "Tin:700:#22ED4E", "Bronze:700:#22ED4E", "RefinedObsidian:2500:#22ED4E", "Osmium:500:#22ED4E", "RefinedGlowstone:300:#22ED4E" };
 
     public static int durabilityFluxed;
     public static int durabilityBloody;
@@ -128,7 +126,6 @@ public class ConfigHandler {
         chiselValoniteEnabled = config.getBoolean("chiselValoniteEnabled", chisels, true, "");
         chiselCardboardEnabled = config.getBoolean("chiselCardboardEnabled", chisels, true, "");
         gemChiselWhitelist = config.getStringList("gemChiselWhitelist", chisels, gemChiselWhitelistDefaults, "Whitelist for chisels created by Gems. Add the OreDict suffix.\nSyntax is:\nGemName:Durability:HexColor");
-        ingotChiselWhitelist = config.getStringList("ingotChiselWhitelist", chisels, ingotChiselWhitelistDefaults, "Whitelist for chisels created by Ingots. Add the OreDict suffix.\nSyntax is:\nIngotName:Durability:HexColor");
 
         // DURABILITY
         durabilityFluxed = config.getInt("durabilityFluxed", durability, 100000, 0, Short.MAX_VALUE, "");
