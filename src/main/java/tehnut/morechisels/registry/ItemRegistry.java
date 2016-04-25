@@ -8,7 +8,7 @@ import tehnut.morechisels.item.chisel.ItemChiselGem;
 
 public class ItemRegistry {
     public static void registerItems() {
-        // Gems and Ingots
+        // Gems
         for (String ore : OreDictionary.getOreNames()) {
             if (ore.startsWith("gem")) {
                 String gem = ore.substring(3);

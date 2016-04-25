@@ -149,6 +149,7 @@ public class ConfigHandler {
         durabilityWalrus = config.getInt("durabilityWalrus", durability, 42, 0, Short.MAX_VALUE, "");
         durabilityCertusQuartz = config.getInt("durabilityCertusQuartz", durability, 250, 0, Short.MAX_VALUE, "");
         durabilityReinforcedMetal = config.getInt("durabilityReinforcedMetal", durability, 10000, 0, Short.MAX_VALUE, "");
+        durabilityGalgadorianMetal = config.getInt("durabilityGalgadorianMetal", durability, 1000000, 0, Short.MAX_VALUE, "");
         durabilitySyrmorite = config.getInt("durabilitySyrmorite", durability, 200, 0, Short.MAX_VALUE, "");
         durabilityOctine = config.getInt("durabilityOctine", durability, 900, 0, Short.MAX_VALUE, "");
         durabilityValonite = config.getInt("durabilityValonite", durability, 2500, 0, Short.MAX_VALUE, "");
