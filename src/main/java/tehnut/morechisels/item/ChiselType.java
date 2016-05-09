@@ -9,13 +9,20 @@ public enum ChiselType {
     BLOODY(durabilityBloody), BOUND(), // Blood Magic
     BEDROCKIUM(0), UNSTABLE(durabilityUnstable), // Extra Utilities
     FLUXED(), // RF
-    CHEESE(durabilityCheese), DESH(durabilityDesh),
+    CHEESE(durabilityCheese), DESH(durabilityDesh), //Galacticraft
     IRONWOOD(durabilityIronwood), STEELEAF(durabilitySteeleaf), KNIGHTMETAL(durabilityKnightmetal), FIERY(durabilityFiery), // Twilight Forest
     MANASTEEL(durabilityManasteel), ELEMENTIUM(durabilityElementium), // Botania
     SKYROOT(durabilitySkyroot), HOLYSTONE(durabilityHolystone), ZANITE(durabilityZanite), GRAVITITE(durabilityGravitite), // Aether II
 //    STEAMPOWERED(durabilitySteam), // Flaxbeard's Steam Power
     SOULIUM(durabilitySoulium), // Soul Shards: The Old Ways
-    THAUMIUM(durabilityThaumium), VOIDMETAL(durabilityVoidmetal); // Thaumcraft
+    THAUMIUM(durabilityThaumium), VOIDMETAL(durabilityVoidmetal), // Thaumcraft
+    NEPTUNIUM(durabilityNeptunium), // Aquaculture
+    INFINITY(0), // Avaritia
+    WALRUS(durabilityWalrus), // Extra Cells
+    CERTUSQUARTZ(durabilityCertusQuartz), // Applied Energistics
+    REINFORCEDMETAL(durabilityReinforcedMetal), GALGADORIANMETAL(durabilityGalgadorianMetal), // Steve's Carts
+    SYRMORITE(durabilitySyrmorite), OCTINE(durabilityOctine), VALONITE(durabilityValonite), // The Betweenlands
+    CARDBOARD(durabilityCardboard); // Better Storage
 
     /**
      * Used for all types of durability (RF, EU, etc)

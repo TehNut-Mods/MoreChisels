@@ -14,10 +14,19 @@ Downloads for MoreChisels (as well as all of my other mods) can be found on my [
 
 * Gems: Whitelisting in config to add chisels OreDict gems
 * Fluxed Chisel: Runs on Redstone Flux.
-* Bound Chisel: Runs on your Blood Magic LP network.
-* Ironwood/Steeleaf: Twilight Forest compat 
-* Bedrockium: Extra Utilities compat
-* Skyroot/Holystone/Zanite/Gravitite: Aether II compat
+* Bound/Bloody Chisel: Runs on your Blood Magic LP network.
+* Ironwood/Steeleaf/Knightmetal/Fiery Chisel: Twilight Forest compat 
+* Bedrockium/Unstable Chisel: Extra Utilities compat
+* Skyroot/Holystone/Zanite/Gravitite Chisel: Aether II compat
+* Cheese/Desh Chisel: Galacticraft compat
+* Soulium Chisel: Soul Shards the old ways compat
+* Thaumium/Voidmetal Chisel: Thaumcraft compat
+* Neptunium Chisel: Aquaculture compat
+* Walrus Chisel: Extra Cells compat
+* Certus Quartz Chisel: Applied Energistics compat
+* Reinforced metal/enhanced galgadorian metal Chisel: Steve's Carts compat
+* Syrmorite/Octine/Valonite Chisel: Betweenlands compat
+* Cardboard Chisel: Better Storage compat
 
 ##Chisels to come:
 
